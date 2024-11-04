@@ -1,0 +1,50 @@
+[0;33m--- WARNING: GDB cannot open serial ports accessed as COMx[0m
+[0;33m--- Using \\.\COM3 instead...[0m
+[0;33m--- esp-idf-monitor 1.4.0 on \\.\COM3 115200 ---[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H ---[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400d7534: compass_init at D:/chandan/projects/manasa/main/main.c:357 (discriminator 1)
+[0m
+[0;33m0x4008aceb: _esp_error_check_failed at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/esp_err.c:49
+[0m
+[0;33m0x40081bae: panic_abort at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/panic.c:463
+0x4008acf5: esp_system_abort at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/port/esp_system_chip.c:92
+0x40092b11: abort at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/newlib/abort.c:38
+0x4008aceb: _esp_error_check_failed at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/esp_err.c:49
+0x400d7534: compass_init at D:/chandan/projects/manasa/main/main.c:357 (discriminator 1)
+0x400d7b0c: app_main at D:/chandan/projects/manasa/main/main.c:618
+0x40155d1b: main_task at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/app_startup.c:208
+0x4008b841: vPortTaskWrapper at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m0x40080400: _init at ??:?
+[0m
+[0;33m0x400dac73: task_wdt_timeout_handling at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:434
+0x400db038: task_wdt_isr at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_system/task_wdt/task_wdt.c:507
+0x400834e1: _xt_lowint1 at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/xtensa/xtensa_vectors.S:1240
+0x400d5325: uart_ll_get_txfifo_len at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/hal/esp32/include/hal/uart_ll.h:408
+ (inlined by) uart_tx_char at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:170
+0x400d5ad7: uart_write at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_driver_uart/src/uart_vfs.c:223
+0x400d69ad: esp_vfs_write at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000182a: write in ROM
+0x400d6411: console_write at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/esp_vfs_console/vfs_console.c:67
+0x400d69ad: esp_vfs_write at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/vfs/vfs.c:502 (discriminator 4)
+0x4000bd83: _write_r in ROM
+0x4000117d: __swrite in ROM
+0x400592fe: __sflush_r in ROM
+0x4005937a: _fflush_r in ROM
+0x4014194d: __sfvwrite_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fvwrite.c:251
+0x40148e8f: __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfiprintf.c:429
+ (inlined by) __sprint_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:399
+0x4014886d: _vfprintf_r at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vfprintf.c:1774 (discriminator 1)
+0x40141ce9: vprintf at /builds/idf/crosstool-NG/.build/HOST-x86_64-w64-mingw32/xtensa-esp-elf/src/newlib/newlib/libc/stdio/vprintf.c:34
+0x40156731: esp_log_writev at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:210
+0x40091471: esp_log_write at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/log/log.c:220
+0x400d7cad: wifi_scan at D:/chandan/projects/manasa/main/wifi_scan.c:79 (discriminator 1)
+0x400d7220: task1 at D:/chandan/projects/manasa/main/main.c:508
+0x4008b841: vPortTaskWrapper at D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[1;31mNone[0m
+[0;33mWaiting for the device to reconnect[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

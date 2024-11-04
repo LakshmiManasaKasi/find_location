@@ -1,0 +1,229 @@
+Y.�2: SPI Speed      : 40�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Nov  2 2024 18:17:21[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=220e4h (139492) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0003210c vaddr=3ffb0000 size=04278h ( 17016) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=0003638c vaddr=40080000 size=09c8ch ( 40076) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=87ee4h (556772) map[0m
+[0;32mI (365) esp_image: segment 4: paddr=000c7f0c vaddr=40089c8c size=0f0a8h ( 61608) load[0m
+[0;32mI (402) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (402) boot: Disabling RNG early entropy source...[0m
+[0;32mI (414) cpu_start: Multicore app[0m
+[0;32mI (422) cpu_start: Pro cpu start user code[0m
+[0;32mI (422) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (423) app_init: Application information:[0m
+[0;32mI (425) app_init: Project name:     wifi_rtos[0m
+[0;32mI (430) app_init: App version:      1[0m
+[0;32mI (435) app_init: Compile time:     Nov  2 2024 18:13:49[0m
+[0;32mI (441) app_init: ELF file SHA256:  c9d6910ef71000d0...[0m
+[0;32mI (447) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (452) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (457) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (462) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (474) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFB8D60 len 000272A0 (156 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (492) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (499) heap_init: At 40098D34 len 000072CC (28 KiB): IRAM[0m
+[0;32mI (507) spi_flash: detected chip: gd[0m
+[0;32mI (509) spi_flash: flash io: dio[0m
+[0;33mW (513) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (526) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (538) main_task: Started on CPU0[0m
+[0;32mI (548) main_task: Calling app_main()[0m
+I (568) wifi:wifi driver task: 3ffc11e4, prio:23, stack:6656, core=0
+I (568) wifi:wifi firmware version: ccaebfa
+I (568) wifi:wifi certification version: v7.0
+I (568) wifi:config NVS flash: enabled
+I (568) wifi:config nano formating: disabled
+I (578) wifi:Init data frame dynamic rx buffer num: 32
+I (578) wifi:Init static rx mgmt buffer num: 5
+I (588) wifi:Init management short buffer num: 32
+I (588) wifi:Init dynamic tx buffer num: 32
+I (588) wifi:Init static rx buffer size: 1600
+I (598) wifi:Init static rx buffer num: 10
+I (598) wifi:Init dynamic rx buffer num: 32
+[0;32mI (608) wifi_init: rx ba win: 6[0m
+[0;32mI (608) wifi_init: accept mbox: 6[0m
+[0;32mI (608) wifi_init: tcpip mbox: 32[0m
+[0;32mI (618) wifi_init: udp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp tx win: 5744[0m
+[0;32mI (628) wifi_init: tcp rx win: 5744[0m
+[0;32mI (628) wifi_init: tcp mss: 1440[0m
+[0;32mI (638) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (638) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (768) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+I (848) wifi:mode : sta (b4:e6:2d:b1:e1:f9)
+I (848) wifi:enable tsf
+[0;32mI (848) main_task: Returned from app_main()[0m
+[0;32mI (4348) Wifi: -----Total APs scanned = 0------
+[0m
+
+Press 1->Samsung	2->ViVo	3->Fibernet	0->exit
+		Select Store :: [0;32mI (5868) BTN: Waiting For Press.[0m
+[0;32mI (13008) BTN: BTN Pressed Down.[0m
+[0;32mI (13088) BTN: Short Press[0m
+2
+[0;32mI (13088) BTN: BTN Released.[0m
+[0;32mI (18538) BTN: BTN Pressed Down.[0m
+[0;32mI (19528) BTN: Long Press[0m
+
+selected ViVo store
+Seleeeeeeeee = 2
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy 0 0 0 
+-1000 -1000 -1000 
+temp = 0	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+
+present_ap = -1 , next_location_ap = 1
+
+next_location_ap = 1
+Magnetic data: X:-197.27 mG, Y:-285.16 mG, Z:-2.44 mG
+Heading = 167.602874
+[0;32mI (24748) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 167.602874	-1.000000
+left
+Magnetic data: X:-197.57 mG, Y:-299.68 mG, Z:-19.53 mG
+Heading = 168.881563
+[0;32mI (28268) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 168.881563	-1.000000
+left
+Magnetic data: X:-143.55 mG, Y:-230.71 mG, Z:96.13 mG
+Heading = 170.385704
+[0;32mI (31788) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 170.385704	-1.000000
+left
+Magnetic data: X:-25.94 mG, Y:-350.95 mG, Z:101.32 mG
+Heading = 198.038149
+[0;32mI (35308) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 198.038149	-1.000000
+left
+Magnetic data: X:-152.71 mG, Y:-312.81 mG, Z:-97.66 mG
+Heading = 176.252730
+[0;32mI (38828) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 176.252730	-1.000000
+left
+Magnetic data: X:-147.71 mG, Y:-323.30 mG, Z:-98.39 mG
+Heading = 177.719667
+[0;32mI (42348) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 177.719667	-1.000000
+left
+Magnetic data: X:-188.11 mG, Y:-300.72 mG, Z:-70.50 mG
+Heading = 170.249222
+[0;32mI (45868) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 170.249222	-1.000000
+left
+Magnetic data: X:-10.38 mG, Y:-460.21 mG, Z:18.43 mG
+Heading = 200.972591
+[0;32mI (49388) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 200.972591	-1.000000
+left
+Magnetic data: X:149.35 mG, Y:-323.00 mG, Z:168.58 mG
+Heading = 227.069319
+[0;32mI (52908) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 227.069319	-1.000000
+left
+Magnetic data: X:144.65 mG, Y:-333.07 mG, Z:164.49 mG
+Heading = 225.729749
+[0;32mI (56428) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 225.729749	-1.000000
+left
+Magnetic data: X:-93.69 mG, Y:-310.49 mG, Z:55.66 mG
+Heading = 185.479257
+[0;32mI (59948) Wifi: -----Total APs scanned = 0------
+[0m
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 185.479257	-1.000000
+left
+Magnetic data: X:-81.60 mG, Y:-329.28 mG, Z:58.29 mG
+Heading = 188.350529

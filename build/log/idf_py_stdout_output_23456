@@ -1,0 +1,796 @@
+e) boot.esp32: SPI S�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Nov  2 2024 18:17:21[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d3f4h (119796) map[0m
+[0;32mI (145) esp_image: segment 1: paddr=0002d41c vaddr=3ffb0000 size=02bfch ( 11260) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=71430h (463920) map[0m
+[0;32mI (310) esp_image: segment 3: paddr=000a1458 vaddr=3ffb2bfc size=0166ch (  5740) load[0m
+[0;32mI (312) esp_image: segment 4: paddr=000a2acc vaddr=40080000 size=18bb0h (101296) load[0m
+[0;32mI (367) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (379) cpu_start: Multicore app[0m
+[0;32mI (388) cpu_start: Pro cpu start user code[0m
+[0;32mI (388) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     wifi_rtos[0m
+[0;32mI (396) app_init: App version:      1[0m
+[0;32mI (400) app_init: Compile time:     Nov  2 2024 18:13:49[0m
+[0;32mI (406) app_init: ELF file SHA256:  6dfc96ba09fec6c1...[0m
+[0;32mI (412) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (417) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (422) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (432) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (439) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (445) heap_init: At 3FFB8358 len 00027CA8 (159 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40098BB0 len 00007450 (29 KiB): IRAM[0m
+[0;32mI (472) spi_flash: detected chip: gd[0m
+[0;32mI (475) spi_flash: flash io: dio[0m
+[0;33mW (479) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (492) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+I (663) wifi:wifi driver task: 3ffbe1f4, prio:23, stack:6656, core=0
+I (663) wifi:wifi firmware version: ccaebfa
+I (663) wifi:wifi certification version: v7.0
+I (663) wifi:config NVS flash: enabled
+I (663) wifi:config nano formating: disabled
+I (673) wifi:Init data frame dynamic rx buffer num: 32
+I (673) wifi:Init static rx mgmt buffer num: 5
+I (683) wifi:Init management short buffer num: 32
+I (683) wifi:Init dynamic tx buffer num: 32
+I (683) wifi:Init static rx buffer size: 1600
+I (693) wifi:Init static rx buffer num: 10
+I (693) wifi:Init dynamic rx buffer num: 32
+[0;32mI (703) wifi_init: rx ba win: 6[0m
+[0;32mI (703) wifi_init: accept mbox: 6[0m
+[0;32mI (703) wifi_init: tcpip mbox: 32[0m
+[0;32mI (713) wifi_init: udp mbox: 6[0m
+[0;32mI (713) wifi_init: tcp mbox: 6[0m
+[0;32mI (713) wifi_init: tcp tx win: 5744[0m
+[0;32mI (723) wifi_init: tcp rx win: 5744[0m
+[0;32mI (723) wifi_init: tcp mss: 1440[0m
+[0;32mI (733) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (733) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (743) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (743) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (823) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+E (833) wifi:failed to post WiFi event=43 ret=259
+I (843) wifi:mode : sta (b4:e6:2d:b1:e1:f9)
+I (843) wifi:enable tsf
+E (843) wifi:failed to post WiFi event=2 ret=259
+[0;32mI (973) main_task: Returned from app_main()[0m
+E (3373) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -77 dBm
+SSID: Dream Spoon  RSSI: -90 dBm
+SSID: Hariom R2  RSSI: -95 dBm
+SSID: ACTFIBERNET  RSSI: -97 dBm
+SSID: Hariom GF 4G  RSSI: -98 dBm
+
+Press 1->Samsung	2->ViVo	3->Fibernet	0->exit
+		Select Store :: [0;32mI (4993) BTN: Waiting For Press.[0m
+[0;32mI (12253) BTN: BTN Pressed Down.[0m
+[0;32mI (12343) BTN: Short Press[0m
+2
+[0;32mI (12343) BTN: BTN Released.[0m
+[0;32mI (13953) BTN: BTN Pressed Down.[0m
+[0;32mI (14943) BTN: Long Press[0m
+
+selected ViVo store
+Seleeeeeeeee = 2
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy 0 0 0 
+-1000 -1000 -1000 
+temp = 0	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+
+present_ap = -1 , next_location_ap = 1
+
+next_location_ap = 1
+Magnetic data: X:-41.02 mG, Y:530.52 mG, Z:130.43 mG
+Heading = 26.610360
+E (19073) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -68 dBm
+SSID: Hariom.l2-4g  RSSI: -93 dBm
+SSID: Dream Spoon  RSSI: -95 dBm
+SSID: Hariom R2  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 26.610360	-1.000000
+left
+Magnetic data: X:-46.08 mG, Y:492.68 mG, Z:292.97 mG
+Heading = 27.532616
+E (21593) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -76 dBm
+SSID: Dream Spoon  RSSI: -88 dBm
+SSID: Hariom GF 4G  RSSI: -92 dBm
+SSID: ACTFIBERNET  RSSI: -94 dBm
+SSID: Hariom.l2-4g  RSSI: -94 dBm
+SSID: Hariom R2  RSSI: -95 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 27.532616	-1.000000
+left
+Magnetic data: X:-107.24 mG, Y:532.65 mG, Z:230.10 mG
+Heading = 33.569818
+E (24123) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -67 dBm
+SSID: Dream Spoon  RSSI: -87 dBm
+SSID: ACTFIBERNET  RSSI: -95 dBm
+SSID: Hariom.l2-4g  RSSI: -95 dBm
+SSID: Hariom GF 4G  RSSI: -98 dBm
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -98 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 33.569818	-1.000000
+left
+Magnetic data: X:171.94 mG, Y:531.43 mG, Z:99.00 mG
+Heading = 4.270372
+E (26653) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -80 dBm
+SSID: Hariom R2  RSSI: -83 dBm
+SSID: Dream Spoon  RSSI: -87 dBm
+SSID: Hariom GF 4G  RSSI: -87 dBm
+SSID: ACTFIBERNET  RSSI: -90 dBm
+SSID: Hariom.l2-4g  RSSI: -90 dBm
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -94 dBm
+SSID: Hariom R3 4g  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 4.270372	-1.000000
+left
+Magnetic data: X:168.27 mG, Y:538.76 mG, Z:111.21 mG
+Heading = 4.852709
+E (29183) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom GF 4G  RSSI: -85 dBm
+SSID: Hariom R2  RSSI: -86 dBm
+SSID: Dream Spoon  RSSI: -87 dBm
+SSID: Hariom.l1-4G  RSSI: -87 dBm
+SSID: ACTFIBERNET  RSSI: -90 dBm
+SSID: Hariom.l2-4g  RSSI: -91 dBm
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -96 dBm
+SSID: Hariom R3 4g  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 4.852709	-1.000000
+left
+Magnetic data: X:158.08 mG, Y:552.19 mG, Z:146.48 mG
+Heading = 6.222177
+E (31713) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -77 dBm
+SSID: Hariom R2  RSSI: -88 dBm
+SSID: Dream Spoon  RSSI: -90 dBm
+SSID: Hariom.l2-4g  RSSI: -92 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 6.222177	-1.000000
+left
+Magnetic data: X:-62.99 mG, Y:484.62 mG, Z:376.71 mG
+Heading = 29.593768
+E (34233) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -73 dBm
+SSID: Hariom R2  RSSI: -88 dBm
+SSID: Hariom.l2-4g  RSSI: -88 dBm
+SSID: Dream Spoon  RSSI: -91 dBm
+SSID: ACTFIBERNET  RSSI: -94 dBm
+SSID: Hariom R3 4g  RSSI: -94 dBm
+SSID: Hariom GF 4G  RSSI: -98 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 29.593768	-1.000000
+left
+Magnetic data: X:-66.96 mG, Y:484.01 mG, Z:434.39 mG
+Heading = 30.064136
+E (36763) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -72 dBm
+SSID: Hariom R2  RSSI: -87 dBm
+SSID: Hariom.l2-4g  RSSI: -88 dBm
+SSID: Dream Spoon  RSSI: -91 dBm
+SSID: ACTFIBERNET  RSSI: -93 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 30.064136	-1.000000
+left
+Magnetic data: X:-224.61 mG, Y:252.99 mG, Z:313.84 mG
+Heading = 63.773721
+E (39283) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -74 dBm
+SSID: Hariom.l2-4g  RSSI: -83 dBm
+SSID: Dream Spoon  RSSI: -90 dBm
+SSID: Hariom R2  RSSI: -91 dBm
+SSID: ACTFIBERNET  RSSI: -92 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 63.773721	-1.000000
+left
+Magnetic data: X:-121.28 mG, Y:283.81 mG, Z:296.45 mG
+Heading = 45.319538
+E (41813) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -71 dBm
+SSID: Dream Spoon  RSSI: -88 dBm
+SSID: ACTFIBERNET  RSSI: -94 dBm
+SSID: Hariom R2  RSSI: -94 dBm
+SSID: Hariom.l2-4g  RSSI: -94 dBm
+SSID: Hariom GF 4G  RSSI: -95 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 45.319538	-1.000000
+left
+Magnetic data: X:-126.04 mG, Y:-36.74 mG, Z:-249.02 mG
+Heading = 128.546081
+E (44353) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -91 dBm
+SSID: Dream Spoon  RSSI: -98 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 128.546081	-1.000000
+left
+Magnetic data: X:-194.82 mG, Y:-8.54 mG, Z:-273.13 mG
+Heading = 114.810226
+E (46873) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -90 dBm
+SSID: Dream Spoon  RSSI: -92 dBm
+SSID: Hariom R2  RSSI: -95 dBm
+SSID: Hariom GF 4G  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 114.810226	-1.000000
+left
+Magnetic data: X:-239.38 mG, Y:-52.80 mG, Z:-272.22 mG
+Heading = 124.732383
+E (49393) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -89 dBm
+SSID: Dream Spoon  RSSI: -95 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 124.732383	-1.000000
+left
+Magnetic data: X:-235.11 mG, Y:-61.95 mG, Z:-269.29 mG
+Heading = 127.055800
+E (51913) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -86 dBm
+SSID: Dream Spoon  RSSI: -94 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 127.055800	-1.000000
+left
+Magnetic data: X:-103.76 mG, Y:89.42 mG, Z:-133.97 mG
+Heading = 71.417840
+E (54433) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -78 dBm
+SSID: Hariom R2  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 71.417840	-1.000000
+left
+Magnetic data: X:-124.02 mG, Y:106.20 mG, Z:-165.10 mG
+Heading = 71.597952
+E (56953) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -77 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 71.597952	-1.000000
+left
+Magnetic data: X:-139.59 mG, Y:38.76 mG, Z:-247.19 mG
+Heading = 96.643640
+E (59473) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -89 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 96.643640	-1.000000
+left
+Magnetic data: X:-202.33 mG, Y:-79.16 mG, Z:-276.61 mG
+Heading = 133.659292
+E (61993) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -89 dBm
+SSID: Dream Spoon  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 133.659292	-1.000000
+left
+Magnetic data: X:-196.23 mG, Y:-82.40 mG, Z:-270.51 mG
+Heading = 135.068571
+E (64513) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -83 dBm
+SSID: Dream Spoon  RSSI: -95 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 135.068571	-1.000000
+left
+Magnetic data: X:-186.77 mG, Y:-75.38 mG, Z:-281.49 mG
+Heading = 134.269777
+E (67033) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -91 dBm
+SSID: Dream Spoon  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 134.269777	-1.000000
+left
+Magnetic data: X:-187.50 mG, Y:-79.16 mG, Z:-272.52 mG
+Heading = 135.180161
+E (69553) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -86 dBm
+SSID: Dream Spoon  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 135.180161	-1.000000
+left
+Magnetic data: X:-81.91 mG, Y:90.94 mG, Z:-169.19 mG
+Heading = 64.182805
+E (72073) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -80 dBm
+SSID: ACTFIBERNET  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 64.182805	-1.000000
+left
+Magnetic data: X:-101.75 mG, Y:115.48 mG, Z:-172.12 mG
+Heading = 63.557181
+E (74593) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -80 dBm
+SSID: Dream Spoon  RSSI: -94 dBm
+SSID: ACTFIBERNET  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 63.557181	-1.000000
+left
+Magnetic data: X:-105.90 mG, Y:108.76 mG, Z:-165.71 mG
+Heading = 66.407823
+E (77113) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -81 dBm
+SSID: ACTFIBERNET  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 66.407823	-1.000000
+left
+Magnetic data: X:-111.21 mG, Y:110.60 mG, Z:-168.58 mG
+Heading = 67.330753
+E (79633) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -86 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 67.330753	-1.000000
+left
+Magnetic data: X:-118.71 mG, Y:109.68 mG, Z:-174.07 mG
+Heading = 69.437167
+E (82153) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -87 dBm
+SSID: Dream Spoon  RSSI: -98 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 69.437167	-1.000000
+left
+Magnetic data: X:-75.20 mG, Y:11.72 mG, Z:-183.41 mG
+Heading = 103.300653
+E (84673) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -89 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 103.300653	-1.000000
+left
+Magnetic data: X:-107.24 mG, Y:6.53 mG, Z:-243.65 mG
+Heading = 108.671483
+E (87193) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -85 dBm
+SSID: Hariom.l2-4g  RSSI: -92 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 108.671483	-1.000000
+left
+Magnetic data: X:-111.51 mG, Y:-2.14 mG, Z:-266.72 mG
+Heading = 113.396918
+E (89713) wifi:failed to post WiFi event=1 ret=259
+SSID: Dream Spoon  RSSI: -93 dBm
+SSID: Hariom.l2-4g  RSSI: -94 dBm
+SSID: Hariom.l1-4G  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 113.396918	-1.000000
+left
+Magnetic data: X:-109.25 mG, Y:-6.23 mG, Z:-236.51 mG
+Heading = 115.559933
+E (92233) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -89 dBm
+SSID: Hariom.l2-4g  RSSI: -92 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 115.559933	-1.000000
+left
+Magnetic data: X:-134.09 mG, Y:-10.38 mG, Z:-248.41 mG
+Heading = 116.722723
+E (94753) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -86 dBm
+SSID: Hariom.l2-4g  RSSI: -92 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 116.722723	-1.000000
+left
+Magnetic data: X:-130.43 mG, Y:40.28 mG, Z:-194.21 mG
+Heading = 94.998954
+E (97273) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -83 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+SSID: ACTFIBERNET  RSSI: -98 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 94.998954	-1.000000
+left
+Magnetic data: X:-235.41 mG, Y:110.90 mG, Z:-243.65 mG
+Heading = 86.940469
+E (99793) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -89 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 86.940469	-1.000000
+left
+Magnetic data: X:-234.68 mG, Y:129.82 mG, Z:-239.69 mG
+Heading = 83.215942
+E (102313) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -89 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 83.215942	-1.000000
+left
+Magnetic data: X:-245.18 mG, Y:129.09 mG, Z:-248.11 mG
+Heading = 84.398861
+E (104833) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -92 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 84.398861	-1.000000
+left
+Magnetic data: X:-218.20 mG, Y:97.35 mG, Z:-241.09 mG
+Heading = 88.120498
+E (107353) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -81 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 88.120498	-1.000000
+left
+Magnetic data: X:-202.03 mG, Y:25.33 mG, Z:-221.56 mG
+Heading = 105.011603
+E (109873) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -79 dBm
+SSID: Dream Spoon  RSSI: -96 dBm
+SSID: Hariom R2  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 105.011603	-1.000000
+left
+Magnetic data: X:-114.26 mG, Y:121.77 mG, Z:-227.36 mG
+Heading = 65.352057
+E (112393) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -74 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+SSID: Hariom.l2-4g  RSSI: -96 dBm
+SSID: Hariom R2  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 65.352057	-1.000000
+left
+Magnetic data: X:-115.66 mG, Y:122.80 mG, Z:-220.76 mG
+Heading = 65.458560
+E (114913) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -74 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 65.458560	-1.000000
+left
+Magnetic data: X:-107.24 mG, Y:126.95 mG, Z:-227.97 mG
+Heading = 62.363253
+E (117433) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -76 dBm
+SSID: Dream Spoon  RSSI: -92 dBm
+SSID: Hariom R2  RSSI: -95 dBm
+SSID: Hariom R3 4g  RSSI: -95 dBm
+SSID: Hariom GF 4G  RSSI: -96 dBm
+SSID: Hariom.l2-4g  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 62.363253	-1.000000
+left
+Magnetic data: X:-72.75 mG, Y:112.61 mG, Z:-215.76 mG
+Heading = 55.043341
+E (119963) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -73 dBm
+SSID: Dream Spoon  RSSI: -94 dBm
+SSID: Hariom R2  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 55.043341	-1.000000
+left
+Magnetic data: X:-70.50 mG, Y:119.63 mG, Z:-207.95 mG
+Heading = 52.689218
+E (122483) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -76 dBm
+SSID: Hariom R2  RSSI: -95 dBm
+SSID: Dream Spoon  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 52.689218	-1.000000
+left
+Magnetic data: X:-72.14 mG, Y:123.41 mG, Z:-221.25 mG
+Heading = 52.488325
+E (125003) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -78 dBm
+SSID: Dream Spoon  RSSI: -92 dBm
+SSID: Hariom.l2-4g  RSSI: -92 dBm
+SSID: Hariom R3 4g  RSSI: -95 dBm
+SSID: Hariom R2  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 52.488325	-1.000000
+left
+Magnetic data: X:-156.86 mG, Y:54.93 mG, Z:-222.47 mG
+Heading = 92.862836
+E (127523) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -70 dBm
+SSID: Dream Spoon  RSSI: -89 dBm
+SSID: Hariom.l2-4g  RSSI: -94 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 92.862836	-1.000000
+left
+Magnetic data: X:-277.83 mG, Y:318.91 mG, Z:140.08 mG
+Heading = 63.236991
+E (130053) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -82 dBm
+SSID: Dream Spoon  RSSI: -95 dBm
+SSID: Hariom R2  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 63.236991	-1.000000
+left
+Magnetic data: X:-274.48 mG, Y:324.83 mG, Z:132.75 mG
+Heading = 62.372328
+E (132573) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -80 dBm
+SSID: Hariom.l2-4g  RSSI: -95 dBm
+SSID: Hariom R2  RSSI: -97 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 62.372328	-1.000000
+left
+Magnetic data: X:-233.76 mG, Y:347.11 mG, Z:161.25 mG
+Heading = 56.136511
+E (135093) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -80 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 56.136511	-1.000000
+left
+Magnetic data: X:-250.55 mG, Y:360.84 mG, Z:156.07 mG
+Heading = 56.951464
+E (137613) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -81 dBm
+SSID: Hariom R2  RSSI: -95 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 56.951464	-1.000000
+left
+Magnetic data: X:-203.67 mG, Y:67.75 mG, Z:-226.26 mG
+Heading = 93.763565
+E (140133) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -83 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 93.763565	-1.000000
+left
+Magnetic data: X:-220.15 mG, Y:74.16 mG, Z:-225.34 mG
+Heading = 93.546695
+E (142653) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -83 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 93.546695	-1.000000
+left
+Magnetic data: X:-68.79 mG, Y:49.56 mG, Z:-148.44 mG
+Heading = 76.396806
+E (145173) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -70 dBm
+SSID: Dream Spoon  RSSI: -89 dBm
+SSID: Hariom R2  RSSI: -92 dBm
+SSID: Hariom GF 4G  RSSI: -95 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 76.396806	-1.000000
+left
+Magnetic data: X:50.17 mG, Y:253.30 mG, Z:-39.98 mG
+Heading = 10.992070
+E (147693) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -72 dBm
+SSID: Dream Spoon  RSSI: -90 dBm
+SSID: Hariom R2  RSSI: -94 dBm
+SSID: Hariom GF 4G  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 10.992070	-1.000000
+left
+Magnetic data: X:50.48 mG, Y:250.37 mG, Z:-34.18 mG
+Heading = 10.797293

@@ -1,0 +1,202 @@
+�당esp32: SPI Speed �ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Nov  2 2024 18:17:21[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (95) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d3d4h (119764) map[0m
+[0;32mI (145) esp_image: segment 1: paddr=0002d3fc vaddr=3ffb0000 size=02c1ch ( 11292) load[0m
+[0;32mI (149) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=714fch (464124) map[0m
+[0;32mI (310) esp_image: segment 3: paddr=000a1524 vaddr=3ffb2c1c size=0164ch (  5708) load[0m
+[0;32mI (312) esp_image: segment 4: paddr=000a2b78 vaddr=40080000 size=18bb0h (101296) load[0m
+[0;32mI (367) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (380) cpu_start: Multicore app[0m
+[0;32mI (388) cpu_start: Pro cpu start user code[0m
+[0;32mI (388) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     wifi_rtos[0m
+[0;32mI (396) app_init: App version:      1[0m
+[0;32mI (400) app_init: Compile time:     Nov  2 2024 18:13:49[0m
+[0;32mI (406) app_init: ELF file SHA256:  a6ebc16f27e49ef0...[0m
+[0;32mI (412) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (417) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (422) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (427) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (432) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (439) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (445) heap_init: At 3FFB8358 len 00027CA8 (159 KiB): DRAM[0m
+[0;32mI (451) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (458) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (464) heap_init: At 40098BB0 len 00007450 (29 KiB): IRAM[0m
+[0;32mI (472) spi_flash: detected chip: gd[0m
+[0;32mI (475) spi_flash: flash io: dio[0m
+[0;33mW (479) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (492) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (503) main_task: Started on CPU0[0m
+[0;32mI (513) main_task: Calling app_main()[0m
+I (693) wifi:wifi driver task: 3ffbe1f4, prio:23, stack:6656, core=0
+I (693) wifi:wifi firmware version: ccaebfa
+I (693) wifi:wifi certification version: v7.0
+I (693) wifi:config NVS flash: enabled
+I (693) wifi:config nano formating: disabled
+I (703) wifi:Init data frame dynamic rx buffer num: 32
+I (703) wifi:Init static rx mgmt buffer num: 5
+I (713) wifi:Init management short buffer num: 32
+I (713) wifi:Init dynamic tx buffer num: 32
+I (713) wifi:Init static rx buffer size: 1600
+I (723) wifi:Init static rx buffer num: 10
+I (723) wifi:Init dynamic rx buffer num: 32
+[0;32mI (733) wifi_init: rx ba win: 6[0m
+[0;32mI (733) wifi_init: accept mbox: 6[0m
+[0;32mI (733) wifi_init: tcpip mbox: 32[0m
+[0;32mI (743) wifi_init: udp mbox: 6[0m
+[0;32mI (743) wifi_init: tcp mbox: 6[0m
+[0;32mI (743) wifi_init: tcp tx win: 5744[0m
+[0;32mI (753) wifi_init: tcp rx win: 5744[0m
+[0;32mI (753) wifi_init: tcp mss: 1440[0m
+[0;32mI (763) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (763) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (773) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (773) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (853) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+E (863) wifi:failed to post WiFi event=43 ret=259
+I (863) wifi:mode : sta (b4:e6:2d:b1:e1:f9)
+I (873) wifi:enable tsf
+E (873) wifi:failed to post WiFi event=2 ret=259
+E (3283) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -71 dBm
+SSID: Dream Spoon  RSSI: -90 dBm
+SSID: Hariom.l2-4g  RSSI: -91 dBm
+SSID: Hariom R2  RSSI: -91 dBm
+SSID: ACTFIBERNET  RSSI: -92 dBm
+SSID: Hariom GF 4G  RSSI: -98 dBm
+[0;32mI (3503) main_task: Returned from app_main()[0m
+E (5913) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -69 dBm
+SSID: Dream Spoon  RSSI: -90 dBm
+SSID: ACTFIBERNET  RSSI: -92 dBm
+SSID: Hariom.l2-4g  RSSI: -93 dBm
+SSID: Hariom R2  RSSI: -93 dBm
+SSID: Hariom GF 4G  RSSI: -95 dBm
+
+Press 1->Samsung	2->ViVo	3->Fibernet	0->exit
+		Select Store :: [0;32mI (7523) BTN: Waiting For Press.[0m
+[0;32mI (15503) BTN: BTN Pressed Down.[0m
+[0;32mI (15723) BTN: Short Press[0m
+2
+[0;32mI (15723) BTN: BTN Released.[0m
+[0;32mI (17573) BTN: BTN Pressed Down.[0m
+[0;32mI (18563) BTN: Long Press[0m
+
+selected ViVo store
+Seleeeeeeeee = 2
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy 0 0 0 
+-1000 -1000 -1000 
+temp = 0	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+
+present_ap = -1 , next_location_ap = 1
+
+next_location_ap = 1
+Magnetic data: X:-112.61 mG, Y:-357.67 mG, Z:19.23 mG
+Heading = 184.794276
+E (22693) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -72 dBm
+SSID: Hariom.l2-4g  RSSI: -89 dBm
+SSID: Hariom R2  RSSI: -90 dBm
+SSID: ACTFIBERNET  RSSI: -95 dBm
+SSID: Dream Spoon  RSSI: -96 dBm
+SSID: Hariom GF 4G  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 184.794276	-1.000000
+left
+Magnetic data: X:-117.31 mG, Y:-350.95 mG, Z:14.95 mG
+Heading = 183.788337
+E (25223) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -81 dBm
+SSID: Hariom.l2-4g  RSSI: -90 dBm
+SSID: Hariom R2  RSSI: -92 dBm
+SSID: Dream Spoon  RSSI: -94 dBm
+SSID: ACTFIBERNET  RSSI: -94 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 183.788337	-1.000000
+left
+Magnetic data: X:-116.27 mG, Y:-354.43 mG, Z:13.12 mG
+Heading = 184.108775
+E (27743) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -77 dBm
+SSID: Hariom R2  RSSI: -91 dBm
+SSID: Hariom.l2-4g  RSSI: -92 dBm
+SSID: Dream Spoon  RSSI: -95 dBm
+SSID: ACTFIBERNET  RSSI: -96 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 184.108775	-1.000000
+left
+Magnetic data: X:-115.36 mG, Y:-356.75 mG, Z:16.91 mG
+Heading = 184.352091
+E (30273) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -76 dBm
+SSID: Hariom.l2-4g  RSSI: -89 dBm
+SSID: Hariom R2  RSSI: -93 dBm
+SSID: Dream Spoon  RSSI: -94 dBm
+SSID: ACTFIBERNET  RSSI: -95 dBm
+SSID: Hariom GF 4G  RSSI: -98 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 184.352091	-1.000000
+left
+Magnetic data: X:-118.41 mG, Y:-353.82 mG, Z:15.99 mG
+Heading = 183.767991
+E (32813) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -75 dBm
+SSID: Hariom.l2-4g  RSSI: -91 dBm
+SSID: Hariom GF 4G  RSSI: -92 dBm
+SSID: Hariom R2  RSSI: -92 dBm
+SSID: Dream Spoon  RSSI: -93 dBm
+SSID: ACTFIBERNET  RSSI: -95 dBm
+-1000 -1000 -1000 
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+Moving
+Heading = 183.767991	-1.000000
+left
+Magnetic data: X:-117.92 mG, Y:-353.52 mG, Z:15.56 mG
+Heading = 183.824269

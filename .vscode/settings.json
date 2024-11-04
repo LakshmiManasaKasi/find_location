@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "string.h": "c",
+        "task.h": "c",
+        "freertos.h": "c",
+        "qmc5883l.h": "c",
+        "i2c.h": "c",
+        "i2cdev.h": "c",
+        "timer_group_struct.h": "c",
+        "esp_wifi.h": "c",
+        "gpio.h": "c"
+    },
+    "idf.adapterTargetName": "esp32"
+}

@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+D:/chandan/projects/manasa/build/CMakeFiles/bootloader
+D:/chandan/projects/manasa/build/CMakeFiles/bootloader.rule
+D:/chandan/projects/manasa/build/CMakeFiles/bootloader-complete.rule
+D:/chandan/projects/manasa/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+D:/chandan/projects/manasa/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+D:/chandan/projects/manasa/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+D:/chandan/projects/manasa/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+D:/chandan/projects/manasa/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+D:/chandan/projects/manasa/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+D:/chandan/projects/manasa/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

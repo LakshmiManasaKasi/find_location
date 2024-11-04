@@ -1,0 +1,1421 @@
+e	i�J��ѹesp32: �ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x16 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  2 2024 18:17:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22004h (139268) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0003202c vaddr=3ffb0000 size=04278h ( 17016) load[0m
+[0;32mI (158) esp_image: segment 2: paddr=000362ac vaddr=40080000 size=09d6ch ( 40300) load[0m
+[0;32mI (174) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=87d9ch (556444) map[0m
+[0;32mI (365) esp_image: segment 4: paddr=000c7dc4 vaddr=40089d6c size=0efc8h ( 61384) load[0m
+[0;32mI (402) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (402) boot: Disabling RNG early entropy source...[0m
+[0;32mI (414) cpu_start: Multicore app[0m
+[0;32mI (422) cpu_start: Pro cpu start user code[0m
+[0;32mI (423) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (423) app_init: Application information:[0m
+[0;32mI (425) app_init: Project name:     wifi_rtos[0m
+[0;32mI (431) app_init: App version:      1[0m
+[0;32mI (435) app_init: Compile time:     Nov  2 2024 18:13:49[0m
+[0;32mI (441) app_init: ELF file SHA256:  bdff4bad8e6d3fb6...[0m
+[0;32mI (447) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (452) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (457) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (462) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (474) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFB8D60 len 000272A0 (156 KiB): DRAM[0m
+[0;32mI (486) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (492) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (499) heap_init: At 40098D34 len 000072CC (28 KiB): IRAM[0m
+[0;32mI (507) spi_flash: detected chip: gd[0m
+[0;32mI (509) spi_flash: flash io: dio[0m
+[0;33mW (513) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (526) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (538) main_task: Started on CPU0[0m
+[0;32mI (548) main_task: Calling app_main()[0m
+I (568) wifi:wifi driver task: 3ffc1160, prio:23, stack:6656, core=0
+I (568) wifi:wifi firmware version: ccaebfa
+I (568) wifi:wifi certification version: v7.0
+I (568) wifi:config NVS flash: enabled
+I (568) wifi:config nano formating: disabled
+I (578) wifi:Init data frame dynamic rx buffer num: 32
+I (578) wifi:Init static rx mgmt buffer num: 5
+I (588) wifi:Init management short buffer num: 32
+I (588) wifi:Init dynamic tx buffer num: 32
+I (588) wifi:Init static rx buffer size: 1600
+I (598) wifi:Init static rx buffer num: 10
+I (598) wifi:Init dynamic rx buffer num: 32
+[0;32mI (608) wifi_init: rx ba win: 6[0m
+[0;32mI (608) wifi_init: accept mbox: 6[0m
+[0;32mI (608) wifi_init: tcpip mbox: 32[0m
+[0;32mI (618) wifi_init: udp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp tx win: 5744[0m
+[0;32mI (628) wifi_init: tcp rx win: 5744[0m
+[0;32mI (628) wifi_init: tcp mss: 1440[0m
+[0;32mI (638) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (638) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;31mE (648) i2cdev: Could not read from device [0x0d at 0]: -1 (ESP_FAIL)[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x400d7534
+file: "./main/main.c" line 357
+func: compass_init
+expression: qmc5883l_set_mode(&dev, QMC5883L_MODE_CONTINUOUS)
+
+abort() was called at PC 0x4008aceb on core 0
+
+
+Backtrace: 0x40081bae:0x3ffbaf30 0x4008acf5:0x3ffbaf50 0x40092b11:0x3ffbaf70 0x4008aceb:0x3ffbafe0 0x400d7534:0x3ffbb010 0x400d7b0c:0x3ffbb030 0x40155d1b:0x3ffbb060 0x4008b841:0x3ffbb090
+
+
+
+
+ELF file SHA256: bdff4bad8e6d3fb6
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x16 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  2 2024 18:17:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v1.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=22004h (139268) map[0m
+[0;32mI (152) esp_image: segment 1: paddr=0003202c vaddr=3ffb0000 size=04278h ( 17016) load[0m
+[0;32mI (159) esp_image: segment 2: paddr=000362ac vaddr=40080000 size=09d6ch ( 40300) load[0m
+[0;32mI (175) esp_image: segment 3: paddr=00040020 vaddr=400d0020 size=87d9ch (556444) map[0m
+[0;32mI (366) esp_image: segment 4: paddr=000c7dc4 vaddr=40089d6c size=0efc8h ( 61384) load[0m
+[0;32mI (403) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (403) boot: Disabling RNG early entropy source...[0m
+[0;32mI (415) cpu_start: Multicore app[0m
+[0;32mI (423) cpu_start: Pro cpu start user code[0m
+[0;32mI (423) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (423) app_init: Application information:[0m
+[0;32mI (426) app_init: Project name:     wifi_rtos[0m
+[0;32mI (431) app_init: App version:      1[0m
+[0;32mI (435) app_init: Compile time:     Nov  2 2024 18:13:49[0m
+[0;32mI (441) app_init: ELF file SHA256:  bdff4bad8e6d3fb6...[0m
+[0;32mI (447) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (453) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (457) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (462) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (467) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (474) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (480) heap_init: At 3FFB8D60 len 000272A0 (156 KiB): DRAM[0m
+[0;32mI (487) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (493) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (499) heap_init: At 40098D34 len 000072CC (28 KiB): IRAM[0m
+[0;32mI (507) spi_flash: detected chip: gd[0m
+[0;32mI (510) spi_flash: flash io: dio[0m
+[0;33mW (514) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (527) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (538) main_task: Started on CPU0[0m
+[0;32mI (548) main_task: Calling app_main()[0m
+I (568) wifi:wifi driver task: 3ffc1160, prio:23, stack:6656, core=0
+I (568) wifi:wifi firmware version: ccaebfa
+I (568) wifi:wifi certification version: v7.0
+I (568) wifi:config NVS flash: enabled
+I (568) wifi:config nano formating: disabled
+I (578) wifi:Init data frame dynamic rx buffer num: 32
+I (578) wifi:Init static rx mgmt buffer num: 5
+I (588) wifi:Init management short buffer num: 32
+I (588) wifi:Init dynamic tx buffer num: 32
+I (588) wifi:Init static rx buffer size: 1600
+I (598) wifi:Init static rx buffer num: 10
+I (598) wifi:Init dynamic rx buffer num: 32
+[0;32mI (608) wifi_init: rx ba win: 6[0m
+[0;32mI (608) wifi_init: accept mbox: 6[0m
+[0;32mI (608) wifi_init: tcpip mbox: 32[0m
+[0;32mI (618) wifi_init: udp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp mbox: 6[0m
+[0;32mI (618) wifi_init: tcp tx win: 5744[0m
+[0;32mI (628) wifi_init: tcp rx win: 5744[0m
+[0;32mI (628) wifi_init: tcp mss: 1440[0m
+[0;32mI (638) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (638) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;31mE (768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (1998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (2998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (3998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (4998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5768) Wifi: Failed to allocate memory for AP record[0;31mE (5778) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (5778) task_wdt:  - IDLE0 (CPU 0)[0m
+[0;31mE (5778) task_wdt: Tasks currently running:[0m
+[0;31mE (5778) task_wdt: CPU 0: task1[0m
+[0;31mE (5778) task_wdt: CPU 1: IDLE1[0m
+[0;31mE (5778) task_wdt: Print CPU 0 (current core) backtrace[0m
+
+
+Backtrace: 0x400DAC73:0x3FFB2240 0x400DB038:0x3FFB2260 0x400834E1:0x3FFB2290 0x400D5325:0x3FFC7AF0 0x400D5AD7:0x3FFC7B20 0x400D69AD:0x3FFC7B40 0x4000BD83:0x3FFC7B60 0x4000182A:0x3FFC7B80 0x400D6411:0x3FFC7BA0 0x400D69AD:0x3FFC7BC0 0x4000BD83:0x3FFC7BE0 0x4000117D:0x3FFC7C00 0x400592FE:0x3FFC7C20 0x4005937A:0x3FFC7C40 0x4014194D:0x3FFC7C60 0x40148E8F:0x3FFC7C90 0x4014886D:0x3FFC7CB0 0x40141CE9:0x3FFC7FD0 0x40156731:0x3FFC8000 0x40091471:0x3FFC8030 0x400D7CAD:0x3FFC8080 0x400D7220:0x3FFC80B0 0x4008B841:0x3FFC80D0
+
+s[0m
+[0;31mE (5848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (5998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (6998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7128) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7138) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7148) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7158) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7168) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7178) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7188) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7198) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7208) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7218) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7228) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7238) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7248) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7258) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7268) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7278) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7288) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7298) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7308) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7318) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7328) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7338) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7348) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7358) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7368) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7378) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7388) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7398) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7408) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7418) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7428) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7438) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7448) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7458) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7468) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7478) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7488) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7498) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7508) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7518) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7528) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7538) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7548) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7558) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7568) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7578) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7588) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7598) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7608) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7618) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7628) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7638) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7648) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7658) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7668) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7678) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7688) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7698) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7708) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7718) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7728) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7738) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7748) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7758) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7768) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7778) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7788) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7798) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7808) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7818) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7828) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7838) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7848) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7858) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7868) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7878) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7888) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7898) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7908) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7918) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7928) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7938) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7948) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7958) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7968) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7978) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7988) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (7998) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8008) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8018) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8028) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8038) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8048) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8058) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8068) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8078) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8088) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8098) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8108) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8118) Wifi: Failed to allocate memory for AP records[0m
+[0;31mE (8128) Wifi: Failed to allocate memory for AP records[0m
