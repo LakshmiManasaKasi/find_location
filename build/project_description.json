@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "wifi_rtos",
-    "project_version":    "1",
+    "project_version":    "a618190-dirty",
     "project_path":       "D:/chandan/projects/manasa",
     "idf_path":           "D:/chandan/Espressif/frameworks/esp-idf-v5.3.1",
     "build_dir":          "D:/chandan/projects/manasa/build",
@@ -1210,7 +1210,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "D:/chandan/projects/manasa/build/esp-idf/main/libmain.a",
-            "sources": [ "D:/chandan/projects/manasa/main/main.c", "D:/chandan/projects/manasa/main/wifi_scan.c", "D:/chandan/projects/manasa/main/magnetometer.c" ],
+            "sources": [ "D:/chandan/projects/manasa/main/main.c", "D:/chandan/projects/manasa/main/wifi_scan.c", "D:/chandan/projects/manasa/main/magnetometer.c", "D:/chandan/projects/manasa/main/lcd.c", "D:/chandan/projects/manasa/main/button.c", "D:/chandan/projects/manasa/main/Algorithm.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

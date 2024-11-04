@@ -8,7 +8,11 @@
         "i2cdev.h": "c",
         "timer_group_struct.h": "c",
         "esp_wifi.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "event_groups.h": "c",
+        "lcd.h": "c",
+        "magnetometer.h": "c",
+        "ssd1306.h": "c"
     },
     "idf.adapterTargetName": "esp32"
 }
