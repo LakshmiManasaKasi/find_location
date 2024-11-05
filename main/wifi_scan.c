@@ -6,7 +6,7 @@
 #include "nvs_flash.h"
 #include "esp_event.h"
 #include "wifi_scan.h"
-
+#include "esp_mac.h"
 
 static const char *TAG = "Wifi";
 uint16_t number = DEFAULT_SCAN_LIST_SIZE;
@@ -52,8 +52,10 @@ void wifi_scan()
     esp_wifi_scan_get_ap_records(&ap_count,ap_records);
     for(int i=0; i<ap_count;i++)
     {
-        printf("SSID: %s  RSSI: %d dBm\n", ap_records[i].ssid, ap_records[i].rssi);
+        printf("SSID: %s  RSSI: %d dBm\t", ap_records[i].ssid, ap_records[i].rssi);
+        printf("MAC: " MACSTR "\n", MAC2STR(ap_records[i].bssid));
     }
+    
     //-----------------------------------
 
     free(ap_records);

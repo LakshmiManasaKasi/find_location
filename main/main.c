@@ -38,10 +38,17 @@ SemaphoreHandle_t xSemaphore = NULL;
 // const char chandanjio[]= "c4954d36f500";
 // const char appa[]= "c49dvddhdds00";
 
-//How ?
+//How :mac_address of wifi (can be read by using wifi analyzer app in android)
 const char samsung[]="a8ba69a6761d";
 const char vivo[]="2248a93111a9";
 const char fiberNet[]="d8473239cc35";
+//example :
+// const char* another_mac = "30:AE:A4:07:0D:64";
+// if (strcmp(mac_str, another_mac) == 0) {
+//     printf("MAC addresses are equal.\n");
+// } else {
+//     printf("MAC addresses are not equal.\n");
+// }
 
 // #define Total_WIFI_Config 3 //total AP's MAC address
 #define ThreshHold -5 //threshold value
@@ -410,4 +417,5 @@ void app_main(void)
     	
 	xTaskCreatePinnedToCore(task1, "task1", 1024*4, NULL, 6, NULL, 0); // task1
 	xTaskCreatePinnedToCore(task2, "task2", 1024*4, NULL, 6, NULL, 1); // task2
+	
 }
