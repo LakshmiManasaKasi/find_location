@@ -1,14 +1,20 @@
 #include "lcd.h"
 #include <stdint.h>
+#include "button.h"
 
-const char *menuItems[] =
-{
-    "vivo",
-    "samsung",
-	"fibernet"
-};
+extern uint8_t TotalShops;
+// extern struct ShopWifiCombo floorMap[];
 
+const char *menuItems[]; 
 SAppMenu menu;
+
+void MenuInit()
+{
+    for(int i=0;i<TotalShops;i++)
+    {
+        menuItems[i]=floorMap[i].ShopName;
+    }
+}
 
 void LCD_Init() 
 {
@@ -22,7 +28,7 @@ void LCD_Print()
 {
     /* Initialize main menu state */
 	ssd1306_clearScreen();
-    ssd1306_createMenu( &menu, menuItems, sizeof(menuItems) / sizeof(char *) );
+    ssd1306_createMenu( &menu, menuItems, TotalShops );
 
     // OLED introduction to project
 	ssd1306_printFixedN (14, 1, "LOCATION", STYLE_NORMAL, FONT_SIZE_2X);

@@ -1,6 +1,7 @@
 #include "button.h"
 #include "ssd1306.h"
 #include "driver/gpio.h"
+#include "lcd.h"
 
 extern SAppMenu menu;
 
@@ -9,16 +10,31 @@ static int Button_press();
 int selected =0;
 static const char *TAGG = "BTN";
 
+
+
+struct ShopWifiCombo floorMap[] = 
+{
+    {"Puma", "Puma123"},
+    {"Foreever21", "Foreever123"},
+    {"Nike", "Nike123"}
+};
+
+uint8_t TotalShops = ARRAY_SIZE(floorMap);
+
 //selection from menu
 void shop_selection()
 {
-		printf("\nPress 1->Puma\t2->Forever21\t3->Nike\t0->exit\n\t\tSelect Store :: ");
+		for(int i=0; i<TotalShops; i++)
+		{
+			printf("\nPress %d->%s\n",i+1,(floorMap[i].ShopName));
+		}
 		vTaskDelay(100 / portTICK_RATE_MS);
     	ssd1306_clearScreen();
 		ssd1306_printFixed (0, 30, "Selected shop :", STYLE_BOLD);
 		vTaskDelay(1100 / portTICK_RATE_MS);
     	ssd1306_clearScreen();
 		/* show menu on the display */
+		MenuInit();
     	ssd1306_showMenu( &menu );
     	button_press = Button_press();
 		printf("\n");

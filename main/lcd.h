@@ -7,5 +7,6 @@
 
 void LCD_Init();
 void LCD_Print();
+void MenuInit();
 
 #endif
