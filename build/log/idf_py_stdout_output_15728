@@ -1,0 +1,27 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\chandan\projects\manasa\build\bootloader\esp-idf\esptool_py && D:\chandan\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/chandan/projects/manasa/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[2/7] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/chandan/projects/manasa/main/main.c: In function 'Map_Mac_Rssi':
+D:/chandan/projects/manasa/main/main.c:179:29: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  179 |                         mac = mac_str(Mac_database[j]);
+      |                             ^
+In file included from D:/chandan/projects/manasa/main/main.c:18:
+D:/chandan/projects/manasa/main/magnetometer.h: At top level:
+D:/chandan/projects/manasa/main/magnetometer.h:15:13: warning: 'wait_for_data' declared 'static' but never defined [-Wunused-function]
+   15 | static void wait_for_data();
+      |             ^~~~~~~~~~~~~
+D:/chandan/projects/manasa/main/main.c:28:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   28 | static const char *TAG = "scan";
+      |                    ^~~
+[3/7] Linking C static library esp-idf\main\libmain.a
+[4/7] Generating ld/sections.ld
+[5/7] Linking CXX executable wifi_rtos.elf
+[6/7] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/chandan/projects/manasa/build/wifi_rtos.bin
+[7/7] cmd.exe /C "cd /D D:\chandan\projects\manasa\build\esp-idf\esptool_py && D:\chandan\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/chandan/projects/manasa/build/partition_table/partition-table.bin D:/chandan/projects/manasa/build/wifi_rtos.bin"
+wifi_rtos.bin binary size 0xab880 bytes. Smallest app partition is 0x100000 bytes. 0x54780 bytes (33%) free.

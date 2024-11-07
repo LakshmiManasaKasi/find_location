@@ -19,6 +19,7 @@
 #include "lcd.h"
 #include "button.h"
 #include "Algorithm.h"
+#include "esp_mac.h"
 // for magneto meter 
 
 extern qmc5883l_t dev;
@@ -28,21 +29,15 @@ static const char *TAG = "scan";
 extern int selected; // to hold selected AP's Index
 SemaphoreHandle_t xSemaphore = NULL;
 
-//mac adddress of kspot related AP's
-// const char kspot_back[]="488f5ad9e1bb";
-// const char kspot_front[]="488f5ad9e152";
-// const char gamma_reception[]="a00460b31f5c";
-// const char panda[]="0aba071fde39";
-// const char amma[]= "a896757d5256";
-// const char sana[]= "ce52a380f612";
-// const char chandanjio[]= "c4954d36f500";
-// const char appa[]= "c49dvddhdds00";
 
-//How :mac_address of wifi (can be read by using wifi analyzer app in android)
-const char samsung[]="a8ba69a6761d";
-const char vivo[]="2248a93111a9";
-const char fiberNet[]="d8473239cc35";
-//example :
+//mac_address of wifi (can be read by using wifi analyzer app in android)
+// database of mac address of available wifi 
+const char Manasa[]="76d656579492";
+const char Hariom[]="c0a5dd1eda91";
+const char MicronEMS_Guest[]="5091e3c61c58";
+
+//example : can be replaced by MAC2STR funxtionality
+// printf("MAC: " MACSTR "\n", MAC2STR(ap_records[i].bssid));
 // const char* another_mac = "30:AE:A4:07:0D:64";
 // if (strcmp(mac_str, another_mac) == 0) {
 //     printf("MAC addresses are equal.\n");
@@ -58,7 +53,7 @@ typedef struct
 {
 	char AccessPoint[60];
 }allAP;
-allAP config_wifi[Total_WIFI_Config]={{"samsung"},{"vivo"},{"fiberNet"}};//wifi names wrt mac address above
+allAP config_wifi[Total_WIFI_Config]={{"Manasa"},{"Hariom"},{"MicronEMS_Guest"}};//wifi names wrt mac address above
 
 static int rssi_values[Total_WIFI_Config]={0,0,0}; // rssi_values to find nearest ap
 extern char converted_mac_str[30];// converted string of mac address of all mac id
@@ -89,9 +84,9 @@ typedef struct
 }flourmap;
 
 //configured Data Of Map's(Shop Location's)
-flourmap shop_data[Total_WIFI_Config] = {{"samsung",{{"vivo","NILL",-1},{"fibernet","NILL",-1}}},
-                            {"vivo",{{"fibernet","NILL",-1},{"samsung","NILL",-1}}},
-                            {"fibernet",{{"samsung","NILL",-1},{"vivo","NILL",-1}}}};
+flourmap shop_data[Total_WIFI_Config] = {{"Manasa",{{"Hariom","NILL",-1},{"MicronEMS_Guest","NILL",-1}}},
+                            {"Hariom",{{"MicronEMS_Guest","NILL",-1},{"Manasa","NILL",-1}}},
+                            {"MicronEMS_Guest",{{"Manasa","NILL",-1},{"Hariom","NILL",-1}}}};
 
 //function to find the nearest ap's index for the device
 void near() {
@@ -114,13 +109,13 @@ void near() {
       			large = i;
     		}
   	}
-  	printf("\ntemp = %d\tinde = %d\tdata =%d\tlarge = %d\n",temp,inde,data_2[large], large);
+  	// printf("\ntemp = %d\tinde = %d\tdata =%d\tlarge = %d\n",temp,inde,data_2[large], large);
   	if(update) {
 		temp = data_2[large];;
 		inde= large;
 		update = false;    		
 	}
-	printf("temp = %d\tinde = %d\tdata =%d\tlarge = %d\n",temp,inde,data_2[large], large);
+	// printf("temp = %d\tinde = %d\tdata =%d\tlarge = %d\n",temp,inde,data_2[large], large);
 
 	//for ignoring the ap when the difference is less to find nearest location
 	//commenting 92 lin2(bool count)
@@ -144,33 +139,66 @@ void FindLocation(wifi_ap_record_t wifi_apRecord[], int wifi_count)
 	for(int k=0;(k < DEFAULT_SCAN_LIST_SIZE) && (k < wifi_count);k++) 
 	{
 		char *mac = (char *)wifi_apRecord[k].bssid;
-		printf("Mac : %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n" , mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+		// printf("Mac : %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n" , mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
 		mac_str(wifi_apRecord[k].bssid);
 		printf("%s\n",converted_mac_str);
-		
-			if(!strcmp(converted_mac_str,samsung)) {
-				rssi_values[0] =  wifi_apRecord[k].rssi;
-			}
-			else if(!strcmp(converted_mac_str,vivo)) {
+
+		if(!strcmp(converted_mac_str,Manasa)) {
+         rssi_values[0] =  wifi_apRecord[k].rssi;
+		}
+		else if(!strcmp(converted_mac_str,Hariom)) {
 				rssi_values[1] = wifi_apRecord[k].rssi;
-			}
-			else if(!strcmp(converted_mac_str,fiberNet)) {
+		}
+		else if(!strcmp(converted_mac_str,MicronEMS_Guest)) {
 				rssi_values[2] =wifi_apRecord[k].rssi;
-			}
-			/*else if(!strcmp(converted_mac_str,panda)) {
+		}
+		/*else if(!strcmp(converted_mac_str,panda)) {
 				rssi_values[3] =wifi_apRecord[k].rssi;
-			}
-			else if(!strcmp(converted_mac_str,amma)) {
+		}
+		else if(!strcmp(converted_mac_str,amma)) {
 				rssi_values[4] = ap_info[k].rssi;
-			}
-			else if(!strcmp(converted_mac_str,sana)) {
+		}
+		else if(!strcmp(converted_mac_str,sana)) {
 				rssi_values[5] = ap_info[k].rssi;
-			}
-			else if(!strcmp(converted_mac_str,chandanjio)) {
+		}
+		else if(!strcmp(converted_mac_str,chandanjio)) {
 				rssi_values[6] = ap_info[k].rssi;
-			}*/
+		}*/	
+			
 	}
 	return;
+}
+
+void Map_Mac_Rssi(wifi_ap_record_t wifi_apRecord[], int wifi_count)
+{	
+	for(int i=0;(i < wifi_count);i++) 
+	{
+		char *mac ;//= (char *)Mac_database[i];
+		printf("MAC: " MACSTR "\n", MAC2STR(wifi_apRecord[i].bssid));
+		for(int j=0;j<DEFAULT_SCAN_LIST_SIZE;j++)
+		{
+			mac = mac_str(Mac_database[j]);
+			if(!strcmp(MACSTR,mac))
+			{
+				rssi_values[i] =  wifi_apRecord[i].rssi;
+				printf("----debug:---macMatchFound %s",mac);
+			}
+		}
+	}
+
+		// char *mac = (char *)wifi_apRecord[k].bssid;
+		// printf("Mac : %.2x:%.2x:%.2x:%.2x:%.2x:%.2x\n" , mac[0], mac[1], mac[2], mac[3], mac[4], mac[5]);
+		// mac_str(wifi_apRecord[k].bssid);
+		// printf("%s\n",converted_mac_str);
+		
+		// if(!strcmp(converted_mac_str,)) 
+		// {
+		// 	rssi_values[k] =  wifi_apRecord[k].rssi;
+		// }
+			
+	
+	return;
+
 }
 
 void search_next_location(int present_ap,int next_location_ap){
@@ -273,8 +301,9 @@ void find_selected_location() {
         	rssi_values[i]=0;
     	}
 		wifi_scan();
-		FindLocation(ap_info, ap_count);
-        near();
+		FindLocation(ap_info, ap_count); //find mac and load rssi values
+		// Map_Mac_Rssi(ap_info,ap_count);
+        near(); //identify the least rssi value 
 		vTaskDelay(1/ portTICK_RATE_MS);
         if(large == next_location_ap){
 			ssd1306_clearScreen();
@@ -319,10 +348,11 @@ void task2 (void *arg)
 		{
 			vTaskDelay(200/ portTICK_RATE_MS);
 			shop_selection();
-			printf("Seleeeeeeeee = %d\n",selected);		
+			printf("Index of selected Shop = %d\n",selected);		
 			FindLocation(ap_info, ap_count); // to find the nearest ap
+			//find mac and load rssi values
 			printf("yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy %d %d %d \n",rssi_values[0] ,rssi_values[1] ,rssi_values[2]);
-			near(); // To find the index of highest RSSI value or nearest ap
+			near(); // To find the index of highest RSSI value or nearest ap : //identify the least rssi value
 			find_selected_location();
 			printf("Direction = %s\tDegrees = %f\n",direction_next,direction_deg);
 		/*	if (large == 0) {

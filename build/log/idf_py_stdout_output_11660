@@ -1,0 +1,81 @@
+[1/63] Building C object esp-idf/i2cdev/CMakeFiles/__idf_i2cdev.dir/i2cdev.c.obj
+[2/63] Building C object esp-idf/qmc5883l/CMakeFiles/__idf_qmc5883l.dir/qmc5883l.c.obj
+[3/63] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/i2c/ssd1306_i2c.c.obj
+[4/63] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/i2c/ssd1306_i2c_embedded.c.obj
+[5/63] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/i2c/ssd1306_i2c_twi.c.obj
+[6/63] Performing build step for 'bootloader'
+[1/1] cmd.exe /C "cd /D D:\chandan\projects\manasa\build\bootloader\esp-idf\esptool_py && D:\chandan\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 D:/chandan/projects/manasa/build/bootloader/bootloader.bin"
+Bootloader binary size 0x6880 bytes. 0x780 bytes (7%) free.
+[7/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/spi/ssd1306_spi.c.obj
+[8/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/spi/ssd1306_spi_avr.c.obj
+[9/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/spi/ssd1306_spi_usi.c.obj
+[10/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/ssd1306_interface.c.obj
+[11/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/uart/ssd1306_uart_builtin.c.obj
+[12/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/vga/atmega328p/vga128x64.c.obj
+[13/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/vga/atmega328p/vga96x40.c.obj
+[14/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/vga/esp32/CompositeOutput.cpp.obj
+[15/61] Linking C static library esp-idf\i2cdev\libi2cdev.a
+[16/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/vga/esp32/vga128x64.cpp.obj
+[17/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/intf/vga/vga.c.obj
+[18/61] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/main.c.obj
+D:/chandan/projects/manasa/main/main.c: In function 'Map_Mac_Rssi':
+D:/chandan/projects/manasa/main/main.c:179:29: warning: assignment discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  179 |                         mac = mac_str(Mac_database[j]);
+      |                             ^
+In file included from D:/chandan/projects/manasa/main/main.c:18:
+D:/chandan/projects/manasa/main/magnetometer.h: At top level:
+D:/chandan/projects/manasa/main/magnetometer.h:15:13: warning: 'wait_for_data' declared 'static' but never defined [-Wunused-function]
+   15 | static void wait_for_data();
+      |             ^~~~~~~~~~~~~
+D:/chandan/projects/manasa/main/main.c:28:20: warning: 'TAG' defined but not used [-Wunused-variable]
+   28 | static const char *TAG = "scan";
+      |                    ^~~
+[19/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/composite_video.c.obj
+[20/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/lcd_common.c.obj
+[21/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/lcd_il9163.c.obj
+[22/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/lcd_ili9341.c.obj
+[23/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/lcd_pcd8544.c.obj
+[24/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/oled_sh1106.c.obj
+[25/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/oled_ssd1306.c.obj
+[26/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/oled_ssd1325.c.obj
+[27/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/oled_ssd1327.c.obj
+[28/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/oled_ssd1331.c.obj
+[29/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/oled_ssd1351.c.obj
+[30/61] Linking C static library esp-idf\qmc5883l\libqmc5883l.a
+[31/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/oled_template.c.obj
+[32/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/lcd/vga_monitor.c.obj
+[33/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/nano_engine/canvas.cpp.obj
+[34/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/nano_engine/core.cpp.obj
+[35/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/nano_gfx.cpp.obj
+[36/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/sprite_pool.cpp.obj
+[37/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_16bit.c.obj
+[38/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_1bit.c.obj
+[39/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_8bit.c.obj
+[40/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_console.cpp.obj
+[41/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_fonts.c.obj
+[42/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_generic.c.obj
+[43/61] Building CXX object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_hal/arduino/platform.cpp.obj
+[44/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_hal/avr/platform.c.obj
+[45/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_hal/esp/platform.c.obj
+[46/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_hal/stm32/platform.c.obj
+[47/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_hal/template/platform.c.obj
+[48/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_menu.c.obj
+[49/61] Building C object esp-idf/ssd1306/CMakeFiles/__idf_ssd1306.dir/src/ssd1306_uart.c.obj
+[50/61] Building C object esp-idf/tarablessd1306/CMakeFiles/__idf_tarablessd1306.dir/ssd1306.c.obj
+[51/61] Building C object esp-idf/tarablessd1306/CMakeFiles/__idf_tarablessd1306.dir/ssd1306_font.c.obj
+[52/61] Building C object esp-idf/tarablessd1306/CMakeFiles/__idf_tarablessd1306.dir/ssd1306_draw.c.obj
+[53/61] Building C object esp-idf/tarablessd1306/CMakeFiles/__idf_tarablessd1306.dir/ifaces/default_if_i2c.c.obj
+[54/61] Building C object esp-idf/tarablessd1306/CMakeFiles/__idf_tarablessd1306.dir/ifaces/default_if_spi.c.obj
+[55/61] Linking C static library esp-idf\tarablessd1306\libtarablessd1306.a
+[56/61] Linking C static library esp-idf\ssd1306\libssd1306.a
+[57/61] Linking C static library esp-idf\main\libmain.a
+[58/61] Generating ld/sections.ld
+[59/61] Linking CXX executable wifi_rtos.elf
+[60/61] Generating binary image from built executable
+esptool.py v4.8.dev5
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated D:/chandan/projects/manasa/build/wifi_rtos.bin
+[61/61] cmd.exe /C "cd /D D:\chandan\projects\manasa\build\esp-idf\esptool_py && D:\chandan\Espressif\python_env\idf5.3_py3.11_env\Scripts\python.exe D:/chandan/Espressif/frameworks/esp-idf-v5.3.1/components/partition_table/check_sizes.py --offset 0x8000 partition --type app D:/chandan/projects/manasa/build/partition_table/partition-table.bin D:/chandan/projects/manasa/build/wifi_rtos.bin"
+wifi_rtos.bin binary size 0xab9d0 bytes. Smallest app partition is 0x100000 bytes. 0x54630 bytes (33%) free.

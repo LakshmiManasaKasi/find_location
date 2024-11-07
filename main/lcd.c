@@ -1,3 +1,4 @@
+
 #include "lcd.h"
 #include <stdint.h>
 #include "button.h"
@@ -8,12 +9,19 @@ extern uint8_t TotalShops;
 const char *menuItems[]; 
 SAppMenu menu;
 
+// to print on lcd
 void MenuInit()
 {
-    for(int i=0;i<TotalShops;i++)
+    int i;
+    for(i=0;i<TotalShops;i++)
     {
         menuItems[i]=floorMap[i].ShopName;
+        #ifdef UPDATE_DATABASE_ENABLED 
+        menuItems[TotalShops-1]= "UpdateDatabase";
+        #endif
+        // printf("----debug:MenuItems%d: %s----\n",i,menuItems[i]);
     }
+    
 }
 
 void LCD_Init() 
@@ -24,6 +32,7 @@ void LCD_Init()
 	return;
 }
 
+//list of shop print on lcd
 void LCD_Print()
 {
     /* Initialize main menu state */

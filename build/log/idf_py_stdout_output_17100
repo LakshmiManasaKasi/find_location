@@ -1,0 +1,4883 @@
+et�9) boot.esp32:�ets Jun  8 2016 00:22:57
+
+rst:0x1 (POWERON_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Nov  2 2024 18:17:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.0[0m
+[0;32mI (39) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (48) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (58) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (69) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (76) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (91) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d424h (119844) map[0m
+[0;32mI (145) esp_image: segment 1: paddr=0002d44c vaddr=3ffb0000 size=02bcch ( 11212) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=715a4h (464292) map[0m
+[0;32mI (310) esp_image: segment 3: paddr=000a15cc vaddr=3ffb2bcc size=0170ch (  5900) load[0m
+[0;32mI (312) esp_image: segment 4: paddr=000a2ce0 vaddr=40080000 size=18bb0h (101296) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (380) cpu_start: Multicore app[0m
+[0;32mI (388) cpu_start: Pro cpu start user code[0m
+[0;32mI (388) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (388) app_init: Application information:[0m
+[0;32mI (391) app_init: Project name:     wifi_rtos[0m
+[0;32mI (396) app_init: App version:      60e9f13-dirty[0m
+[0;32mI (402) app_init: Compile time:     Nov  6 2024 22:06:38[0m
+[0;32mI (408) app_init: ELF file SHA256:  4d504701e68128d5...[0m
+[0;32mI (414) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (424) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (429) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (434) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (441) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFB83F8 len 00027C08 (159 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (459) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (466) heap_init: At 40098BB0 len 00007450 (29 KiB): IRAM[0m
+[0;32mI (473) spi_flash: detected chip: gd[0m
+[0;32mI (476) spi_flash: flash io: dio[0m
+[0;33mW (480) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (493) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (505) main_task: Started on CPU0[0m
+[0;32mI (515) main_task: Calling app_main()[0m
+I (705) wifi:wifi driver task: 3ffbe294, prio:23, stack:6656, core=0
+I (705) wifi:wifi firmware version: ccaebfa
+I (705) wifi:wifi certification version: v7.0
+I (705) wifi:config NVS flash: enabled
+I (705) wifi:config nano formating: disabled
+I (715) wifi:Init data frame dynamic rx buffer num: 32
+I (715) wifi:Init static rx mgmt buffer num: 5
+I (725) wifi:Init management short buffer num: 32
+I (725) wifi:Init dynamic tx buffer num: 32
+I (725) wifi:Init static rx buffer size: 1600
+I (735) wifi:Init static rx buffer num: 10
+I (735) wifi:Init dynamic rx buffer num: 32
+[0;32mI (745) wifi_init: rx ba win: 6[0m
+[0;32mI (745) wifi_init: accept mbox: 6[0m
+[0;32mI (745) wifi_init: tcpip mbox: 32[0m
+[0;32mI (755) wifi_init: udp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp mbox: 6[0m
+[0;32mI (755) wifi_init: tcp tx win: 5744[0m
+[0;32mI (765) wifi_init: tcp rx win: 5744[0m
+[0;32mI (765) wifi_init: tcp mss: 1440[0m
+[0;32mI (775) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (775) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (785) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (785) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (865) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+E (875) wifi:failed to post WiFi event=43 ret=259
+I (885) wifi:mode : sta (b4:e6:2d:b1:e1:f9)
+I (885) wifi:enable tsf
+E (885) wifi:failed to post WiFi event=2 ret=259
+[0;32mI (1005) main_task: Returned from app_main()[0m
+E (3415) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -58 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -86 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -91 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R3 4g  RSSI: -98 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom R2  RSSI: -98 dBm	MAC: 3c:cd:57:6b:64:16
+------debug:TotalShops=3-------
+Press 1->Puma
+
+Press 2->Foreever21
+
+Press 3->Nike
+
+Press 4->UpdateDatabase
+[0;32mI (5045) BTN: Waiting For Press.[0m
+[0;32mI (17935) BTN: BTN Pressed Down.[0m
+[0;32mI (18015) BTN: Short Press[0m
+2
+[0;32mI (18015) BTN: BTN Released.[0m
+[0;32mI (20825) BTN: BTN Pressed Down.[0m
+[0;32mI (20935) BTN: Short Press[0m
+3
+[0;32mI (20935) BTN: BTN Released.[0m
+[0;32mI (21705) BTN: BTN Pressed Down.[0m
+[0;32mI (22695) BTN: Long Press[0m
+
+Updating Database: Move aroundKeep Moving E (25155) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -69 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R3 4g  RSSI: -96 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom R2  RSSI: -96 dBm	MAC: 3c:cd:57:6b:64:16
+Keep Moving E (27775) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -72 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -88 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -90 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R2  RSSI: -94 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom R3 4g  RSSI: -97 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (30405) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -57 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -77 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -84 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -94 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Poco  RSSI: -95 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -95 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (33035) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -56 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -82 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -92 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Dream Spoon  RSSI: -94 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -95 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (35665) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -54 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom GF 4G  RSSI: -95 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R3 4g  RSSI: -97 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (38295) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -57 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -94 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Galaxy M31CE7C  RSSI: -95 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -96 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (40915) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -57 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -79 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -95 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R2  RSSI: -96 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Poco  RSSI: -97 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -98 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (43545) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -57 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -94 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R3 4g  RSSI: -97 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom-r1  RSSI: -99 dBm	MAC: 18:45:93:5f:37:89
+Keep Moving E (46175) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -58 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -71 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -94 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -95 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -96 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -96 dBm	MAC: 3c:cd:57:6b:64:16
+Keep Moving E (48795) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -56 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -94 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Galaxy M31CE7C  RSSI: -96 dBm	MAC: 9e:bb:f8:c1:39:32
+Keep Moving E (51415) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -95 dBm	MAC: a6:8a:c8:05:83:90
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -97 dBm	MAC: 16:7f:67:c2:2c:8a
+SSID: Dream Spoon  RSSI: -99 dBm	MAC: f0:a7:31:f7:6e:18
+Keep Moving E (54045) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -61 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -68 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom.l2-4g  RSSI: -86 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom R3 4g  RSSI: -92 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (56685) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -36 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom.l2-4g  RSSI: -88 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -94 dBm	MAC: 16:7f:67:c2:2c:8a
+Keep Moving E (59305) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -56 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -84 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -89 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R2  RSSI: -93 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -93 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (61935) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -68 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -81 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -86 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -88 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -89 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R2  RSSI: -94 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -96 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -98 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (64575) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -61 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -86 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R3 4g  RSSI: -88 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -91 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Poco  RSSI: -95 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom-r1  RSSI: -97 dBm	MAC: 18:45:93:5f:37:89
+Keep Moving E (67225) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -56 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -85 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -88 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -89 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Parikshitpg1  RSSI: -96 dBm	MAC: 6c:5a:b0:44:96:bb
+Keep Moving E (69865) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -42 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -65 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -80 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -84 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -92 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom.l2-4g  RSSI: -97 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (72495) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -42 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -71 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: ACTFIBERNET  RSSI: -88 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R3 4g  RSSI: -90 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -92 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Dream Spoon  RSSI: -97 dBm	MAC: f0:a7:31:f7:6e:18
+Keep Moving E (75135) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -62 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: ACTFIBERNET  RSSI: -82 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -86 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R3 4g  RSSI: -92 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom.l2-4g  RSSI: -93 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Dream Spoon  RSSI: -94 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R2  RSSI: -96 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -97 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (77775) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -61 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom GF 4G  RSSI: -83 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom.l2-4g  RSSI: -83 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R3 4g  RSSI: -91 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (80415) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -62 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -81 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -84 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R2  RSSI: -86 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -89 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -93 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R3 4g  RSSI: -95 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Poco  RSSI: -97 dBm	MAC: a6:8a:c8:05:83:90
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -97 dBm	MAC: 16:7f:67:c2:2c:8a
+Keep Moving E (83065) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -59 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -67 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -82 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -89 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -92 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -93 dBm	MAC: 9e:bb:f8:c1:39:32
+Keep Moving E (85695) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -59 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -82 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -84 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: ACTFIBERNET  RSSI: -86 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -89 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -94 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Dream Spoon  RSSI: -96 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -99 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (88335) wifi:failed to post WiFi event=1 ret=259
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Manasa  RSSI: -71 dBm	MAC: 76:d6:56:57:94:92
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -90 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R3 4g  RSSI: -94 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom R2  RSSI: -95 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (90965) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -65 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -71 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom GF 4G  RSSI: -87 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Dream Spoon  RSSI: -88 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -90 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R3 4g  RSSI: -95 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom R2  RSSI: -97 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -100 dBm	MAC: 16:7f:67:c2:2c:8a
+Keep Moving E (93615) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -73 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -83 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -87 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -92 dBm	MAC: 16:7f:67:c2:2c:8a
+SSID: Hariom R3 4g  RSSI: -93 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom-r1  RSSI: -97 dBm	MAC: 18:45:93:5f:37:89
+Keep Moving E (96265) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -52 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -82 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R2  RSSI: -86 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -87 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R3 4g  RSSI: -94 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom.l2-4g  RSSI: -94 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Parikshitpg1  RSSI: -96 dBm	MAC: 6c:5a:b0:44:96:bb
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -97 dBm	MAC: 16:7f:67:c2:2c:8a
+SSID: Poco  RSSI: -98 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (98915) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -57 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -84 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -88 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -89 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom.l2-4g  RSSI: -89 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Parikshitpg1  RSSI: -93 dBm	MAC: 6c:5a:b0:44:96:bb
+SSID: Hariom R2  RSSI: -93 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom R3 4g  RSSI: -94 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: [LG_Wall-Mount A/C]2c8a  RSSI: -96 dBm	MAC: 16:7f:67:c2:2c:8a
+SSID: Poco  RSSI: -97 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (101575) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -77 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom GF 4G  RSSI: -84 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R2  RSSI: -85 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -87 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R3 4g  RSSI: -94 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Dream Spoon  RSSI: -95 dBm	MAC: f0:a7:31:f7:6e:18
+Keep Moving E (104205) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -66 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom GF 4G  RSSI: -87 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R3 4g  RSSI: -92 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom.l2-4g  RSSI: -93 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R2  RSSI: -94 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -96 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (106845) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -45 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: ACTFIBERNET  RSSI: -84 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -86 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -91 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -91 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Poco  RSSI: -94 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (109475) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -66 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -82 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -94 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (112095) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -45 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -66 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -81 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (114715) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -66 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -82 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -91 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -93 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -97 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (117355) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -67 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -81 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -95 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (119985) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -66 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -94 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -95 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -97 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (122615) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -68 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -94 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -95 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -95 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -98 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (125235) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -59 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -86 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -92 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom R2  RSSI: -95 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Galaxy M31CE7C  RSSI: -98 dBm	MAC: 9e:bb:f8:c1:39:32
+Keep Moving E (127865) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -68 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -82 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -85 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -92 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -95 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R3 4g  RSSI: -98 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (130495) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -82 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -85 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Poco  RSSI: -86 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -88 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R2  RSSI: -93 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -95 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R3 4g  RSSI: -96 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (133135) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -82 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -94 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -95 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (135765) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -95 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R3 4g  RSSI: -99 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (138405) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -91 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -91 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (141045) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -49 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -79 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -86 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -91 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R3 4g  RSSI: -93 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: ACTFIBERNET  RSSI: -95 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (143685) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -98 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (146315) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -93 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -98 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (148945) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -94 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (151585) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -49 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (154215) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -84 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -98 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (156845) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -93 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: ACTFIBERNET  RSSI: -98 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (159475) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -49 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -91 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -95 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (162115) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (164745) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -69 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (167375) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -94 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -98 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (170005) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -93 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (172635) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -52 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -99 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (175265) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -85 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -86 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -86 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -98 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (177895) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -77 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -85 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -98 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (180535) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -49 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -85 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -97 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (183175) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -86 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -95 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (185805) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -71 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -85 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -98 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -99 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (188445) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -52 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+Keep Moving E (191065) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -51 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -92 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -94 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -97 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -100 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (193705) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -49 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -71 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -91 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -96 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Parikshitpg1  RSSI: -96 dBm	MAC: 6c:5a:b0:44:96:bb
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (196345) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: ACTFIBERNET  RSSI: -97 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (198975) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -49 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -93 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Parikshitpg1  RSSI: -94 dBm	MAC: 6c:5a:b0:44:96:bb
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (201605) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -97 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Parikshitpg1  RSSI: -99 dBm	MAC: 6c:5a:b0:44:96:bb
+Keep Moving E (204245) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -50 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -77 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -86 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -97 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (206885) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -53 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -98 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (209515) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -48 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -69 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -85 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -86 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R2  RSSI: -93 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom GF 4G  RSSI: -94 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: ACTFIBERNET  RSSI: -95 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R3 4g  RSSI: -97 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (212145) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -49 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -83 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (214785) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -86 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R3 4g  RSSI: -99 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (217425) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -45 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -84 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -84 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -95 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R3 4g  RSSI: -96 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (220065) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -91 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -99 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (222705) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -79 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -92 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (225345) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -85 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -99 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (227975) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -97 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (230605) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -79 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R3 4g  RSSI: -95 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Galaxy M31CE7C  RSSI: -95 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (233245) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -77 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -86 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom R3 4g  RSSI: -94 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom.l2-4g  RSSI: -98 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (235885) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -70 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -85 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (238515) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -85 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom R3 4g  RSSI: -97 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (241155) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -90 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (243785) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -79 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -86 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -94 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -95 dBm	MAC: 9e:bb:f8:c1:39:32
+Keep Moving E (246405) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -81 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -86 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -95 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R3 4g  RSSI: -96 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (249045) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -80 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: ACTFIBERNET  RSSI: -88 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (251675) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -80 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -99 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (254305) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -82 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -84 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -87 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -97 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (256935) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -42 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -80 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -86 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -96 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (259575) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+Keep Moving E (262205) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -84 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -98 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (264835) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -84 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (267465) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -42 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -85 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -85 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -93 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (270095) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -83 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -86 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -87 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -95 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+SSID: Hariom GF 4G  RSSI: -98 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (272735) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -47 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -86 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R3 4g  RSSI: -97 dBm	MAC: f4:8c:eb:11:59:5a
+SSID: Hariom GF 4G  RSSI: -100 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (275375) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -77 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -82 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -86 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -88 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -95 dBm	MAC: 5c:f9:fd:8d:fd:49
+SSID: Hariom.l2-4g  RSSI: -98 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (278015) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -94 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -95 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (280645) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Poco  RSSI: -87 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -88 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom GF 4G  RSSI: -97 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (283275) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -77 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -84 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -88 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -92 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -92 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom.l2-4g  RSSI: -97 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (285905) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -79 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Galaxy M31CE7C  RSSI: -93 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -94 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom GF 4G  RSSI: -96 dBm	MAC: 5c:f9:fd:8d:fd:49
+Keep Moving E (288535) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -94 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -98 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (291165) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R2  RSSI: -91 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+Keep Moving E (293795) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -81 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -94 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -97 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (296425) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (299055) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (301685) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -42 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -92 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -94 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (304315) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -89 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -98 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (306945) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -79 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (309575) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (312205) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -82 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Hariom.l2-4g  RSSI: -97 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (314835) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -45 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom R2  RSSI: -90 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -91 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -99 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (317465) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -88 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Dream Spoon  RSSI: -92 dBm	MAC: f0:a7:31:f7:6e:18
+Keep Moving E (320095) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -73 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -89 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -90 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Dream Spoon  RSSI: -96 dBm	MAC: f0:a7:31:f7:6e:18
+Keep Moving E (322725) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -75 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -99 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (325355) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -92 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -93 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (327985) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -76 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -85 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -93 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (330615) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -43 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -90 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: Galaxy M31CE7C  RSSI: -93 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -94 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -94 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom.l2-4g  RSSI: -96 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (333245) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -47 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -86 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Dream Spoon  RSSI: -88 dBm	MAC: f0:a7:31:f7:6e:18
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Poco  RSSI: -94 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+Keep Moving E (335875) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -78 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -86 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+Keep Moving E (338495) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -74 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Galaxy M31CE7C  RSSI: -87 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Hariom R2  RSSI: -89 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -90 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -91 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Hariom R3 4g  RSSI: -96 dBm	MAC: f4:8c:eb:11:59:5a
+Keep Moving E (341125) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -48 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom R2  RSSI: -88 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -89 dBm	MAC: 9e:bb:f8:c1:39:32
+SSID: Poco  RSSI: -91 dBm	MAC: a6:8a:c8:05:83:90
+SSID: Hariom.l2-4g  RSSI: -95 dBm	MAC: 5c:8c:30:31:03:29
+select from above listed stores
+Seleeeeeeeee = 1073415720
+Mac : f8:9e:fb:3f:00:00
+f89efb3f0000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+Mac : 00:00:00:00:00:00
+000000000000
+yyyyyyyyyyyyyyyyyyyyyyyyyyyyyy 0 0 0 
+-1000 -1000 -1000 
+temp = 0	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+temp = -1000	inde = -1	data =-1000	large = -1
+
+present_ap = -1 , next_location_ap = 1073415719
+
+next_location_ap = 1073415719
+Magnetic data: X:138.24 mG, Y:-445.25 mG, Z:-131.35 mG
+Heading = 219.505598
+E (345455) wifi:failed to post WiFi event=1 ret=259
+SSID: Manasa  RSSI: -44 dBm	MAC: 76:d6:56:57:94:92
+SSID: Hariom.l1-4G  RSSI: -72 dBm	MAC: c0:a5:dd:1e:da:91
+SSID: Hariom R2  RSSI: -87 dBm	MAC: 3c:cd:57:6b:64:16
+SSID: Poco  RSSI: -88 dBm	MAC: a6:8a:c8:05:83:90
+SSID: ACTFIBERNET  RSSI: -89 dBm	MAC: 3c:52:a1:6e:82:c2
+SSID: Galaxy M31CE7C  RSSI: -90 dBm	MAC: 9e:bb:f8:c1:39:32
+MAC: f8:9e:fb:3f:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:c4:bb
+MAC: 30:30:30:30:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 01:00:00:00:00:00
+MAC: 00:53:fb:3f:00:00
+MAC: b4:ff:fa:3f:10:bb
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 04:01:00:00:00:00
+MAC: 00:00:00:00:94:e2
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:70:14
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 01:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 7c:00:0e:40:88:00
+MAC: 00:00:00:00:f0:02
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: ff:ff:ff:ff:ff:ff
+MAC: 00:00:00:00:00:00
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: 00:00:00:00:00:00
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: 0c:3f:fc:3f:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 34:60:fb:3f:ff:00
+MAC: 00:00:00:00:83:00
+MAC: 83:00:00:00:09:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:05:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 12:12:12:12:00:00
+MAC: 00:00:00:00:10:3e
+MAC: 12:12:12:12:00:00
+MAC: 98:3a:00:00:00:01
+MAC: 20:01:00:00:0e:01
+MAC: fc:00:0b:01:00:00
+MAC: ff:00:ff:00:00:01
+MAC: ee:f7:fe:04:08:0c
+MAC: 00:00:00:00:34:38
+MAC: 00:00:00:00:00:00
+MAC: 02:03:04:05:00:01
+MAC: 64:84:fb:3f:60:00
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:0c:84
+MAC: 0c:84:fb:3f:cc:6d
+MAC: 0c:84:fb:3f:0c:84
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 20:03:06:00:00:00
+MAC: f0:bf:00:40:30:05
+MAC: 20:00:00:00:ff:ff
+MAC: d4:96:0f:40:30:09
+MAC: 20:03:06:00:23:05
+MAC: 00:00:00:00:00:00
+MAC: 01:00:00:00:58:01
+MAC: 40:97:fb:3f:00:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 00:00:00:00:00:00
+MAC: 72:69:6f:6d:20:52
+MAC: 0c:84:fb:3f:0c:84
+MAC: 00:00:00:00:6c:98
+MAC: 07:00:00:00:00:00
+MAC: 07:00:00:00:00:00
+MAC: 87:00:00:00:00:00
+MAC: 87:00:00:00:49:4e
+MAC: 07:00:00:00:49:4e
+MAC: 07:00:00:00:00:00
+MAC: 07:00:00:00:00:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:08:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:08:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:60:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:51:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:36:00
+MAC: a4:97:fb:3f:4b:07
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: a4:97:fb:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: a4:97:fb:3f:13:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 00:00:00:00:01:00
+MAC: 03:00:00:00:23:00
+MAC: 00:00:00:00:ff:ff
+MAC: 00:b0:fb:3f:00:00
+MAC: 00:00:00:00:00:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 20:0e:06:00:23:00
+MAC: b2:8d:08:40:30:00
+MAC: 00:00:00:00:00:00
+MAC: f0:b8:fb:3f:03:00
+MAC: 01:00:00:00:00:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 44:46:fb:3f:19:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 28:bb:fb:3f:28:bb
+MAC: 80:bb:fb:3f:80:bb
+MAC: 00:00:00:00:00:00
+MAC: b4:9b:0f:40:b0:13
+MAC: 01:00:00:00:01:00
+MAC: 00:00:00:00:00:00
+MAC: 0f:00:00:00:00:00
+MAC: ff:ff:ff:ff:ff:ff
+MAC: 3c:dc:83:ef:cd:30
+MAC: 79:2e:2b:23:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:ff
+MAC: 00:00:00:00:00:ff
+MAC: 50:c0:fb:3f:50:c0
+MAC: 00:00:00:00:00:00
+MAC: ff:00:00:00:ff:00
+MAC: 14:00:00:00:54:e4
+MAC: b8:c1:fb:3f:ff:ff
+MAC: 11:00:00:00:00:00
+MAC: 11:00:00:00:00:00
+MAC: 19:00:00:00:ce:20
+MAC: 00:00:00:00:00:00
+MAC: 19:00:00:00:22:d3
+MAC: 00:00:00:00:00:00
+MAC: 11:00:00:00:00:00
+MAC: 07:00:00:00:50:fc
+MAC: 19:00:00:00:66:d9
+MAC: 11:00:00:00:00:00
+MAC: 17:00:00:00:00:00
+MAC: 10:00:00:00:00:00
+MAC: 07:00:00:00:90:fd
+MAC: 00:00:00:00:00:00
+MAC: 17:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 07:00:00:00:90:fd
+MAC: 11:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 00:00:00:00:23:0b
+MAC: 26:bc:08:40:ec:0e
+MAC: f0:d9:fb:3f:10:ff
+MAC: 5c:ff:fa:3f:20:2e
+MAC: a0:da:fb:3f:34:00
+MAC: d8:ec:fa:3f:60:60
+MAC: 01:00:00:00:00:00
+MAC: 44:eb:fa:3f:88:ed
+MAC: 00:dc:fb:3f:d8:ec
+MAC: e0:df:fb:3f:b4:de
+MAC: 80:00:00:00:01:00
+MAC: 00:00:00:ff:68:ff
+MAC: 60:e0:fb:3f:c2:9b
+MAC: 20:05:06:00:ff:ff
+MAC: 00:00:00:00:00:00
+MAC: ac:00:00:00:00:00
+MAC: 08:00:00:00:08:00
+MAC: 01:00:00:00:00:00
+MAC: 80:df:fb:3f:01:00
+MAC: 0c:00:00:00:61:1d
+MAC: 70:e0:fb:3f:03:01
+MAC: 00:00:00:00:01:00
+MAC: c8:86:00:00:00:00
+MAC: 00:00:00:00:ff:ff
+MAC: 23:01:06:00:00:00
+MAC: 28:2c:fb:3f:ff:ff
+MAC: 00:00:00:00:00:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: cc:c1:fb:3f:94:e2
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:40:82
+MAC: 04:00:00:00:02:00
+MAC: 61:2e:70:6d:6b:00
+MAC: 73:74:61:2e:63:68
+MAC: 00:00:00:00:cc:67
+MAC: 69:6e:74:76:07:00
+MAC: 61:6c:00:73:74:61
+MAC: d8:67:fb:3f:73:74
+MAC: 0c:07:02:00:00:00
+MAC: 73:74:61:2e:73:6f
+MAC: 73:74:61:2e:6d:69
+MAC: 00:00:00:00:0d:00
+MAC: 73:74:61:2e:72:72
+MAC: 72:72:6d:5f:65:00
+MAC: 01:00:00:00:00:00
+MAC: 00:61:70:2e:61:75
+MAC: 61:70:2e:61:75:74
+MAC: 00:00:00:00:30:6b
+MAC: 70:68:79:6d:1d:00
+MAC: 68:79:62:77:00:61
+MAC: 37:6b:fb:3f:61:70
+MAC: 22:00:01:00:00:00
+MAC: 74:65:00:63:6f:75
+MAC: 63:6f:75:6e:74:72
+MAC: 00:00:00:00:01:00
+MAC: 73:74:61:2e:73:61
+MAC: 73:61:65:5f:68:32
+MAC: 02:00:00:00:00:00
+MAC: 73:74:61:2e:68:65
+MAC: 63:6d:5f:63:5f:74
+MAC: 03:00:00:00:87:6b
+MAC: 64:00:73:74:33:00
+MAC: 66:5f:64:00:73:74
+MAC: 8c:6b:fb:3f:73:74
+MAC: 38:00:01:00:00:00
+MAC: 5f:72:65:73:65:74
+MAC: 62:61:6e:64:00:61
+MAC: 54:e4:40:3f:60:c1
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: e8:16:fb:3f:00:00
+MAC: 00:00:00:00:00:00
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ff:ff
+MAC: ff:ff:ff:ff:ef:be
+MAC: 00:00:00:00:00:00
+MAC: 13:3a:b7:94:e3:d9
+MAC: 34:ee:0e:33:2b:5b
+MAC: bf:6a:6e:23:34:87
+MAC: bd:dc:fa:b3:32:4d
+MAC: 3c:d6:64:53:c0:a1
+MAC: 80:f7:fb:3f:80:f7
+MAC: 43:2e:bc:42:6a:2c
+MAC: 91:21:10:da:23:09
+MAC: 3f:35:3d:b4:01:57
+MAC: e2:80:84:4a:82:a8
+MAC: 5c:5c:7d:08:63:91
+MAC: 7a:f6:27:4c:62:6a
+MAC: 00:00:f4:01:00:00
+MAC: f4:bb:fc:4c:59:9a
+MAC: ae:e2:92:b7:4b:b8
+MAC: 32:28:22:ac:41:2e
+MAC: c0:37:40:70:63:03
+MAC: 8a:f6:e8:46:e1:8c
+MAC: 81:b7:9d:db:1c:85
+MAC: 00:00:00:00:a8:f9
+MAC: ff:ff:ff:ff:ff:ff
+MAC: 04:01:00:00:0f:ac
+MAC: 0c:92:79:81:33:fa
+MAC: 00:62:32:2f:00:0b
+MAC: 0c:43:00:00:00:00
+MAC: f6:3b:b4:79:48:30
+MAC: f4:17:fc:3f:94:fe
+MAC: 4b:00:1f:03:00:00
+MAC: 48:60:6c:30:14:01
+MAC: a4:00:00:27:a4:00
+MAC: 02:01:01:00:00:03
+MAC: 00:01:01:10:49:00
+MAC: 55:3d:a0:06:30:27
+MAC: 8d:f6:ac:fb:5d:bb
+MAC: e4:14:74:ae:46:a0
+MAC: 9c:38:a0:13:bf:89
+MAC: 86:8f:54:1d:f2:2b
+MAC: 03:3c:c2:aa:7d:4a
+MAC: 99:1a:eb:3a:11:f4
+MAC: 42:10:b6:df:e1:45
+MAC: 73:48:ae:8a:d6:81
+MAC: 4b:f2:fb:38:2d:d1
+MAC: ca:b2:fd:6e:6c:42
+MAC: 6b:7a:95:34:46:9c
+MAC: b6:f7:8d:45:8d:ef
+MAC: ef:be:ad:de:44:06
+MAC: 0b:05:04:00:02:00
+MAC: 00:00:00:00:00:00
+MAC: 05:00:16:32:80:00
+MAC: 46:cc:95:92:31:cb
+MAC: 0d:e8:e7:f3:ae:34
+MAC: 7f:14:82:7e:82:4c
+MAC: 80:56:c6:c8:81:8a
+MAC: 8e:19:2b:34:3f:41
+MAC: c0:2d:50:87:f1:fb
+MAC: 0d:33:4c:36:7e:bf
+MAC: 99:ba:4b:f3:1a:07
+MAC: 34:b0:8e:98:a6:f7
+MAC: 0e:f4:26:01:36:36
+MAC: 77:13:3f:5d:b2:eb
+MAC: 2a:40:ac:25:65:d5
+MAC: cd:d4:f0:b3:44:3b
+MAC: 0c:06:ce:5c:6e:9f
+MAC: 7f:75:3a:6c:c0:84
+MAC: a0:75:ea:80:45:78
+MAC: f7:ab:b9:28:e9:4c
+MAC: 7d:50:38:51:40:21
+MAC: b3:ac:44:f9:aa:4f
+MAC: be:26:a6:18:bf:3c
+MAC: 2f:4c:35:63:ad:97
+MAC: c8:16:10:c5:fa:f3
+MAC: d9:af:ab:b0:eb:0c
+MAC: 7c:ec:a2:cf:b4:81
+MAC: 5a:21:48:1c:ba:10
+MAC: 99:cc:8c:a3:eb:cf
+MAC: 47:89:96:13:e0:9d
+MAC: e6:6b:ce:4c:7d:be
+MAC: fc:c0:63:3f:42:a0
+MAC: 9f:ab:63:27:51:93
+MAC: 33:4e:ee:32:d7:4c
+MAC: 6f:e7:b0:84:33:27
+MAC: 40:eb:d4:03:11:d0
+MAC: ff:ff:ff:ff:ff:ff
+MAC: 04:01:00:00:0f:ac
+MAC: 0c:92:79:81:33:fa
+MAC: 8d:73:72:7f:af:2c
+MAC: 02:06:e9:46:4a:cb
+MAC: 05:4a:16:80:97:d0
+MAC: d5:34:71:07:08:dc
+MAC: 10:5e:b6:fc:29:8d
+MAC: 86:41:0e:56:45:f3
+MAC: 48:fb:c1:a1:47:67
+MAC: 57:9e:f5:19:77:02
+MAC: f1:0f:5a:01:0a:3c
+MAC: c2:52:7d:00:d0:61
+MAC: 59:ba:ec:84:ad:87
+MAC: e0:74:b0:e3:d6:8f
+MAC: d6:a0:ef:40:11:f8
+MAC: ad:ec:51:6d:c2:24
+MAC: e3:57:a6:ac:29:86
+MAC: a0:00:0c:b4:2a:b3
+MAC: 60:33:08:20:01:02
+MAC: 00:00:00:00:00:00
+MAC: 02:00:00:dd:18:00
+MAC: 2a:fe:45:af:36:d3
+MAC: 0f:1c:ba:13:93:7f
+MAC: dc:a4:61:94:52:37
+MAC: 6b:1b:d2:ed:fd:50
+MAC: 5b:4e:24:d7:7e:de
+MAC: 63:0b:43:57:97:58
+MAC: f3:d8:69:cf:5a:b4
+MAC: 5b:9c:f5:26:02:97
+MAC: 49:86:9e:cc:d7:6c
+MAC: 03:b0:a0:57:4d:19
+MAC: f6:28:c4:4c:0e:29
+MAC: f5:4a:a1:d2:f7:a8
+MAC: c2:16:fb:9c:47:55
+MAC: 3f:3c:08:5e:ab:dc
+MAC: 92:e9:72:51:e1:ef
+MAC: 01:04:82:84:8b:96
+MAC: 00:15:00:00:00:00
+MAC: 01:02:01:00:02:01
+MAC: 87:a5:af:66:a9:a9
+MAC: 94:e6:5e:dd:92:45
+MAC: c3:8a:de:e2:fd:84
+MAC: d9:be:07:6f:e3:8f
+MAC: 3b:a0:45:ed:c6:14
+MAC: 65:5c:75:f4:6d:ae
+MAC: 20:4f:67:ae:d3:53
+MAC: a6:af:6c:4c:e0:aa
+MAC: 4e:85:74:c7:7f:56
+MAC: e7:0f:29:0b:ad:f6
+MAC: 09:74:23:69:3d:8b
+MAC: 4f:59:e7:76:af:ba
+MAC: 12:44:13:1c:76:eb
+MAC: 31:26:43:91:e8:ec
+MAC: 2a:cd:3d:c6:60:a8
+MAC: da:91:c0:a8:0d:93
+MAC: 00:01:02:10:47:00
+MAC: 00:00:00:00:00:dd
+MAC: 43:03:00:00:00:00
+MAC: 96:33:40:4b:b0:50
+MAC: d1:d8:60:6e:14:28
+MAC: ef:2a:22:94:9d:0e
+MAC: 0d:54:30:83:c7:e6
+MAC: 0a:74:99:02:9c:20
+MAC: df:07:7c:17:7f:82
+MAC: 4f:b1:ff:80:ef:38
+MAC: 23:44:6d:41:db:ff
+MAC: b1:0d:d8:be:02:0f
+MAC: d5:a1:76:26:51:80
+MAC: bf:f1:41:74:95:f2
+MAC: e2:70:6d:88:4f:26
+MAC: b9:3a:fd:4e:ca:33
+MAC: 4a:b5:5d:02:7d:91
+MAC: 25:51:12:00:80:00
+MAC: 07:08:09:0a:0b:05
+MAC: 00:00:00:00:00:3d
+MAC: 00:27:a4:00:00:42
+MAC: 5f:7a:1e:c8:ce:11
+MAC: 76:d0:b1:c5:c1:9f
+MAC: ab:a2:96:8b:6b:de
+MAC: cf:b9:27:41:4c:83
+MAC: 4e:30:ac:2a:83:45
+MAC: 2d:07:7b:70:7d:f7
+MAC: af:dc:c6:0b:c4:7a
+MAC: 78:cd:6c:ee:72:23
+MAC: 7c:e1:f8:7f:a2:5f
+MAC: 58:39:ef:f4:aa:e3
+MAC: 59:f4:6c:b8:75:8c
+MAC: 3b:c8:e4:e6:51:40
+MAC: da:b4:d8:b1:f5:db
+MAC: 13:3b:3a:70:95:1c
+MAC: ef:be:ad:de:00:00
+MAC: 03:01:0b:32:04:0c
+MAC: 04:2d:1a:ec:01:17
+MAC: 0f:ac:04:01:00:00
+MAC: 65:3a:75:df:7a:70
+MAC: d3:2c:b7:7e:27:5b
+MAC: 66:ed:d3:24:78:54
+MAC: c6:d7:11:f4:da:32
+MAC: c2:4b:14:14:4f:78
+MAC: bd:09:85:81:bc:0e
+MAC: a9:0b:54:5e:75:15
+MAC: 76:b0:b8:7e:63:2c
+MAC: 64:17:41:cf:3b:cd
+MAC: c6:e6:06:a6:fb:fb
+MAC: 97:36:c7:6b:10:00
+MAC: f2:09:40:1e:ff:23
+MAC: b8:c1:1d:be:1f:37
+MAC: 19:3b:4f:47:c4:b5
+MAC: c5:77:cd:39:58:d9
+MAC: 00:06:4d:61:6e:61
+MAC: 00:00:00:01:00:3d
+MAC: 00:40:dd:0b:8c:fd
+MAC: 51:f3:ec:29:bb:ac
+MAC: 4c:84:38:b2:ce:f4
+MAC: 91:44:f4:09:96:e1
+MAC: f6:d7:90:08:d2:bb
+MAC: 17:2c:d2:e2:e1:6a
+MAC: 99:3a:1f:52:1d:a0
+MAC: 94:69:f3:8d:d5:db
+MAC: f0:64:af:e6:e0:cd
+MAC: 3a:dc:a0:35:72:92
+MAC: c6:d3:da:a7:c8:d7
+MAC: bc:64:a2:af:dc:b4
+MAC: 66:26:67:92:bb:b0
+MAC: b2:f8:84:5d:3e:5a
+MAC: 76:0e:e6:6e:34:ce
+MAC: 92:66:92:37:63:01
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: e8:dc:10:40:a8:7f
+MAC: 64:00:00:00:bc:69
+MAC: 34:6e:11:40:e0:69
+MAC: d4:3f:fc:3f:00:00
+MAC: 2c:40:fc:3f:00:00
+MAC: 20:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:1c:47
+MAC: 00:00:00:00:74:47
+MAC: 00:00:00:00:cc:47
+MAC: 00:00:00:00:24:48
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:f4:48
+MAC: 20:49:fc:3f:20:49
+MAC: 74:49:fc:3f:01:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: fc:3f:01:00:39:00
+MAC: b0:53:fc:3f:84:01
+MAC: 0c:00:00:00:36:00
+MAC: 50:54:fc:3f:36:00
+MAC: d8:ec:fa:3f:01:93
+MAC: 10:55:fc:3f:30:55
+MAC: 5c:57:fc:3f:d8:ec
+MAC: a5:a5:a5:a5:6b:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: dc:00:f0:3f:01:00
+MAC: 54:57:fc:3f:00:00
+MAC: a2:bb:08:80:a0:58
+MAC: 6a:34:08:40:23:03
+MAC: ff:ff:ff:ff:36:6c
+MAC: 00:00:00:00:01:00
+MAC: 00:00:00:00:00:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 00:00:00:00:b0:59
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 58:5b:fc:3f:58:5b
+MAC: 00:00:00:00:00:00
+MAC: 3c:52:a1:6e:82:c2
+MAC: 00:00:00:00:0c:84
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 46:57:0d:80:4c:32
+MAC: 6a:34:08:40:fd:14
+MAC: 88:ed:fa:3f:f4:64
+MAC: 80:65:fc:3f:d8:6c
+MAC: 00:00:00:ff:86:bd
+MAC: 17:00:00:00:ac:65
+MAC: 00:00:00:00:01:00
+MAC: 10:00:00:00:e0:68
+MAC: 09:00:00:00:27:06
+MAC: 90:67:fc:3f:d8:6c
+MAC: a2:bb:08:80:70:68
+MAC: 00:00:00:00:23:0c
+MAC: 01:00:00:00:4c:3c
+MAC: 01:00:00:00:02:00
+MAC: 08:00:00:00:13:6e
+MAC: 00:00:00:00:00:00
+MAC: d4:4d:fb:3f:00:00
+MAC: fb:00:00:00:3f:00
+MAC: 04:00:00:00:01:93
+MAC: 01:00:00:00:2e:00
+MAC: 04:00:00:00:49:72
+MAC: d0:6b:fc:3f:00:00
+MAC: 01:00:00:00:00:00
+MAC: a5:a5:a5:a5:a5:a5
+MAC: 7c:6c:fc:3f:10:48
+MAC: ac:eb:fa:3f:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: cc:6d:fc:3f:17:00
+MAC: 00:00:00:00:01:00
+MAC: 00:09:00:00:00:00
+MAC: 9d:f5:fb:f9:3e:22
+MAC: 2a:6a:73:44:ff:ed
+MAC: 27:b2:8a:2d:d2:ea
+MAC: 73:61:ee:2a:2b:5a
+MAC: 6a:06:24:9e:a0:5a
+MAC: a4:23:07:42:65:18
+MAC: f7:d4:12:98:1f:35
+MAC: ef:3c:7a:31:3a:d9
+MAC: 7c:9a:7a:28:d2:b9
+MAC: 27:0e:15:d5:04:73
+MAC: 74:0e:17:a0:b0:78
+MAC: 80:ae:52:60:de:1d
+MAC: ef:7c:60:8d:c6:6f
+MAC: 5b:da:05:5b:d6:28
+MAC: d8:3a:ba:be:c0:23
+MAC: 86:70:06:56:cf:21
+MAC: 68:2e:d5:83:31:03
+MAC: 8d:9e:da:44:bb:ee
+MAC: 59:18:cc:9e:66:4e
+MAC: 04:4b:1c:43:f3:3a
+MAC: 37:1e:b5:14:19:af
+MAC: a3:09:f8:c4:0a:45
+MAC: 5d:a7:80:e5:41:fe
+MAC: 0a:d7:08:f7:ce:84
+MAC: ac:6b:ba:45:49:08
+MAC: 51:03:57:f4:dd:26
+MAC: bf:e2:e9:c1:27:8c
+MAC: 59:81:99:c5:a4:43
+MAC: 61:ff:5c:83:e1:19
+MAC: f5:64:88:67:24:1f
+MAC: 8f:b2:a0:d4:5c:b5
+MAC: 9b:54:7c:91:1f:e3
+MAC: b1:ee:0e:24:44:70
+MAC: 71:5c:2b:00:14:04
+MAC: c4:ef:5a:e2:71:5e
+MAC: f9:ee:0a:b0:8f:6a
+MAC: 31:1d:4b:cb:10:84
+MAC: 63:ed:88:93:40:fd
+MAC: fc:8d:99:ef:90:07
+MAC: 9c:dc:8d:e3:6c:38
+MAC: 35:ed:33:3d:48:73
+MAC: f3:d6:94:6f:ae:4e
+MAC: d4:b0:02:10:33:a5
+MAC: 4c:b0:20:e4:98:14
+MAC: ff:d7:e1:f3:e5:e2
+MAC: 6b:07:c4:36:72:62
+MAC: 7b:02:5a:9d:29:fe
+MAC: fe:3c:9e:5c:3a:47
+MAC: 94:4c:c6:06:1a:b1
+MAC: fb:8a:cd:c0:79:84
+MAC: 5d:b9:f8:69:55:50
+MAC: 0b:2c:44:b9:8e:6f
+MAC: 66:e5:00:f3:1b:6c
+MAC: 81:ad:5b:96:29:04
+MAC: 15:e1:a3:5e:2e:95
+MAC: e8:da:6a:70:1b:e5
+MAC: f1:bb:71:84:dd:74
+MAC: a5:53:0e:6e:11:23
+MAC: 2f:f6:60:81:ab:0d
+MAC: c4:32:65:02:41:af
+MAC: e5:a7:0c:24:f4:a3
+MAC: 76:6a:3c:a1:43:3e
+MAC: fe:8d:3b:8b:8b:5d
+MAC: ba:23:10:23:53:bd
+MAC: b6:93:bf:17:32:c8
+MAC: 5d:2f:43:7d:b6:51
+MAC: 52:72:4c:ab:6b:00
+MAC: 3a:9e:3e:b2:a1:61
+MAC: 89:f6:ca:a3:25:28
+MAC: 78:56:3d:d4:45:b6
+MAC: c0:0d:45:8c:87:91
+MAC: 5f:fc:1f:04:7f:f8
+MAC: f9:ee:63:cf:a5:99
+MAC: d1:bc:24:f3:09:b1
+MAC: 61:8b:41:10:2a:1b
+MAC: 76:ed:85:f0:56:d5
+MAC: 81:b1:09:22:9a:24
+MAC: fa:e0:f7:74:84:12
+MAC: ee:d4:16:2c:e2:e8
+MAC: 2e:7b:c8:a1:7f:e2
+MAC: 79:1e:c2:f8:90:a4
+MAC: 15:93:b4:90:f4:95
+MAC: f6:79:63:f5:79:7f
+MAC: 47:5d:c4:80:d9:03
+MAC: 31:9a:50:23:36:8f
+MAC: cc:c4:23:a9:fc:78
+MAC: 7d:ef:0d:83:d6:80
+MAC: 07:f5:eb:e9:a2:04
+MAC: b8:bd:27:31:1a:ea
+MAC: a9:f4:18:8d:07:b0
+MAC: 8f:fa:a8:5c:dd:a2
+MAC: 26:48:a6:ae:e7:ed
+MAC: 97:3e:88:20:5e:00
+MAC: 6e:25:ed:33:31:69
+MAC: 6e:74:28:69:2e:31
+MAC: bf:33:01:49:ce:d0
+MAC: 09:b5:06:03:e8:79
+MAC: 5a:d3:3d:83:74:34
+MAC: e4:b4:75:3d:15:e9
+MAC: 05:c1:04:41:54:9b
+MAC: e9:a8:fb:78:e3:f2
+MAC: d7:a4:65:ab:03:13
+MAC: 59:05:68:47:2f:b3
+MAC: 18:a5:67:94:4a:4f
+MAC: a0:0a:64:4c:74:12
+MAC: ae:66:18:11:b7:d0
+MAC: 4e:19:f3:a6:fc:17
+MAC: 06:04:14:70:0e:ed
+MAC: d6:c7:fc:6d:32:0d
+MAC: b9:39:73:74:80:c9
+MAC: 78:16:7a:4b:c5:08
+MAC: 35:f4:14:b9:79:7e
+MAC: 95:85:8e:8c:98:82
+MAC: 3f:87:ae:3a:94:15
+MAC: d3:52:32:76:e2:2b
+MAC: bb:f0:0a:12:41:97
+MAC: 74:91:d9:d1:d1:8b
+MAC: 54:9f:9a:c9:24:75
+MAC: ef:f2:85:05:a9:4a
+MAC: 7b:16:40:27:b0:d5
+MAC: 05:3a:45:21:f7:4d
+MAC: c5:fa:74:fc:1f:08
+MAC: 3b:48:60:80:d3:f4
+MAC: 8f:99:a4:6e:68:6c
+MAC: 6b:e7:12:46:34:ae
+MAC: 65:21:83:24:74:b9
+MAC: 49:07:42:14:70:9c
+MAC: 9a:14:95:9f:3e:31
+MAC: 2b:df:63:24:e0:20
+MAC: 01:aa:82:a8:ac:34
+MAC: 71:b0:dd:f6:ce:7b
+MAC: 27:a4:53:b7:13:6b
+MAC: 80:99:ba:da:db:91
+MAC: c5:e5:76:da:a1:0c
+MAC: 29:74:f9:ac:00:2a
+MAC: 50:9f:05:3c:18:9b
+MAC: bf:6a:05:70:56:84
+MAC: 81:99:e7:2c:7c:01
+MAC: f2:0d:82:c3:56:a1
+MAC: fa:a0:8a:63:0e:18
+MAC: 9d:c3:39:19:ae:e0
+MAC: f5:91:31:37:78:43
+MAC: bf:cd:f0:b1:40:c0
+MAC: a9:5f:49:d4:d8:fd
+MAC: 55:b7:40:6a:04:f9
+MAC: d7:d3:0f:69:b4:75
+MAC: 7b:c1:d3:65:20:23
+MAC: 27:98:a1:66:19:9d
+MAC: fa:27:d6:5b:93:48
+MAC: 24:86:a0:22:76:0b
+MAC: f6:cc:3b:82:88:43
+MAC: a5:9b:80:3e:d4:07
+MAC: 39:53:e1:38:3d:87
+MAC: cb:2a:24:fa:06:5c
+MAC: 8f:b6:8c:99:6d:88
+MAC: e2:be:85:b7:17:97
+MAC: d8:d7:7a:29:86:e3
+MAC: 5d:18:aa:a0:79:d7
+MAC: ea:72:80:9c:0d:1a
+MAC: 9b:b8:68:b1:98:d4
+MAC: 6f:c9:ca:f6:11:e7
+MAC: d7:63:41:41:44:54
+MAC: a7:cd:a7:2e:67:46
+MAC: 0a:36:59:d0:a1:71
+MAC: 1e:4f:9e:eb:49:bf
+MAC: c5:ca:bb:65:22:88
+MAC: cd:ac:20:47:21:ab
+MAC: 84:b9:dc:8c:26:e5
+MAC: df:ca:04:aa:c2:88
+MAC: df:37:24:86:ea:1c
+MAC: 16:68:5c:90:60:d7
+MAC: 11:a9:5e:ef:25:17
+MAC: 1b:b7:b6:f4:a4:19
+MAC: cd:c4:f7:d7:a5:8a
+MAC: 4b:d0:06:90:6d:a2
+MAC: 0b:1d:11:b4:e0:b9
+MAC: 68:e2:32:de:27:29
+MAC: 3e:ae:6d:2b:0b:4d
+MAC: a1:ec:25:62:a2:ed
+MAC: a4:cd:64:ed:82:a3
+MAC: b1:34:b7:cb:06:67
+MAC: bf:9b:27:0a:62:c7
+MAC: a3:21:55:39:04:cd
+MAC: 1e:bd:15:26:22:81
+MAC: cf:b6:04:96:b8:69
+MAC: cb:c3:78:17:1f:a1
+MAC: 02:b0:a7:62:9a:8c
+MAC: 50:0f:82:2e:f5:e7
+MAC: a3:fd:e3:07:33:2b
+MAC: 97:36:02:e6:d2:3a
+MAC: d5:b0:86:21:f5:a7
+MAC: 03:a3:68:70:bc:ec
+MAC: 34:90:45:52:50:2d
+MAC: aa:53:d6:53:a2:ce
+MAC: fa:77:2b:d4:e0:fc
+MAC: cf:a5:5c:3d:20:05
+MAC: ef:a9:01:bc:55:12
+MAC: 73:4f:c3:28:35:08
+MAC: 3b:2b:ef:84:19:0e
+MAC: e6:f8:77:e2:8c:9c
+MAC: 85:ff:06:16:40:51
+MAC: 4b:b4:a6:89:f3:51
+MAC: ed:0e:82:4f:db:59
+MAC: fd:d0:6d:cb:18:8f
+MAC: 72:0f:01:44:03:b1
+MAC: d6:70:58:a0:c6:9a
+MAC: bd:37:a4:62:a8:9a
+MAC: ad:70:e6:39:3d:50
+MAC: c4:8c:b7:bd:2f:a2
+MAC: 06:be:93:99:2a:21
+MAC: 18:76:44:c6:92:ff
+MAC: aa:ed:aa:be:9b:06
+MAC: 33:44:14:50:96:14
+MAC: 39:e9:2c:9c:ab:b4
+MAC: 3a:f7:62:a6:60:d1
+MAC: 76:4a:02:05:51:b3
+MAC: f9:04:0e:fb:2e:ea
+MAC: 73:61:01:e2:fb:4e
+MAC: 51:07:68:01:26:e1
+MAC: d8:66:e4:a5:68:e7
+MAC: 30:11:19:c7:29:e4
+MAC: 9b:4e:19:a9:f5:7f
+MAC: e9:07:d4:e0:80:8c
+MAC: 6a:47:a8:11:d0:d9
+MAC: 28:d0:40:80:18:04
+MAC: 88:6c:2a:8d:55:84
+MAC: 9b:72:f0:18:66:08
+MAC: eb:95:09:bc:49:92
+MAC: 24:cf:81:d1:d7:c1
+MAC: f6:67:ef:2d:8f:52
+MAC: f4:08:14:48:ec:af
+MAC: 84:ac:12:56:8e:b0
+MAC: 93:5b:4c:d2:6f:4a
+MAC: eb:cc:ae:ec:a2:88
+MAC: 25:48:e2:21:82:47
+MAC: 8f:73:40:51:ae:74
+MAC: f2:9e:5f:81:10:07
+MAC: 4f:93:4d:81:5e:b2
+MAC: 77:9d:e4:66:52:b1
+MAC: bf:f4:3a:c3:d0:d2
+MAC: 17:22:37:31:9b:33
+MAC: 3f:76:fc:1b:bb:14
+MAC: 28:67:24:69:52:90
+MAC: 4f:ff:5b:44:df:7e
+MAC: 8c:2f:93:a9:aa:ae
+MAC: 7e:6d:98:55:06:40
+MAC: 17:25:98:40:24:cd
+MAC: f6:07:60:51:80:20
+MAC: 39:a8:b7:51:3c:08
+MAC: af:01:b9:89:a8:ad
+MAC: b2:88:85:5d:9a:4c
+MAC: 97:e6:88:4f:ef:d7
+MAC: 47:db:06:ac:e2:59
+MAC: c1:69:31:83:c3:c5
+MAC: 42:f3:4c:b4:a8:e6
+MAC: ca:47:01:5a:57:01
+MAC: c2:d3:4a:4c:f7:db
+MAC: de:bf:b7:fe:25:53
+MAC: 3f:b6:62:26:b8:29
+MAC: 7d:72:26:00:56:11
+MAC: 48:46:19:00:88:60
+MAC: be:20:85:25:bc:02
+MAC: 6c:84:ab:b6:70:b7
+MAC: bb:ce:88:78:2d:56
+MAC: 10:5a:92:df:85:42
+MAC: 7f:6c:ad:f8:c8:80
+MAC: 8a:ed:64:64:1f:05
+MAC: 2f:77:93:40:85:ed
+MAC: 5a:99:d2:27:18:62
+MAC: ec:80:3e:6e:bc:57
+MAC: d5:f4:06:d7:9a:5e
+MAC: a9:3d:93:57:c9:a2
+MAC: 87:06:cf:18:a2:06
+MAC: d3:c9:76:85:58:c0
+MAC: 10:0c:32:76:53:f3
+MAC: 1b:5a:0c:90:58:3e
+MAC: d6:47:0e:b2:8e:6d
+MAC: 21:7c:b2:e9:88:82
+MAC: ec:67:d8:7d:04:11
+MAC: 9f:fb:9e:58:9c:80
+MAC: ee:a6:b2:a8:7c:1f
+MAC: 79:cb:a5:d2:d0:06
+MAC: b4:87:24:b2:21:4c
+MAC: d2:7c:0d:f9:fe:ad
+MAC: 34:33:28:88:74:2c
+MAC: 39:7d:65:7d:4c:41
+MAC: 6a:9d:48:52:bb:3f
+MAC: 92:c5:63:c0:e1:28
+MAC: eb:f6:19:9d:85:b8
+MAC: 43:22:2b:a3:48:21
+MAC: 3d:3e:11:a3:1c:10
+MAC: ea:d9:61:a4:d5:2c
+MAC: 01:f0:45:c2:55:91
+MAC: c5:38:c3:24:24:00
+MAC: de:9d:42:51:7a:61
+MAC: 75:04:d0:5f:a0:7b
+MAC: 5b:fe:d8:a4:87:2d
+MAC: a4:bd:f2:8a:c2:91
+MAC: 1f:b3:38:5e:56:68
+MAC: af:a7:c2:a2:9f:25
+MAC: f6:7f:81:c4:25:96
+MAC: 65:f3:5a:f4:69:54
+MAC: 6b:4d:f1:5b:6c:e1
+MAC: 4b:c6:da:15:92:76
+MAC: 95:13:2f:8e:27:46
+MAC: 8b:ca:df:d3:2b:f0
+MAC: 7d:45:b8:1d:87:20
+MAC: e8:65:0c:34:79:64
+MAC: c3:33:20:2b:e1:f9
+MAC: 2f:9b:aa:b7:48:5c
+MAC: d8:bf:a9:50:2d:5c
+MAC: 58:99:68:82:64:98
+MAC: df:c8:94:7d:76:fe
+MAC: 56:34:34:b2:ee:86
+MAC: 38:62:d6:84:1a:d2
+MAC: 7e:8b:42:9a:9a:90
+MAC: ce:54:e6:25:60:c4
+MAC: 84:4e:73:81:0c:64
+MAC: eb:ae:7b:35:04:15
+MAC: cf:2b:a7:d9:4c:60
+MAC: e5:8c:a8:bf:e9:f1
+MAC: 52:4d:2b:15:bb:cc
+MAC: 6b:3d:1c:4c:77:74
+MAC: 57:f0:da:67:4f:3b
+MAC: 30:c5:e8:0a:ba:c8
+MAC: cb:1f:3c:24:7d:ed
+MAC: fd:38:4c:9f:88:15
+MAC: 3e:16:5d:74:15:10
+MAC: c9:5a:7e:c6:c9:37
+MAC: 39:32:e2:2c:e9:a9
+MAC: b2:ba:a0:a1:2d:b0
+MAC: 43:8f:34:09:9d:c9
+MAC: 82:29:ca:b2:a8:fb
+MAC: 7d:07:95:74:2a:93
+MAC: 76:0a:64:21:86:49
+MAC: 51:e7:48:45:51:9b
+MAC: 6b:33:bb:a9:36:03
+MAC: 9e:51:60:4b:10:9f
+MAC: 0b:d5:6b:1c:50:98
+MAC: 5f:84:16:6f:70:44
+MAC: e4:3f:2b:6f:12:21
+MAC: a7:b5:5a:49:b7:e7
+MAC: fb:11:11:09:bd:12
+MAC: 4e:86:74:21:f7:d0
+MAC: 5f:89:8a:f3:91:73
+MAC: 9c:cc:b3:1e:42:f3
+MAC: ca:c1:69:25:4d:61
+MAC: 92:b7:f7:12:8d:2d
+MAC: 37:85:5e:fc:ee:8f
+MAC: ca:55:9c:00:6b:56
+MAC: 7b:fc:61:a0:21:da
+MAC: 65:13:6e:5a:26:a7
+MAC: b9:7d:18:68:c9:53
+MAC: dc:7e:03:d0:10:0c
+MAC: 05:d1:13:62:c6:15
+MAC: a9:41:b5:ba:67:5f
+MAC: 52:ed:28:04:21:90
+MAC: 6e:c1:a6:06:d7:9d
+MAC: 1c:1b:23:42:da:41
+MAC: 73:53:44:bc:f4:fa
+MAC: 9b:0d:21:65:c6:44
+MAC: 4d:60:26:bc:9c:de
+MAC: 1b:88:2c:a0:98:74
+MAC: 96:12:15:9a:d6:0b
+MAC: 07:36:99:82:ed:2d
+MAC: 47:c5:18:03:40:ef
+MAC: d9:33:ef:b4:f4:a7
+MAC: ad:e7:c4:68:30:4b
+MAC: d9:a0:ce:4f:49:a4
+MAC: cb:73:31:49:96:c1
+MAC: e3:ba:24:cd:0a:13
+MAC: 36:0b:fe:b7:15:a1
+MAC: 2b:cb:f7:15:52:20
+MAC: 45:f2:0b:4d:b8:42
+MAC: 2f:98:3e:01:f6:57
+MAC: 32:f5:aa:43:c9:3b
+MAC: a5:7e:07:33:a1:9f
+MAC: ed:1d:80:f6:8a:c4
+MAC: df:21:35:e3:61:b0
+MAC: ae:57:60:d8:9c:d7
+MAC: 3e:d2:14:3d:7b:94
+MAC: cc:9a:c4:b9:da:eb
+MAC: 37:2c:cf:12:31:8a
+MAC: 6b:18:ba:0e:4d:f7
+MAC: df:f1:37:ff:d5:33
+MAC: d3:ed:15:7f:a3:cc
+MAC: 6b:68:ee:81:bf:a9
+MAC: df:3b:71:22:2a:da
+MAC: b7:6b:72:ee:55:bb
+MAC: 1d:bb:1a:53:1f:09
+MAC: 83:0b:40:1e:8e:0c
+MAC: cd:b9:d6:8b:24:b5
+MAC: ae:00:15:f4:a8:55
+MAC: 9a:75:5d:fb:12:32
+MAC: 23:28:77:30:94:24
+MAC: fe:e2:e3:09:c5:42
+MAC: db:3b:ba:97:2e:5a
+MAC: 91:e6:ed:78:a4:86
+MAC: 4f:ae:ed:2e:56:5b
+MAC: 1e:42:a5:b1:30:da
+MAC: ff:4b:d2:4e:ee:39
+MAC: e0:07:20:7c:a0:8c
+MAC: 91:ab:6c:81:68:9b
+MAC: 82:96:3b:1f:3b:db
+MAC: 76:a6:98:a5:68:b5
+MAC: f4:c0:b6:0c:04:06
+MAC: df:b8:72:2f:23:38
+MAC: ef:58:59:30:bf:c5
+MAC: cf:92:d8:e9:5e:80
+MAC: dd:52:8f:ea:89:af
+MAC: 42:dd:30:a9:21:a9
+MAC: 3f:35:30:cd:88:50
+MAC: ed:c0:f6:77:aa:1b
+MAC: 78:5b:44:05:b4:c2
+MAC: dc:0b:c4:24:88:ce
+MAC: a7:45:88:ed:e4:90
+MAC: 16:24:44:5e:fa:6d
+MAC: 91:c3:1d:c1:8f:87
+MAC: 78:4a:8d:21:30:92
+MAC: 66:84:b0:96:09:b1
+MAC: 7f:cd:80:3f:28:b6
+MAC: 12:5c:f8:01:56:1d
+MAC: b2:1e:74:bf:a8:0f
+MAC: b4:f4:a1:81:cc:30
+MAC: 6f:8f:0e:a8:43:ee
+MAC: f1:e6:0f:ba:5d:2f
+MAC: c9:a0:64:0f:7c:85
+MAC: bd:84:57:f7:87:e1
+MAC: 61:dc:62:23:d8:c4
+MAC: 1d:3a:60:85:28:c0
+MAC: 97:7e:58:9a:61:44
+MAC: f1:db:14:ee:73:48
+MAC: d3:3a:76:50:77:3c
+MAC: 6d:1a:57:ec:37:a7
+MAC: 9d:84:b8:57:54:ef
+MAC: ff:03:66:fb:9c:c6
+MAC: d2:ea:44:69:89:7e
+MAC: a7:2d:24:fc:74:eb
+MAC: b0:35:fb:12:9c:7e
+MAC: dd:1b:46:05:f1:9a
+MAC: bc:1a:eb:cd:f0:c4
+MAC: 67:76:9a:37:41:a5
+MAC: 08:bc:3f:61:74:2a
+MAC: 3b:8d:32:28:c5:ca
+MAC: 99:17:74:fa:3d:0d
+MAC: c4:70:e0:67:d2:cf
+MAC: 30:04:7a:a2:e6:7e
+MAC: 59:74:82:c2:c2:26
+MAC: b5:d3:15:65:13:01
+MAC: 94:3c:21:00:2b:00
+MAC: 21:f5:50:c6:27:84
+MAC: cd:c2:13:4c:c2:bc
+MAC: c7:dd:03:3d:1b:4c
+MAC: 51:5a:54:08:94:48
+MAC: ef:0e:03:c0:31:22
+MAC: f8:7b:b8:5a:ba:84
+MAC: 91:ef:07:dd:8d:5d
+MAC: ac:8c:62:f5:00:05
+MAC: 2f:7a:2c:11:89:9b
+MAC: 91:6e:1d:32:86:06
+MAC: 0c:3f:09:3c:41:09
+MAC: a8:05:32:90:60:b3
+MAC: 65:bc:3e:29:7b:3d
+MAC: 4e:36:50:0f:08:db
+MAC: 72:e5:ff:98:d0:d0
+MAC: cf:56:7d:cb:25:23
+MAC: 1d:f4:4c:09:a9:51
+MAC: 2b:d8:f3:f0:40:5b
+MAC: 11:69:6e:c5:2f:67
+MAC: 9a:d3:97:72:a8:dc
+MAC: b8:f3:43:7d:99:05
+MAC: 9c:b6:8c:5a:2d:b8
+MAC: ff:8a:4b:c7:ae:3c
+MAC: f4:cf:8b:92:ff:13
+MAC: c4:da:80:6a:ab:24
+MAC: 8e:b2:82:0a:e2:af
+MAC: 99:6f:02:3e:5b:30
+MAC: e1:ba:8b:b1:6e:a5
+MAC: ed:cf:fa:05:48:5c
+MAC: 91:b6:17:80:9f:70
+MAC: 4c:da:c2:57:81:a1
+MAC: aa:bc:22:88:55:18
+MAC: 12:47:62:c7:22:a3
+MAC: 8d:00:86:8f:1c:31
+MAC: 72:89:4c:03:9f:90
+MAC: 10:99:13:de:c0:db
+MAC: a7:93:4c:dd:f2:a7
+MAC: e9:69:36:2a:f4:41
+MAC: 23:63:23:6c:85:e0
+MAC: 06:c0:c2:1a:7f:76
+MAC: f9:1c:f1:02:e3:b8
+MAC: 1f:bb:01:ac:a1:dd
+MAC: 63:17:d8:cd:79:4a
+MAC: d0:c5:18:68:3e:b3
+MAC: d5:10:e3:ef:ab:d4
+MAC: bd:46:62:4e:63:01
+MAC: aa:c6:f3:f1:4f:5a
+MAC: e9:34:b1:87:1b:29
+MAC: f9:09:23:d4:79:3f
+MAC: 15:f7:67:c5:7b:65
+MAC: 54:96:5f:73:db:a4
+MAC: b9:17:b5:1b:c3:15
+MAC: a8:cd:57:6c:a3:cb
+MAC: 94:73:40:50:ad:e8
+MAC: 31:ba:dd:f0:79:ec
+MAC: 1e:df:ca:1b:cf:dd
+MAC: 63:5b:12:e4:51:84
+MAC: 67:b1:0f:82:30:a6
+MAC: b3:1f:3b:52:0a:47
+MAC: 23:e2:c5:7c:49:c0
+MAC: e8:75:1b:5b:b6:4a
+MAC: 0a:8f:33:70:8b:a7
+MAC: 78:b5:ba:c0:bf:91
+MAC: 0e:dc:0e:90:fa:ee
+MAC: ec:9d:c2:34:08:ed
+MAC: 96:15:fc:02:b4:b3
+MAC: 9d:b4:df:a8:9a:82
+MAC: 33:63:16:62:ca:07
+MAC: 7f:7e:a5:8a:cd:2a
+MAC: b6:6c:e9:44:20:cc
+MAC: 05:10:99:d6:72:50
+MAC: db:ac:4d:e9:ae:0d
+MAC: b0:8d:1c:2d:0e:1f
+MAC: f3:a3:0a:f3:e4:e0
+MAC: 7c:09:67:70:20:62
+MAC: 87:63:79:46:8f:a9
+MAC: 5a:5c:80:1d:24:28
+MAC: 71:39:f5:00:b5:c7
+MAC: 79:7f:f0:66:0f:14
+MAC: fa:b7:63:c0:04:92
+MAC: 87:e1:6b:37:ed:61
+MAC: 46:01:86:2f:52:a6
+MAC: e8:72:ed:9b:88:db
+MAC: bd:07:3a:02:be:8a
+MAC: 34:84:ae:d1:cd:32
+MAC: 42:a5:83:53:b1:e5
+MAC: 57:71:a5:ba:1e:de
+MAC: 8c:cb:d3:56:45:e1
+MAC: 7b:79:98:6f:79:08
+MAC: 58:69:c1:73:28:a2
+MAC: 26:a0:9b:20:39:08
+MAC: 8f:2c:82:1f:ad:7a
+MAC: fc:64:d1:72:17:c4
+MAC: 39:e8:30:60:a1:09
+MAC: c0:1d:dc:49:8d:2e
+MAC: d3:7d:df:c7:a1:31
+MAC: 17:33:e7:09:e3:a7
+MAC: f3:cc:ce:19:36:c8
+MAC: 7f:94:82:c4:55:ae
+MAC: 75:df:27:ad:ff:79
+MAC: 32:5b:5e:1a:15:7b
+MAC: 79:10:2f:31:e4:c7
+MAC: fd:d4:c3:6c:ae:87
+MAC: c2:fb:b4:38:3a:e8
+MAC: ce:ef:08:64:c0:99
+MAC: 5d:33:ef:2a:ca:2d
+MAC: 49:05:02:52:c7:64
+MAC: 97:49:74:89:12:98
+MAC: 41:3e:8f:89:c0:e2
+MAC: 3e:92:2c:e2:b3:13
+MAC: 7f:4a:77:b8:fc:3f
+MAC: f8:de:5c:41:38:4f
+MAC: 31:fe:a3:52:c2:9a
+MAC: b7:f9:ba:2a:b8:6a
+MAC: c2:41:b3:85:08:d0
+MAC: 4c:3b:67:2a:b9:e6
+MAC: 5f:05:06:e6:77:8a
+MAC: b6:9d:6c:a0:05:ee
+MAC: 32:63:f6:3f:0d:18
+MAC: 7d:23:60:ca:0b:96
+MAC: 11:78:75:3b:76:dd
+MAC: c4:44:d9:10:6a:0c
+MAC: fd:96:32:fb:e2:20
+MAC: 5d:ff:bc:00:53:3d
+MAC: 9c:f6:62:a3:d1:c0
+MAC: 7d:0d:b1:4c:2f:2b
+MAC: b2:a6:34:85:c8:18
+MAC: 69:50:7d:f0:09:5a
+MAC: ae:df:03:cb:65:14
+MAC: d8:cc:d3:9d:d4:56
+MAC: 9e:9f:24:a7:b6:72
+MAC: cf:16:73:e5:c0:50
+MAC: 47:a3:61:96:82:52
+MAC: b0:91:3c:e5:36:cc
+MAC: ed:c4:62:68:8f:2d
+MAC: e0:d5:0f:f7:26:ab
+MAC: 92:8f:c9:35:dc:ff
+MAC: da:b9:0a:72:50:71
+MAC: 0b:96:5a:eb:2c:0d
+MAC: de:3b:3d:b8:51:dc
+MAC: d3:bd:51:88:1c:72
+MAC: bc:3f:e3:43:75:f3
+MAC: 93:71:a0:42:f5:99
+MAC: 52:d0:c8:52:be:08
+MAC: 53:e4:61:14:fe:bc
+MAC: 60:4e:19:64:1b:40
+MAC: d7:e3:41:92:ee:e4
+MAC: df:17:2a:3d:1e:3b
+MAC: 22:5d:87:9a:66:30
+MAC: 96:01:a3:b7:7a:a4
+MAC: ca:3f:12:88:66:07
+MAC: a7:20:6b:14:0c:ba
+MAC: 4b:49:1a:b7:78:71
+MAC: 3e:ea:c8:52:bc:50
+MAC: 21:7f:a9:4e:78:fd
+MAC: 70:e4:f0:6a:da:51
+MAC: 3e:63:02:1a:71:66
+MAC: e6:06:7f:a9:11:5e
+MAC: dc:68:4c:89:87:1b
+MAC: 4d:60:87:d2:c0:89
+MAC: 3e:b4:61:b3:b4:52
+MAC: 12:6b:05:e0:2c:c8
+MAC: f7:9a:08:11:df:38
+MAC: e7:46:c5:a9:e0:02
+MAC: 72:dd:80:20:58:f0
+MAC: 3f:7a:3d:0e:eb:f9
+MAC: 60:29:8a:15:b4:65
+MAC: 0d:3f:34:db:3f:23
+MAC: 7b:ae:d8:59:f4:93
+MAC: 3a:04:03:17:bc:5c
+MAC: 5e:09:90:4c:dd:94
+MAC: e7:f9:98:b1:a2:d4
+MAC: 7d:98:18:ab:36:d0
+MAC: 6c:5e:85:14:1d:98
+MAC: fc:e1:43:a1:58:2c
+MAC: 3f:1e:0c:1c:c7:b3
+MAC: 4b:34:2c:e2:29:24
+MAC: 99:7f:89:72:4f:e6
+MAC: 7e:20:da:2f:64:ba
+MAC: 96:0f:0e:dc:d7:0b
+MAC: 12:61:4d:7c:83:38
+MAC: fb:64:85:fe:92:13
+MAC: 09:da:26:d6:03:7a
+MAC: 87:80:1c:82:98:62
+MAC: b5:31:42:4b:e7:66
+MAC: 75:9c:0c:74:f5:30
+MAC: 2c:43:30:3b:98:70
+MAC: 19:d7:9c:70:1e:63
+MAC: 14:80:8e:d5:16:34
+MAC: eb:87:3b:7d:a9:02
+MAC: f3:61:27:81:58:15
+MAC: b1:65:2a:24:ef:f5
+MAC: a1:a1:e2:ac:80:a4
+MAC: 3e:ac:2d:81:90:f1
+MAC: 89:eb:2e:5f:d2:29
+MAC: cb:d2:70:39:02:66
+MAC: d2:58:9b:22:fe:4a
+MAC: 3c:d9:29:dd:6c:93
+MAC: d9:c8:fd:72:9d:ec
+MAC: 97:d2:c1:c1:12:cc
+MAC: b5:43:ae:a6:15:1a
+MAC: f1:33:52:11:90:9b
+MAC: 12:e3:24:e4:e4:00
+MAC: d3:4b:40:a3:a0:6b
+MAC: ae:73:78:a7:49:4e
+MAC: ef:bd:2c:aa:4f:d9
+MAC: 01:97:52:b0:33:97
+MAC: 41:b1:82:96:14:4c
+MAC: 57:58:4f:2e:ec:9c
+MAC: e7:85:80:2c:06:68
+MAC: f0:ae:82:4f:d4:41
+MAC: c1:5a:a0:b7:70:d0
+MAC: eb:0d:b0:2c:6b:3a
+MAC: ce:78:88:57:b7:67
+MAC: 2e:c8:86:21:96:e5
+MAC: f0:1a:23:05:97:a8
+MAC: 5d:89:cc:9e:81:b8
+MAC: 7f:3f:61:26:03:f8
+MAC: 07:af:12:b9:5f:df
+MAC: e0:d1:93:60:cc:24
+MAC: e6:64:e8:a1:73:16
+MAC: b5:49:8c:12:04:c6
+MAC: ad:2a:48:26:42:77
+MAC: 8d:8b:47:ac:b5:80
+MAC: 6e:ae:9d:86:fc:91
+MAC: 05:75:c8:85:85:be
+MAC: 8c:a9:2e:eb:a7:fb
+MAC: ec:ea:c8:c6:68:8d
+MAC: 88:32:b8:d4:c8:99
+MAC: 39:d9:0f:05:09:9b
+MAC: e6:e5:82:81:92:a3
+MAC: 35:37:89:d6:e5:00
+MAC: eb:41:86:ee:09:88
+MAC: f5:23:60:00:40:79
+MAC: ad:1c:5b:9a:63:7e
+MAC: bc:95:ca:a6:b4:bc
+MAC: 61:66:ca:40:19:ed
+MAC: 92:4f:bc:df:36:25
+MAC: a9:b4:3e:3b:29:2a
+MAC: ff:e9:db:de:4d:71
+MAC: b7:3e:24:be:7c:fb
+MAC: 2f:73:9a:84:d9:50
+MAC: 51:61:90:33:16:87
+MAC: bb:fd:d5:00:1f:73
+MAC: c6:bf:32:d3:67:a8
+MAC: 9c:82:1d:ce:e4:cb
+MAC: 8d:79:15:19:33:9b
+MAC: e3:03:88:2f:69:c7
+MAC: 5d:6c:83:22:67:ec
+MAC: aa:4c:e8:fc:2c:d7
+MAC: 87:77:ce:06:f1:cf
+MAC: e5:85:7b:8b:46:23
+MAC: 9d:39:ec:33:08:2b
+MAC: f6:be:f8:36:4c:48
+MAC: 33:f3:ab:11:79:c9
+MAC: 58:f3:2c:83:a0:f0
+MAC: 5d:f3:2b:25:57:0b
+MAC: 37:4f:82:0e:56:b6
+MAC: f2:e4:23:ec:f8:f2
+MAC: 2b:c1:e9:11:c2:40
+MAC: 68:d0:cd:97:1e:28
+MAC: 3b:98:88:12:08:0e
+MAC: df:4e:a2:7e:06:19
+MAC: 33:4f:43:f7:a6:fa
+MAC: 1d:89:79:08:b9:dd
+MAC: 2d:30:9c:02:f1:83
+MAC: 93:ec:31:a2:3b:d2
+MAC: 36:e5:68:14:c4:6d
+MAC: 00:87:93:e9:14:b3
+MAC: 5b:e9:9c:1e:88:40
+MAC: ce:f7:82:9a:0b:a5
+MAC: aa:c3:a7:92:0f:01
+MAC: e7:0b:32:6a:0f:4f
+MAC: a7:84:ad:03:be:f6
+MAC: dd:37:40:fe:98:42
+MAC: dd:ff:6a:f4:21:48
+MAC: 10:77:63:a0:10:4c
+MAC: d3:da:f6:42:eb:67
+MAC: 4e:03:b7:42:35:3a
+MAC: e8:bf:0c:60:28:e6
+MAC: ac:cf:27:c8:5c:96
+MAC: 77:7c:03:ef:b4:06
+MAC: 81:6f:19:c9:a8:45
+MAC: da:a7:51:c9:27:c6
+MAC: bf:f5:50:db:4a:63
+MAC: 20:8c:d1:4f:02:ee
+MAC: 47:a4:48:c0:07:44
+MAC: 00:38:a1:5b:92:e1
+MAC: 38:81:1c:b2:25:59
+MAC: 9b:3b:31:0d:26:1b
+MAC: 78:5c:e8:6a:02:11
+MAC: fe:e3:d8:c3:f8:fc
+MAC: e8:fd:a2:f5:34:ca
+MAC: 7b:b9:04:70:d6:bb
+MAC: 3f:3a:c0:42:84:14
+MAC: bf:fc:29:d0:7a:21
+MAC: 5b:96:c4:20:97:6e
+MAC: 6c:c4:f4:82:13:3b
+MAC: 58:b4:46:90:9e:e3
+MAC: 79:29:99:c2:25:4c
+MAC: a1:e1:cd:ba:b7:dc
+MAC: 6f:97:73:43:05:81
+MAC: ca:df:c8:1e:fd:f3
+MAC: 59:53:ef:3e:00:81
+MAC: f7:da:b8:fa:43:75
+MAC: 35:d3:b6:03:b6:ea
+MAC: fe:bb:b0:5b:52:cf
+MAC: 39:df:99:dd:04:8e
+MAC: 78:07:5e:db:bb:09
+MAC: 1e:f1:35:54:00:38
+MAC: 69:be:da:b8:06:bf
+MAC: f1:7b:b0:0f:55:98
+MAC: d9:7a:d1:43:21:c2
+MAC: 75:23:0e:b9:be:8e
+MAC: 4a:ed:24:07:1e:97
+MAC: fe:ce:22:a1:2d:ea
+MAC: ab:04:88:6d:60:87
+MAC: 7a:df:b5:a5:68:5a
+MAC: 29:dc:80:eb:06:59
+MAC: 5d:85:e0:4e:72:8f
+MAC: 8f:f4:3b:59:22:44
+MAC: 16:5b:3d:91:cd:75
+MAC: ba:1e:c9:5c:67:f0
+MAC: cd:a7:5d:7e:22:c6
+MAC: ad:ed:04:fb:41:c6
+MAC: 1b:86:f3:85:de:f4
+MAC: 75:ae:86:8b:e9:2e
+MAC: bc:e3:e5:9f:18:0d
+MAC: d4:af:05:49:24:91
+MAC: f9:d1:e1:21:e5:f9
+MAC: dc:e8:f9:a0:2c:5f
+MAC: 53:7d:1b:64:6a:27
+MAC: dd:a9:5d:43:1e:ee
+MAC: 66:45:2f:9f:21:23
+MAC: fd:95:e6:47:78:20
+MAC: c7:12:88:04:19:01
+MAC: 06:28:a8:44:a8:43
+MAC: 5c:45:77:29:85:17
+MAC: b4:97:be:55:b0:98
+MAC: 1a:4e:6e:4a:e2:30
+MAC: ac:b1:70:9f:a5:de
+MAC: 7e:37:da:3c:84:0c
+MAC: 49:89:86:01:ce:11
+MAC: 25:93:9d:11:bf:dd
+MAC: f1:b4:98:4a:5f:d1
+MAC: 49:b2:f0:70:90:64
+MAC: 63:6e:03:a4:ec:be
+MAC: 0c:60:82:0e:32:40
+MAC: b7:33:a7:40:1e:47
+MAC: 7d:fe:87:91:6c:06
+MAC: ec:62:4e:53:a6:c4
+MAC: d1:ac:70:df:9d:a4
+MAC: 59:f4:77:d8:62:a8
+MAC: 34:90:a1:28:a5:9e
+MAC: b2:1c:c2:b0:8d:44
+MAC: 27:8a:05:51:58:dd
+MAC: e2:00:8e:45:32:a2
+MAC: 7e:ac:73:bb:41:78
+MAC: e1:65:08:77:ef:92
+MAC: 11:f8:10:40:c3:f1
+MAC: a6:6d:08:74:ed:5e
+MAC: cb:28:62:18:14:87
+MAC: c7:ae:96:78:f7:0b
+MAC: 33:7e:e4:3a:4a:42
+MAC: 79:ce:40:08:bf:84
+MAC: 99:d9:88:45:2b:82
+MAC: 1f:80:90:04:68:c2
+MAC: 0f:2d:89:fb:1f:3b
+MAC: bf:a1:b2:54:1e:4e
+MAC: 8d:e6:52:6f:03:25
+MAC: c0:5d:43:50:e4:9c
+MAC: 77:0c:b0:d0:99:a3
+MAC: 23:03:79:8c:e5:94
+MAC: 8a:6e:b9:f8:ea:e3
+MAC: e4:66:6f:86:d9:7c
+MAC: ed:a6:cb:19:b9:16
+MAC: 9f:11:b8:2d:26:cb
+MAC: 22:8c:28:01:80:d5
+MAC: b4:07:ad:5d:82:e2
+MAC: e9:aa:e8:d3:99:19
+MAC: 3e:75:08:54:62:f0
+MAC: 1a:f1:47:bd:71:bf
+MAC: 2f:b8:2f:28:89:62
+MAC: 41:53:b4:a3:fe:09
+MAC: ad:a7:dc:14:fc:23
+MAC: 15:44:d3:0b:b4:a4
+MAC: d6:b4:55:68:f8:00
+MAC: 75:e3:e7:d5:69:7d
+MAC: 05:d5:00:db:5e:2e
+MAC: ae:66:b8:ce:c4:81
+MAC: 6d:c4:44:7b:01:d6
+MAC: fb:d3:6e:d4:8f:c7
+MAC: 8c:84:5d:30:cd:53
+MAC: 96:97:15:78:aa:96
+MAC: 6f:a7:06:00:50:97
+MAC: d4:77:db:5a:44:48
+MAC: 4e:72:99:94:13:dc
+MAC: 3b:c7:e1:87:61:6d
+MAC: 7c:0d:49:08:4d:31
+MAC: a5:cd:2f:71:a9:7d
+MAC: 75:67:d2:67:d8:97
+MAC: 18:c3:43:57:1f:90
+MAC: 19:1e:db:ad:b3:8d
+MAC: fd:c7:d8:25:c9:d6
+MAC: 21:b7:1b:2e:78:9e
+MAC: 93:a3:e4:a2:ad:28
+MAC: 33:d6:0c:b1:ea:22
+MAC: d3:3a:e4:cb:40:1b
+MAC: 8b:0b:b2:ef:dc:ac
+MAC: e8:b6:89:3f:36:9a
+MAC: ef:5d:e4:20:00:4f
+MAC: 0f:5f:d0:1e:62:25
+MAC: fc:2c:5f:72:e4:3c
+MAC: b9:6f:b5:1a:7a:86
+MAC: 48:c0:ee:58:6c:f2
+MAC: f7:f6:85:5d:99:90
+MAC: 89:5b:ff:c0:9a:99
+MAC: 5a:4d:b2:8e:08:01
+MAC: d4:8f:c5:44:26:d2
+MAC: c6:11:88:46:ca:38
+MAC: 43:bf:c6:26:86:23
+MAC: 31:db:97:7b:5c:b6
+MAC: 0b:b4:51:cc:59:8c
+MAC: f0:15:d1:7f:77:8b
+MAC: db:66:08:ca:e4:0a
+MAC: 94:ae:d6:06:90:da
+MAC: 8f:f1:be:89:49:99
+MAC: d6:75:01:8c:1b:87
+MAC: f4:08:35:10:16:4c
+MAC: ff:df:84:a9:4b:e1
+MAC: a9:b4:0f:90:84:97
+MAC: 34:d9:80:65:ec:36
+MAC: 2f:1d:e7:d2:fc:8c
+MAC: 43:53:b0:e4:0c:18
+MAC: ad:b9:c4:0e:e3:0f
+MAC: 7d:e9:c4:4d:53:21
+MAC: 17:09:17:1f:d2:e4
+MAC: a1:d3:5e:31:de:9f
+MAC: 97:a3:04:14:a7:38
+MAC: 31:13:50:f9:32:43
+MAC: fb:b1:df:46:02:f5
+MAC: 40:28:e9:95:b8:cd
+MAC: 27:ba:37:96:8e:00
+MAC: e7:8d:5b:53:88:43
+MAC: 40:fa:e4:61:a4:e8
+MAC: 4e:f0:30:c8:68:74
+MAC: c7:5b:e1:60:09:6d
+MAC: 69:dc:a3:e3:d1:13
+MAC: bc:27:d2:95:fd:2f
+MAC: e3:0c:9b:cc:46:6b
+MAC: 9b:de:d9:87:8d:04
+MAC: da:ae:f3:47:74:e4
+MAC: 3c:a9:89:10:05:4c
+MAC: 5a:4f:a3:99:ac:f5
+MAC: 15:d7:99:b0:e7:6c
+MAC: 41:82:1b:f6:5d:46
+MAC: 93:b4:02:22:6d:c9
+MAC: a5:42:c1:22:8a:aa
+MAC: 9f:15:6a:c4:d9:bf
+MAC: 2b:c7:49:32:e5:60
+MAC: a2:08:a0:4f:8c:8d
+MAC: 19:f2:29:c6:3e:22
+MAC: 0b:5f:49:bb:47:8c
+MAC: ce:de:ea:30:39:d7
+MAC: 64:51:ed:95:56:fa
+MAC: bb:cd:3e:b3:61:61
+MAC: f7:27:50:7a:b8:38
+MAC: 08:ef:25:c0:c8:b6
+MAC: 82:87:54:46:a7:02
+MAC: ef:3e:a9:60:ef:ce
+MAC: 31:31:4d:d2:03:3a
+MAC: 3e:d6:58:58:ce:46
+MAC: 4a:90:8d:3e:86:f4
+MAC: b7:90:c9:87:7b:22
+MAC: 2e:f1:60:ca:a0:0a
+MAC: 09:9a:79:1a:19:81
+MAC: 75:33:13:e7:84:7a
+MAC: 71:70:90:a7:19:af
+MAC: 88:13:00:25:85:c5
+MAC: 37:15:c1:01:a3:33
+MAC: 63:dc:ee:af:21:6f
+MAC: ba:b2:4e:ff:2b:ec
+MAC: 5b:37:0b:ae:d9:f4
+MAC: e2:f4:07:95:b4:11
+MAC: 6d:92:a9:27:85:ff
+MAC: 47:10:c2:75:33:3a
+MAC: 59:fc:ca:26:e6:0a
+MAC: 27:09:44:b3:78:22
+MAC: 73:4e:d2:8d:88:46
+MAC: ca:a8:05:5a:cd:29
+MAC: 24:f6:23:02:25:01
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:bc:e8
+MAC: 00:00:00:00:00:00
+MAC: 54:04:fe:3f:54:04
+MAC: 54:04:fe:3f:54:04
+MAC: 54:04:fe:3f:54:04
+MAC: d4:bf:00:40:d4:bf
+MAC: 68:0c:00:40:00:00
+MAC: 16:00:00:00:1c:c0
+MAC: 0b:00:00:00:1c:c0
+MAC: 00:00:00:00:00:c8
+MAC: 00:00:20:00:00:c8
+MAC: 00:04:00:00:00:fc
+MAC: 4d:79:51:5f:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 6b:71:f0:f7:bb:40
+MAC: 20:79:10:1f:20:a6
+MAC: cf:fe:75:62:59:4a
+MAC: 29:a7:de:30:b6:bc
+MAC: eb:d8:d1:10:79:4a
+MAC: de:b0:39:e0:c8:58
+MAC: 30:06:67:e0:47:c4
+MAC: 5c:32:58:e1:68:be
+MAC: 0f:4b:ff:89:59:66
+MAC: 7f:dd:76:a2:80:8f
+MAC: 1a:b6:30:23:dc:b4
+MAC: c6:da:c9:f2:0a:94
+MAC: d3:21:ad:e1:07:d9
+MAC: 3e:3a:65:75:bd:8c
+MAC: 21:1a:80:73:e2:e2
+MAC: 6b:82:3a:09:37:2e
+MAC: 2f:fb:3f:14:c5:66
+MAC: 7a:ab:cd:c8:22:bb
+MAC: 26:71:14:94:58:85
+MAC: 81:e9:fe:2a:90:09
+MAC: a7:91:8f:8f:7c:2f
+MAC: 7a:d0:ab:8b:37:69
+MAC: 4f:84:ce:60:12:42
+MAC: cb:bc:67:f0:f2:e5
+MAC: 07:e1:8a:53:40:5e
+MAC: 35:da:09:05:66:42
+MAC: 27:61:87:c7:74:75
+MAC: e3:d4:60:1f:99:8a
+MAC: c3:bb:78:e3:4b:bd
+MAC: c4:6e:fc:d3:b2:26
+MAC: 6d:07:c0:a2:92:97
+MAC: 08:fe:82:81:a2:7b
+MAC: 96:9f:1a:ef:b7:e3
+MAC: a6:dc:16:5c:91:d1
+MAC: ec:d2:d8:67:66:7f
+MAC: 57:f5:24:80:d0:a6
+MAC: 89:0f:52:4a:36:d0
+MAC: cf:95:76:7b:64:c5
+MAC: dc:fc:78:08:7f:55
+MAC: c7:3c:fb:09:40:43
+MAC: 16:48:fa:10:43:0f
+MAC: 61:ae:d6:58:1d:1b
+MAC: 4e:64:33:e5:84:7f
+MAC: bf:5e:19:d0:a1:e3
+MAC: 52:2d:78:eb:a6:93
+MAC: a9:74:d5:40:4f:17
+MAC: 58:b8:43:5d:af:23
+MAC: 8a:c4:f2:20:e2:2c
+MAC: 7f:e7:cd:be:46:17
+MAC: 3f:f5:ea:82:ce:41
+MAC: ed:8b:1b:d1:d0:b5
+MAC: ff:79:33:d9:6c:0a
+MAC: 74:6e:93:3c:aa:fc
+MAC: 5b:be:33:ef:a2:63
+MAC: 72:75:34:64:c0:f1
+MAC: 84:23:3e:91:c0:fb
+MAC: 6f:ce:5b:03:42:b9
+MAC: 5c:86:f3:94:35:f1
+MAC: 2e:9d:37:e3:00:aa
+MAC: 68:8a:bc:7f:cc:1e
+MAC: a5:27:a3:14:ba:e3
+MAC: 57:61:55:a4:52:4c
+MAC: 09:ae:83:6b:60:d0
+MAC: c8:0f:b0:ac:59:e7
+MAC: 2c:47:d5:79:45:26
+MAC: 43:2b:67:8a:c8:f4
+MAC: d0:ef:38:f6:ab:1d
+MAC: 4a:a0:28:f0:66:d5
+MAC: 79:ed:58:cf:40:1a
+MAC: 82:54:c0:06:4b:73
+MAC: d1:c2:32:39:7b:0d
+MAC: 89:62:c4:b3:79:ec
+MAC: 51:e6:86:3b:c5:34
+MAC: 1e:52:16:a1:ea:c9
+MAC: d1:5f:6a:45:54:72
+MAC: 22:65:98:03:19:2e
+MAC: a9:ed:9c:ba:6e:c3
+MAC: 42:c6:f2:21:1c:7f
+MAC: d7:3a:74:05:53:c5
+MAC: 85:5f:11:aa:d1:75
+MAC: 68:a9:96:c6:35:20
+MAC: 7d:05:e9:83:99:9a
+MAC: da:f3:91:dd:9a:38
+MAC: 12:5c:b2:54:32:ac
+MAC: ae:fa:40:c3:e4:ab
+MAC: fb:c8:60:0d:0e:a3
+MAC: 6f:f8:2d:d5:11:80
+MAC: 6c:bb:7a:42:8b:14
+MAC: c9:1d:10:d1:5e:e0
+MAC: 58:5e:e9:01:a0:c0
+MAC: 31:cc:b0:be:28:f7
+MAC: 00:00:00:00:01:00
+MAC: a0:33:fe:3f:67:3b
+MAC: 2d:e7:11:ed:fe:89
+MAC: a8:e7:31:15:00:e0
+MAC: 00:20:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:40:fd:3f:00:20
+MAC: 00:00:00:00:00:00
+MAC: 01:00:00:00:00:00
+MAC: 00:80:00:00:39:32
+MAC: 00:42:42:30:00:00
+MAC: 00:00:00:00:00:00
+MAC: ff:ff:3f:b3:00:00
+MAC: 00:00:00:00:0c:18
+MAC: 20:19:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: f8:83:fb:3f:08:7c
+MAC: ff:ff:ff:ff:00:00
+MAC: 00:00:00:00:40:04
+MAC: b0:7c:01:00:ff:ff
+MAC: 00:00:00:00:00:00
+MAC: da:ab:22:0e:20:07
+MAC: 20:b9:73:02:78:78
+MAC: 04:08:00:00:20:0f
+MAC: 10:3b:fe:3f:0c:00
+MAC: a4:3b:fe:3f:b8:b9
+MAC: 31:00:fb:3f:00:00
+MAC: b4:a1:b4:03:00:00
+MAC: 0e:00:00:00:e9:05
+MAC: e0:14:08:40:00:00
+MAC: cc:2b:fb:3f:0c:17
+MAC: 00:00:00:00:00:00
+MAC: 60:17:5c:19:cd:23
+MAC: 00:00:10:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 01:00:00:00:f1:ea
+MAC: ff:08:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:08:00:00:88:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 64:43:fe:3f:64:43
+MAC: 00:80:00:00:00:c8
+MAC: 10:00:00:00:f0:ff
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 00:00:00:00:00:00
+MAC: 1a:1f:8e:f4:e8:13
+MAC: 67:be:0e:e0:78:7e
+MAC: 83:28:45:54:9c:08
+MAC: 06:11:36:de:af:4b
+MAC: 02:d4:15:a0:28:75
+MAC: 20:1c:b5:21:c1:90
+MAC: 12:10:af:ad:f2:41
+MAC: 45:7a:e2:22:09:79
+MAC: 32:69:55:bb:8c:ea
+MAC: a0:99:7f:a0:53:be
+MAC: 7d:b8:0c:62:6c:7a
+MAC: f1:eb:b8:01:82:81
+MAC: c7:c7:02:53:92:0c
+MAC: de:84:0e:94:76:bb
+MAC: 57:e2:b2:43:bc:3a
+MAC: 8a:6b:04:b6:58:ed
+MAC: 92:b7:9e:64:30:5d
+MAC: 27:ab:b9:69:aa:79
+MAC: f5:65:cd:3e:04:bd
+MAC: 55:15:51:5f:c0:aa
+MAC: 86:aa:0a:3a:1f:51
+MAC: 29:d2:18:d9:39:f7
+MAC: 7e:5e:f1:26:0c:d7
+MAC: 05:41:43:a0:0a:fa
+MAC: cc:10:db:3e:21:b3
+MAC: 87:77:b6:f8:ba:98
+MAC: d2:20:6c:01:8e:0e
+MAC: 5a:af:9c:80:63:28
+MAC: 2b:5f:00:30:02:4d
+MAC: 1f:d0:ea:06:88:52
+MAC: 2e:6b:39:d0:13:55
+MAC: fb:81:09:e2:74:a0
+MAC: e7:3b:4e:bc:81:73
+MAC: 3c:57:48:5a:f2:84
+MAC: 4e:79:3e:16:f9:7a
+MAC: 44:0a:8a:3a:9e:30
+MAC: 8b:db:48:a6:05:19
+MAC: eb:e5:74:3a:85:e7
+MAC: 16:02:ac:18:fe:ae
+MAC: 68:5b:05:12:0e:04
+MAC: cb:59:0b:0f:e4:1d
+MAC: 16:95:88:23:e5:e9
+MAC: 5f:e8:06:ca:99:f3
+MAC: 6e:95:cc:df:e5:41
+MAC: e0:56:44:47:b9:17
+MAC: 7e:a7:7a:9c:54:dc
+MAC: 15:f5:54:e5:0c:f8
+MAC: a4:76:18:90:c3:56
+MAC: b9:b4:b7:e4:41:9b
+MAC: 77:3f:5f:45:ae:f2
+MAC: a7:26:85:88:d0:49
+MAC: a4:9d:a9:53:a9:ba
+MAC: bb:1f:c3:84:bd:b0
+MAC: 4e:3a:2b:84:0e:c2
+MAC: dd:a6:a1:30:60:c1
+MAC: 19:5e:c4:d4:23:04
+MAC: af:fa:15:03:49:72
+MAC: 05:b1:28:d8:d5:2c
+MAC: 49:ce:63:35:8c:df
+MAC: 7c:79:95:92:37:00
+MAC: 15:f6:c9:f0:a2:d6
+MAC: c6:c0:8c:ec:ab:bc
+MAC: fc:37:37:88:ac:72
+MAC: 8e:dd:94:8a:f4:89
+MAC: 04:ee:b5:82:19:4b
+MAC: 57:cd:05:f9:a7:4e
+MAC: ce:2c:b9:7d:d8:79
+MAC: 4d:e2:28:86:e2:81
+MAC: 26:9a:04:f9:41:b7
+MAC: 88:f4:c3:3c:7c:03
+MAC: 2d:33:26:67:8c:f2
+MAC: 1e:de:a1:45:66:36
+MAC: 3f:eb:18:91:cc:7c
+MAC: 9d:76:af:00:29:d1
+MAC: fb:ee:85:f6:6c:29
+MAC: 43:e8:30:84:84:37
+MAC: 6a:07:08:4d:8c:2e
+MAC: 29:15:20:20:f4:a7
+MAC: bf:e5:91:46:e0:82
+MAC: b3:48:84:44:92:d8
+MAC: e4:6e:e9:7c:32:d3
+MAC: ce:ee:e2:40:2b:bc
+MAC: 38:4c:57:50:18:6b
+MAC: 31:bb:11:bf:1f:7d
+MAC: 0b:7c:f1:02:bf:40
+MAC: c3:7e:be:57:9c:4a
+MAC: 10:16:96:92:06:f4
+MAC: 52:a1:00:19:bf:f0
+MAC: 4e:99:b0:ca:01:23
+MAC: f6:76:38:03:a3:54
+MAC: 5a:63:80:81:b0:c0
+MAC: 7d:5d:fc:46:8a:cd
+MAC: ff:4d:3c:d3:82:a1
+MAC: ab:db:a8:7a:b9:a7
+MAC: e5:99:81:85:10:82
+MAC: 9b:85:08:1a:e1:05
+MAC: 98:a9:94:a8:07:c2
+MAC: 95:bb:aa:d1:6f:66
+MAC: b3:27:ae:ec:f8:5b
+MAC: b9:a6:62:09:24:8d
+MAC: 04:5c:27:28:31:2c
+MAC: a0:69:11:cd:4e:2d
+MAC: 72:5f:c3:0e:88:a2
+MAC: 04:5e:0e:cc:68:a1
+MAC: 78:2b:93:d8:0b:e1
+MAC: ab:29:01:99:2f:30
+MAC: 71:8c:10:ec:32:1e
+MAC: 1f:de:5a:ee:35:fc
+MAC: 66:e3:94:04:52:d0
+MAC: 03:9b:38:6f:70:d9
+MAC: 3b:0e:12:43:0e:d0
+MAC: 91:de:48:06:4e:d7
+MAC: 58:f7:48:d1:c5:06
+MAC: 6c:3e:57:56:91:2f
+MAC: 93:3f:ff:eb:3c:d3
+MAC: 5f:c6:8a:9c:42:53
+MAC: a0:19:ae:71:98:a0
+MAC: cb:6a:32:20:46:67
+MAC: 9d:e3:24:69:9d:49
+MAC: fe:a2:ab:8d:f9:a2
+MAC: 50:1b:59:68:1a:aa
+MAC: d6:ff:78:b3:2e:04
+MAC: 0c:00:00:00:04:08
+MAC: 0c:00:00:00:e4:3a
+MAC: ba:58:11:a1:30:e3
+MAC: f1:aa:25:01:00:00
+MAC: c0:7d:fe:3f:44:13
+MAC: 87:eb:f9:3f:97:eb
+MAC: 9b:95:ba:35:81:59
+MAC: 17:47:88:8b:b8:37
+MAC: 87:46:56:52:63:5d
+MAC: 24:69:28:9e:28:f9
+MAC: ff:dc:ce:6c:e4:17
+MAC: c8:9e:55:e2:e5:2b
+MAC: e7:b4:2b:7e:ec:7f
+MAC: 70:b1:08:01:60:ac
+MAC: 42:44:4e:57:ae:12
+MAC: 3d:53:8e:cf:98:9c
+MAC: 84:8c:94:2d:39:47
+MAC: e5:fb:a8:b5:c7:96
+MAC: cf:55:ea:48:a8:65
+MAC: 88:40:82:20:86:6e[0;31mE (350555) task_wdt: Task watchdog got triggered. The following tasks/users did not reset the watchdog in time:[0m
+[0;31mE (350555) task_wdt:  - IDLE1 (CPU 1)[0m
+[0;31mE (350555) task_wdt: Tasks currently running:[0m
+[0;31mE (350555) task_wdt: CPU 0: IDLE0[0m
+[0;31mE (350555) task_wdt: CPU 1: task2[0m
+[0;31mE (350555) task_wdt: Print CPU 1 backtrace[0m
+
+
+Backtrace: 0x400850A2:0x3FFB28D0 0x400834CD:0x3FFB28F0 0x400D4F81:0x3FFC6510 0x400D5725:0x3FFC6540 0x400D64F1:0x3FFC6560 0x4000BD83:0x3FFC6580 0x4000182A:0x3FFC65A0 0x400D605D:0x3FFC65C0 0x400D64F1:0x3FFC65E0 0x4000BD83:0x3FFC6600 0x4000117D:0x3FFC6620 0x400592FE:0x3FFC6640 0x4005937A:0x3FFC6660 0x4012C679:0x3FFC6680 0x40133BBB:0x3FFC66B0 0x40133599:0x3FFC66D0 0x4012C6FB:0x3FFC69F0 0x400D6DFC:0x3FFC6A40 0x400D7180:0x3FFC6A70 0x400D7249:0x3FFC6BD0 0x4008B7FD:0x3FFC6BF0
+
+
+MAC: ae:d4:2e:8a:17:51
+MAC: 13:48:9c:6d:c2:ee
+MAC: 65:ae:00:b6:a7:9b
+MAC: 0f:0e:45:31:e4:f4
+MAC: b0:3c:ec:7b:73:69
+MAC: 12:ee:76:0d:07:21
+MAC: d5:7e:71:e0:79:4a
+MAC: 69:8c:de:da:9c:c6
+MAC: 02:e8:e7:f9:4c:76
+MAC: ff:f7:42:5d:39:25
+MAC: 70:dd:5b:61:12:11
+MAC: be:dd:b2:0a:e7:d6
+MAC: 99:b4:41:33:71:e0
+MAC: 91:ce:8c:40:26:cc
+MAC: cd:42:82:59:d3:6b
+MAC: fa:fa:c6:c6:08:1f
+MAC: be:af:35:24:a0:a0
+MAC: 6e:e7:e2:8b:b8:b4
+MAC: 8b:d6:30:82:9a:27
+MAC: 90:b3:8e:96:aa:73
+MAC: 34:b4:8a:4a:ca:13
+MAC: 78:58:91:07:18:42
+MAC: ef:6e:94:7e:0a:f2
+MAC: 14:99:07:a8:38:0b
+MAC: df:10:43:41:4d:26
+MAC: eb:b6:32:99:04:49
+MAC: f0:75:42:53:40:37
+MAC: d9:ee:62:90:63:eb
+MAC: fb:b5:71:08:5c:a4
+MAC: 39:7e:bd:40:a6:00
+MAC: 5f:d8:24:11:43:cf
+MAC: 4b:a2:40:26:0c:a8
+MAC: c5:35:48:08:68:fa
+MAC: 44:55:4f:33:cc:9f
+MAC: dc:32:32:e2:39:db
+MAC: 4e:cd:32:99:c1:bb
+MAC: 1b:ef:e0:b7:64:e4
+MAC: a2:0a:c8:ae:69:39
+MAC: 76:65:ea:07:74:95
+MAC: e7:72:1d:ca:90:22
+MAC: ba:d4:86:8c:8a:b2
+MAC: cf:cb:18:ed:c2:29
+MAC: 45:7f:f3:b0:84:36
+MAC: 93:1e:2c:45:23:c3
+MAC: 4d:2f:28:b9:e8:a4
+MAC: ab:97:40:2e:4a:04
+MAC: e3:b2:68:e7:f3:4d
+MAC: 76:cf:bc:29:cc:81
+MAC: 9b:0c:03:8e:4d:a0
+MAC: b4:21:f6:3c:c5:a9
+MAC: 09:6c:a6:7b:55:b2
+MAC: 44:22:78:78:a3:87
+MAC: d5:ca:49:19:e0:37
+MAC: cb:fa:96:6e:16:06
+MAC: 2f:bb:b0:24:6b:48
+MAC: c2:5c:a0:d3:02:a0
+MAC: e2:77:c0:a3:21:42
+MAC: 4b:77:14:13:16:a7
+MAC: b0:46:cb:0e:68:de
+MAC: fa:00:53:79:4a:bd
+MAC: 2b:eb:70:9d:60:a0
+MAC: 05:80:ca:48:ce:02
+MAC: e8:32:a2:15:01:8a
+MAC: 1c:1c:9d:57:8d:dd
+MAC: d3:46:34:10:6a:66
+MAC: f5:6f:61:ad:96:0a
+MAC: 32:41:af:c4:04:69
+MAC: 0a:28:2c:23:a5:d6
+MAC: 34:3e:a7:17:c1:d8
+MAC: 74:3f:a0:5a:48:b5
+MAC: 7c:79:b9:fe:2e:8d
+MAC: 86:79:a3:0d:a2:2f
+MAC: 81:2b:5d:d8:41:39
+MAC: dd:7c:f6:31:78:b4
+MAC: b7:9d:4b:24:fa:e6
+MAC: 64:ad:0d:44:d0:45
+MAC: 13:be:56:1d:59:0e
+MAC: 2e:26:11:d7:fc:ac
+MAC: fe:60:92:1f:fa:6d
+MAC: a7:d2:80:c9:1d:97
+MAC: c1:44:00:ae:1d:34
+MAC: 74:7f:bf:bd:0b:6c
+MAC: 4c:3c:50:08:a0:29
+MAC: a4:d8:6d:4e:7f:10
+MAC: 50:b4:8f:7f:81:30
+MAC: 3f:a4:9f:16:11:c0
+MAC: 30:79:2c:8a:22:a4
+MAC: 81:be:8d:68:6f:03
+MAC: 2d:d6:30:a3:f4:34
+MAC: 8f:1f:2b:18:8f:df
+MAC: 88:ec:86:90:60:e5
+MAC: 99:82:14:55:63:80
+MAC: d2:32:7b:8d:a2:72
+MAC: a3:2b:c9:10:2a:ea
+MAC: 53:f6:0a:46:5d:04
+MAC: cd:95:c0:93:83:48
+MAC: 9f:78:99:c1:96:b0
+MAC: cd:fd:11:9a:27:ec
+MAC: b7:9a:23:a9:fd:ed
+MAC: d5:6f:03:60:cd:d0
+MAC: 46:b0:51:90:23:bd
+MAC: b0:7b:ac:ad:d2:4e
+MAC: f6:ca:87:1f:3c:44
+MAC: 61:19:a0:c0:1e:a2
+MAC: f5:e5:8e:d4:74:3b
+MAC: 38:89:99:02:90:26
+MAC: 37:1a:d0:64:47:51
+MAC: 26:3d:30:d6:a0:95
+MAC: 84:f8:a5:ee:a7:b5
+MAC: 0b:9d:b5:1f:f0:54
+MAC: 07:5f:6e:a0:be:c9
+MAC: c2:26:eb:24:96:60
+MAC: b9:b8:95:a6:33:cc
+MAC: 4c:7e:c7:9e:f7:a2
+MAC: 19:71:10:d6:a3:0a
+MAC: 1d:f5:a2:0c:0a:97
+MAC: 2f:45:9f:97:fc:82
+MAC: ba:73:80:20:0c:d7
+MAC: bd:3c:fc:6d:67:86
+MAC: 9b:cd:5d:4b:14:d0
+MAC: 58:b1:97:1a:31:c2
+MAC: b9:3d:1d:01:14:d4
+MAC: 87:da:d1:87:f9:57
+MAC: 15:d5:c4:c4:0c:68
+MAC: d1:9d:59:e9:c3:4a
+MAC: 69:97:02:b4:27:3f
+MAC: 51:cb:86:3f:39:df
+MAC: ba:c2:b0:8d:5d:46
+MAC: fb:cb:28:9a:e0:2a
+MAC: 69:2d:62:3e:06:d8
+MAC: b9:30:04:ba:83:02
+MAC: 09:d1:ef:ed:30:ed
+MAC: c1:dd:4d:b5:78:72
+MAC: d1:e7:44:0e:5c:00
+MAC: 7a:91:7b:98:f5:e3
+MAC: cf:c4:9e:ee:01:db
+MAC: 9a:91:73:70:c8:a1
+MAC: 78:9d:05:de:24:99
+MAC: be:2c:17:19:22:06
+MAC: c7:1f:16:74:96:d3
+MAC: af:2a:9f:29:79:5d
+MAC: 62:04:34:0d:23:3d
+MAC: 5b:7a:ee:74:7b:21
+MAC: 1c:5f:c3:c1:58:c1
+MAC: 8b:4c:19:61:5a:1e
+MAC: ed:fe:c0:ee:3b:2a
+MAC: 22:3a:ae:40:00:82
+MAC: 23:ec:87:6c:c5:b3
+MAC: e9:e5:22:1a:53:a6
+MAC: b6:77:00:a1:13:e1
+MAC: fa:ef:65:49:6b:ec
+MAC: 6f:f6:b2:71:74:99
+MAC: d6:e4:d7:d5:f9:01
+MAC: 92:a8:b4:9d:4e:b8
+MAC: a3:b6:ef:70:de:32
+MAC: 7e:ed:0a:b7:d4:7f
+MAC: 9f:14:60:31:14:1d
+MAC: a2:ef:23:4f:29:87
+MAC: 61:0c:0b:4b:f7:44
+MAC: 0b:f7:68:e2:a8:14
+MAC: 87:50:d0:5d:fd:d8
+MAC: f0:0c:4c:49:fa:8b
+MAC: c4:da:45:6c:32:3a
+MAC: 98:2d:11:95:ad:83
+MAC: a6:1b:36:8d:f2:05
+MAC: 65:1f:92:09:09:3c
+MAC: fa:96:50:1c:6c:9b
+MAC: f9:f6:83:60:69:6a
+MAC: 04:93:4a:07:f2:c5
+MAC: bf:9a:44:dc:7b:e9
+MAC: 18:93:c0:f3:01:40
+MAC: 07:04:60:6f:b2:e3
+MAC: 96:e8:0f:75:30:1a
+MAC: bd:a0:4d:14:92:24
+MAC: ae:ed:2d:d1:6d:0c
+MAC: f9:3f:e2:1a:69:74
+MAC: 99:cd:b5:7e:54:2b
+MAC: 05:5d:28:26:97:31
+MAC: 73:33:14:07:16:a5
+MAC: d8:f9:01:6a:01:f7
+MAC: 6b:c6:0c:82:16:f0
+MAC: b9:8e:8c:ce:e5:57
+MAC: 38:ac:43:03:5d:40
+MAC: e6:be:a3:21:15:ca
+MAC: bb:ef:04:b0:37:d3
+MAC: e2:1a:35:19:30:b1
+MAC: 1f:6f:46:c1:c8:c7
+MAC: a0:31:89:0d:9a:ca
+MAC: bc:be:78:c8:d1:fd
+MAC: b5:b9:31:43:b4:e9
+MAC: 6c:96:5a:93:3b:1f
+MAC: c9:c0:ca:dc:5f:e6
+MAC: 0a:41:5c:16:13:5e
+MAC: 8f:89:4e:11:72:c5
+MAC: 94:9e:f3:fe:0c:29
+MAC: d0:97:29:64:b7:33
+MAC: 6b:c6:0c:52:c5:9c
+MAC: 00:0d:93:e7:8f:38
+MAC: 83:90:9c:63:7b:f5
+MAC: 93:4e:6b:0b:82:b2
+MAC: 17:58:12:90:a7:37
+MAC: 1d:c7:8b:df:18:29
+MAC: 7d:eb:3a:0b:00:9c
+MAC: d9:7a:4c:58:20:2f
+MAC: 2e:2f:84:d8:c8:5a
+MAC: f4:e6:cd:f4:b9:85
+MAC: 6b:14:13:d5:08:4d
+MAC: 79:2f:2a:46:3a:18
+MAC: 4d:da:b5:30:63:c9
+MAC: b4:1d:9f:c4:40:e5
+MAC: 1a:b8:3a:e0:bd:cd
+MAC: e3:3d:11:60:87:45
+MAC: 22:97:74:43:48:3a
+MAC: 3b:7d:2a:c2:6b:d7
+MAC: 9e:2a:f1:41:27:3b
+MAC: 32:29:c3:31:ee:e2
+MAC: 76:ff:9a:03:68:89
+MAC: 83:11:70:19:40:ee
+MAC: 3a:19:88:3b:61:eb
+MAC: c6:77:75:ec:2c:71
+MAC: 17:d8:f2:11:0e:92
+MAC: db:08:5c:52:13:7c
+MAC: dd:f2:55:8a:33:57
+MAC: 7b:72:46:39:b2:45
+MAC: ba:47:0f:a6:80:fd
+MAC: a1:bf:61:21:4b:e3
+MAC: dc:98:e1:7e:4f:fc
+MAC: d9:8d:96:56:8a:65
+MAC: 1f:12:e7:00:eb:e4
+MAC: 67:85:f2:85:cc:f1
+MAC: 76:21:78:3e:33:b1
+MAC: bd:a0:5e:f6:b3:21
+MAC: 5f:02:11:f4:52:7c
+MAC: d9:b0:a1:52:cd:29
+MAC: 39:2f:2d:50:9d:57
+MAC: a3:66:86:95:e0:83
+MAC: 10:75:f0:7f:2b:ac
+MAC: 9f:29:ba:f4:01:6a
+MAC: bb:45:02:cf:3c:6d
+MAC: 83:a6:ec:c8:72:6f
+MAC: 6b:d4:61:58:c7:c0
+MAC: a2:2e:2e:81:98:19
+MAC: 38:5d:e1:ec:d8:b6
+MAC: c6:6a:c0:39:89:a5
+MAC: ef:3c:a4:94:60:b3
+MAC: a7:c6:1f:7b:26:43
+MAC: 58:2a:b8:68:7c:69
+MAC: d4:e6:cd:75:28:55
+MAC: df:c0:44:28:42:41
+MAC: bd:22:62:97:42:04
+MAC: 59:ae:93:b7:94:89
+MAC: 81:73:d8:6b:b9:5a
+MAC: a7:44:c5:3c:07:a1
+MAC: b5:99:81:26:04:04
+MAC: 09:65:30:23:13:27
+MAC: 1b:03:78:f0:b7:57
+MAC: 72:5a:6b:8b:6f:ac
+MAC: 4a:0a:1a:99:9b:03
+MAC: 2b:fe:ff:4e:a0:b9
+MAC: 6f:59:b9:56:56:ec
+MAC: ba:b2:d8:6c:40:32
+MAC: f9:4f:59:83:db:54
+MAC: 6a:84:4d:91:19:62
+MAC: 83:0a:2f:ee:ca:a3
+MAC: ec:ae:99:7b:82:47
+MAC: b4:82:58:41:c1:38
+MAC: b9:fe:29:3a:f1:27
+MAC: 79:ac:6c:3c:a4:b0
+MAC: 2f:59:1c:24:4b:33
+MAC: c9:3c:85:02:e7:9e
+MAC: be:5c:a0:cb:16:75
+MAC: ef:c7:4e:46:f3:30
+MAC: 54:11:5f:07:d8:11
+MAC: d9:2a:6b:6f:ae:9c
+MAC: fa:e7:a3:10:95:ec
+MAC: 47:9a:39:c8:0e:03
+MAC: f3:69:64:f9:2a:c4
+MAC: bd:85:10:08:f1:90
+MAC: b5:52:f5:cb:1b:29
+MAC: 03:f0:70:54:02:5f
+MAC: 6c:e7:c0:89:38:1d
+MAC: 37:10:51:6b:5c:7e
+MAC: 29:03:cf:53:d1:de
+MAC: da:c7:75:13:18:5e
+MAC: ec:c7:93:b3:21:e1
+MAC: 06:3e:c4:6f:40:01
+MAC: a0:1f:a4:81:c7:d9
+MAC: 51:7f:25:21:1a:7a
+MAC: 4e:3f:82:29:23:0a
+MAC: 23:fb:0b:99:97:01
+MAC: f7:f5:a6:47:f8:04
+MAC: 19:9b:22:c1:5f:5c
+MAC: 68:45:ea:07:b3:72
+MAC: 35:ac:98:44:b9:00
+MAC: 0c:c2:fc:32:ac:2c
+MAC: 43:f0:23:b7:20:2f
+MAC: cb:3f:24:8a:60:09
+MAC: 54:6e:a2:c0:e0:0a
+MAC: 79:c8:49:32:de:06
+MAC: 66:61:81:0a:86:07
+MAC: 96:c8:4d:05:0a:d5
+MAC: e6:1b:99:0e:ab:cb
+MAC: 10:27:10:f7:f1:dd
+MAC: e0:8f:99:f3:62:05
+MAC: 0f:e7:9b:a2:84:73
+MAC: ab:bf:0d:a2:02:25
+MAC: cc:6b:35:98:97:61
+MAC: 82:0b:c2:e8:18:e9
+MAC: df:2a:f3:66:14:a1
+MAC: a1:d5:c8:a2:b0:57
+MAC: 85:42:6c:3c:3f:83
+MAC: d8:4f:26:b4:c1:c1
+MAC: ff:3d:ee:4f:6d:75
+MAC: aa:2a:a6:fc:0e:2b
+MAC: 3a:5b:f7:21:80:88
+MAC: f7:f7:3f:93:10:70
+MAC: a7:6f:d0:d4:25:68
+MAC: 2a:c3:26:be:e7:aa
+MAC: 6b:41:79:90:84:a5
+MAC: 35:c7:0c:51:62:5d
+MAC: 20:58:5c:76:da:f4
+MAC: ae:40:1a:39:45:ce
+MAC: af:ce:ec:53:c8:bc
+MAC: c9:15:84:9d:f0:3b
+MAC: 7a:7b:ae:26:6c:51
+MAC: 7b:7f:20:1f:f7:dc
+MAC: e0:29:f1:02:c0:61
+MAC: e0:41:4a:56:00:3c
+MAC: ba:d3:9f:5f:b8:e9
+MAC: 65:57:01:72:90:74
+MAC: f6:5c:23:8c:1b:0f
+MAC: d9:e9:e1:5d:2f:51
+MAC: e6:ff:69:e8:c4:07
+MAC: 55:c6:b8:25:51:65
+MAC: 1e:f8:9d:2f:05:14
+MAC: 5e:2f:30:dc:1a:c9
+MAC: db:7f:3d:cc:c6:9e
+MAC: 42:2c:0c:6a:93:44
+MAC: 55:07:10:65:7a:47
+MAC: 2e:e1:d2:40:70:25
+MAC: 69:b0:31:03:18:28
+MAC: 3c:ec:1a:9d:5b:c7
+MAC: b3:e8:58:98:e0:e8
+MAC: e9:98:99:40:92:38
+MAC: e5:63:47:87:d3:b6
+MAC: 45:10:2d:1a:3a:84
+MAC: fb:af:65:68:4d:f9
+MAC: fb:15:08:a5:a3:46
+MAC: 53:b5:80:e9:38:25
+MAC: 6a:df:82:78:8c:00
+MAC: ef:d8:9a:02:08:2c
+MAC: 67:06:d3:01:d6:47
+MAC: c0:a8:85:e6:72:a8
+MAC: 48:fe:89:68:d0:f3
+MAC: e1:78:b8:b3:25:65
+MAC: 41:fa:88:4f:cc:5b
+MAC: d5:22:06:49:ca:8f
+MAC: 5f:45:4f:71:19:16
+MAC: 62:1f:51:82:b9:79
+MAC: 9f:0d:c8:21:13:8e
+MAC: 19:65:27:ee:83:a4
+MAC: c2:5a:33:01:a7:1c
+MAC: 5c:35:77:80:65:f8
+MAC: f6:d1:c9:d1:92:eb
+MAC: 01:00:00:00:76:35
+MAC: 01:00:00:00:00:f0
+MAC: 78:25:30:38:78:0d
+MAC: 6d:45:20:28:25:6c
+MAC: 73:1b:5b:30:6d:0a
+MAC: 20:66:72:6f:6d:20
+MAC: 63:65:2e:2e:2e:1b
+MAC: 65:20:77:69:6c:6c
+MAC: 78:25:78:1b:5b:30
+MAC: 20:6f:74:61:5f:69
+MAC: 74:6c:6f:61:64:65
+MAC: 20:64:61:74:61:00
+MAC: 70:28:30:78:25:78
+MAC: 32:6d:49:20:28:25
+MAC: 20:20:54:79:70:65
+MAC: 5b:30:6d:0a:00:1b
+MAC: 74:6f:72:79:20:69
+MAC: 3a:20:6f:74:61:20
+MAC: 61:72:74:69:74:69
+MAC: 61:62:6c:65:20:74
+MAC: 61:70:70:20:61:73
+MAC: 20:70:61:72:74:69
+MAC: 20:73:69:7a:65:20
+MAC: 69:73:20:61:6c:6c
+MAC: 69:6f:6e:20:25:64
+MAC: 69:6e:67:20:65:6e
+MAC: 72:65:61:64:20:30
+MAC: 20:68:65:72:65:3f
+MAC: 20:3e:20:73:74:61
+MAC: 65:72:6c:61:70:73
+MAC: 61:6e:67:65:00:6c
+MAC: 3b:33:31:6d:45:20
+MAC: 68:20:25:6c:75:20
+MAC: 61:73:68:5f:72:65
+MAC: 3b:33:31:6d:45:20
+MAC: 49:20:28:25:6c:75
+MAC: 20:25:73:3a:20:69
+MAC: 65:72:20:74:68:61
+MAC: 74:1b:5b:30:6d:0a
+MAC: 61:64:65:72:5f:73
+MAC: 4f:52:44:53:20:3d
+MAC: 6f:64:65:29:1b:5b
+MAC: 6e:64:00:2f:2f:49
+MAC: 74:61:5f:65:6e:64
+MAC: 72:20:25:64:4d:48
+MAC: 3a:20:66:61:69:6c
+MAC: 20:72:65:73:65:74
+MAC: 3b:33:31:6d:45:20
+MAC: 71:75:69:72:65:73
+MAC: 70:20:72:65:76:20
+MAC: 6f:72:74:2f:73:72
+MAC: 20:74:77:69:63:65
+MAC: 61:64:64:72:20:6e
+MAC: 29:20:25:73:3a:20
+MAC: 74:6c:6f:61:64:65
+MAC: 5f:72:65:61:64:20
+MAC: 6f:61:64:65:72:5f
+MAC: 33:32:6d:49:20:28
+MAC: 0a:00:1b:5b:30:3b
+MAC: 33:31:6d:45:20:28
+MAC: 25:73:3a:20:62:6f
+MAC: 4f:00:51:4f:55:54
+MAC: 20:20:20:3a:20:25
+MAC: 7a:65:20:3a:20:25
+MAC: 6c:75:29:20:25:73
+MAC: 2e:2e:1b:5b:30:6d
+MAC: 6c:65:20:74:69:6d
+MAC: 47:65:74:20:78:74
+MAC: 64:20:66:72:65:71
+MAC: 33:31:6d:45:20:28
+MAC: 50:6f:74:65:6e:74
+MAC: 74:69:61:6c:6c:79
+MAC: 20:66:72:65:71:75
+MAC: 7a:1b:5b:30:6d:0a
+MAC: 20:4d:48:7a:2e:1b
+MAC: 49:44:46:2f:63:6f
+MAC: 63:79:63:6c:65:73
+MAC: 74:61:6c:20:68:61
+MAC: 00:00:00:00:00:00
+MAC: 64:65:72:5f:73:68
+MAC: 61:64:65:72:5f:66
+MAC: 61:6c:00:72:74:63
+MAC: 9b:9d:42:60:99:bc
+MAC: 8c:aa:e2:f9:5c:39
+MAC: 51:26:05:11:06:1d
+MAC: ed:5c:fc:ea:6f:e6
+MAC: e6:65:7f:c1:3d:96
+MAC: bd:1f:8f:9c:be:cc
+MAC: 95:fe:b7:86:b5:0f
+MAC: df:73:82:52:de:05
+MAC: 57:80:4e:8e:27:6f
+MAC: 55:82:cf:3a:f1:f5
+MAC: d1:ee:81:34:7c:07
+MAC: 5c:ba:3e:6a:ef:b4
+MAC: 8a:36:91:45:12:69
+MAC: 97:f2:f6:3e:a3:dc
+MAC: 63:55:ef:5c:af:55
+MAC: e8:2e:2d:65:38:48
+MAC: 3f:5a:d5:64:17:8b
+MAC: 9b:de:8f:44:52:83
+MAC: 41:2c:92:b5:0a:c4
+MAC: ad:d1:64:f3:e1:12
+MAC: f1:47:e4:a8:b4:df
+MAC: ba:d4:01:db:86:ca
+MAC: c6:16:00:8b:fd:48
+MAC: cb:96:e9:24:73:f0
+MAC: bc:bd:4b:1f:9c:ed
+MAC: 1f:7e:5e:94:a3:22
+MAC: 8d:08:93:5c:55:62
+MAC: af:e2:2a:44:2e:3a
+MAC: da:61:b6:1f:75:4b
+MAC: f4:bb:f3:20:2c:55
+MAC: 82:e0:e9:91:20:e2
+MAC: 6f:87:c2:ef:91:c7
+MAC: 79:5d:37:5b:83:0e
+MAC: f2:06:19:40:b8:86
+MAC: 1c:ab:09:38:46:cd
+MAC: 5a:2f:fb:d3:08:cb
+MAC: f7:15:0c:e8:5a:c1
+MAC: f1:8f:07:18:ea:91
+MAC: f4:ee:a8:fa:b3:7f
+MAC: 66:da:73:26:01:3f
+MAC: 89:87:b4:06:d4:ed
+MAC: d3:b5:33:df:a3:5b
+MAC: 0e:00:eb:95:c8:c4
+MAC: 7d:91:38:f2:06:34
+MAC: b3:85:cc:64:02:21
+MAC: 0c:2b:55:fb:c8:3f
+MAC: 1b:ee:71:11:b8:52
+MAC: dc:3d:8f:cc:27:b9
+MAC: 96:f6:65:c8:ad:61
+MAC: ae:ef:35:b8:82:37
+MAC: 33:7c:cd:dd:4a:d5
+MAC: 67:e7:5e:3f:4d:90
+MAC: 47:a0:10:7c:98:14
+MAC: c2:68:69:19:8f:36
+MAC: 44:76:60:22:b8:0a
+MAC: 3e:60:91:83:38:af
+MAC: 5e:33:e8:93:3a:7f
+MAC: a9:e1:03:ad:6f:53
+MAC: 94:73:40:c7:a0:60
+MAC: fb:03:01:b6:f7:d0
+MAC: 5f:f6:71:aa:05:40
+MAC: 1f:bf:5d:a4:ca:c1
+MAC: 47:d5:05:82:43:68
+MAC: 27:b5:c9:04:77:3f
+MAC: 6d:f0:c8:d3:34:37
+MAC: e6:f2:12:cd:70:f1
+MAC: eb:e1:69:e9:0a:61
+MAC: 89:3b:21:08:b4:0f
+MAC: 40:8c:3e:60:51:90
+MAC: dd:d5:e1:60:6b:a3
+MAC: da:88:95:4c:9f:44
+MAC: 29:a5:9b:d5:65:48
+MAC: e1:2b:08:b8:87:8d
+MAC: 23:16:58:97:93:a1
+MAC: ca:71:02:92:a0:93
+MAC: 7b:81:1d:b6:75:c4
+MAC: fd:20:7c:e2:63:a6
+MAC: eb:7c:b8:83:4a:06
+MAC: bf:fe:f7:ed:d3:35
+MAC: bf:f7:98:80:cb:d4
+MAC: b3:0b:6e:bd:cf:3e
+MAC: 8d:a0:b3:75:c2:ea
+MAC: 64:05:b2:f0:1d:bf
+MAC: a1:89:4d:44:1c:73
+MAC: b8:f5:47:c6:ea:97
+MAC: f5:06:89:15:9a:3f
+MAC: dd:3b:f0:04:53:c8
+MAC: 60:89:71:e7:ad:9f
+MAC: 41:74:4b:9b:42:2a
+MAC: 44:60:12:5c:e6:8f
+MAC: ba:6b:0a:c4:80:77
+MAC: ec:f7:3c:37:25:15
+MAC: ea:ac:36:e7:72:10
+MAC: 26:29:e0:24:a6:11
+MAC: 4e:31:9e:1a:f5:81
+MAC: c4:35:d9:29:9d:4e
+MAC: 3d:7f:cc:8c:2a:6a
+MAC: 89:77:d5:74:ae:80
+MAC: 09:0f:03:9f:40:62
+MAC: c2:9f:a6:b8:2d:77
+MAC: 73:8d:e2:71:61:1e
+MAC: 3e:4a:9a:12:90:59
+MAC: cb:04:6c:91:f2:5a
+MAC: aa:88:a2:0f:8a:a3
+MAC: c2:30:c5:24:10:7d
+MAC: 6f:51:b8:e4:fe:f2
+MAC: 2b:6e:42:39:da:b0
+MAC: 81:36:44:60:59:29
+MAC: 4f:a7:2b:7a:b2:75
+MAC: e6:54:c3:b8:8f:bf
+MAC: 5e:2c:9c:14:d7:74
+MAC: 2f:cb:4c:46:04:08
+MAC: e6:0f:dd:8a:4e:29
+MAC: 7f:17:b3:9e:1c:ad
+MAC: d2:18:61:01:ec:1e
+MAC: 98:65:e0:8c:e4:b6
+MAC: e6:15:5d:16:cd:a0
+MAC: 01:b1:ce:54:20:91
+MAC: 6b:47:eb:7a:37:5d
+MAC: 0b:82:7a:17:50:42
+MAC: 6e:21:d3:9a:d6:84
+MAC: 31:92:29:f8:45:a5
+MAC: e7:9f:29:75:70:f0
+MAC: 14:22:8f:89:ff:40
+MAC: 0c:28:a8:68:0c:98
+MAC: 14:03:67:9a:e0:30
+MAC: 3d:b5:ba:3c:b8:f3
+MAC: e7:0d:52:82:b7:17
+MAC: d9:b8:6b:3d:24:a0
+MAC: 3f:35:67:ed:4c:48
+MAC: e9:35:00:16:5f:53
+MAC: f7:d6:e7:59:a1:9e
+MAC: 5e:43:76:14:e9:70
+MAC: b1:fb:c2:52:ba:88
+MAC: e7:c2:4a:bd:72:cc
+MAC: 29:18:71:82:fe:e2
+MAC: 12:7c:9f:26:e5:33
+MAC: f1:7b:44:c8:c7:74
+MAC: 88:ea:44:1e:02:b1
+MAC: ae:e2:48:3e:1a:42
+MAC: cc:f8:45:43:c9:21
+MAC: 5e:da:b4:04:c3:fe
+MAC: ee:fe:4f:83:2c:15
+MAC: 69:6e:85:e9:76:8c
+MAC: 68:6a:26:b0:cb:3e
+MAC: 79:ff:c6:38:26:54
+MAC: 16:e2:5a:62:b3:1c
+MAC: 4c:d7:f3:63:73:8b
+MAC: 36:4a:4c:32:20:c4
+MAC: d4:ce:40:46:a5:08
+MAC: fb:98:01:05:2f:2d
+MAC: 81:aa:92:c6:54:a1
+MAC: 22:ad:ac:5c:52:91
+MAC: 01:e2:ad:e9:c9:d0
+MAC: 86:5a:c1:d4:4f:63
+MAC: 1e:59:5f:39:b1:42
+MAC: 46:6f:5b:93:34:ca
+MAC: 12:dc:4e:29:ca:e8
+MAC: 97:72:7f:70:70:91
+MAC: b2:68:a0:3a:3a:1d
+MAC: ff:3c:bb:22:2b:e5
+MAC: b8:d0:21:a2:b4:bb
+MAC: 94:02:b8:70:35:a3
+MAC: 1e:c7:16:1c:88:0c
+MAC: b5:88:97:f4:e4:41
+MAC: 97:d9:03:a4:05:ef
+MAC: 93:94:aa:e3:d6:c5
+MAC: b4:70:8a:99:0c:00
+MAC: b0:00:3e:b8:82:3d
+MAC: ce:63:40:2e:07:ba
+MAC: 31:53:6c:28:35:f8
+MAC: 6e:a5:ba:90:68:6b
+MAC: 40:2e:08:bb:c2:02
+MAC: e7:21:31:eb:85:b5
+MAC: e3:f6:c7:84:f4:bb
+MAC: 9b:d4:70:1a:2c:68
+MAC: 98:14:6e:32:8b:fa
+MAC: e9:de:40:a2:b7:52
+MAC: 4b:0b:33:53:c1:8e
+MAC: 6a:57:39:1c:a5:77
+MAC: 43:31:c0:61:f7:df
+MAC: f4:75:3d:5a:a1:0f
+MAC: c7:a0:81:f0:64:c0
+MAC: 16:00:f7:1c:f8:ab
+MAC: 75:b4:84:b6:8a:c9
+MAC: af:e1:0e:34:03:34
+MAC: 2c:8e:fa:d4:d0:bc
+MAC: eb:a4:c0:de:96:9f
+MAC: 7f:2f:d6:94:94:32
+MAC: 77:7a:15:2f:93:79
+MAC: bd:e8:43:b0:65:37
+MAC: 0c:61:82:86:40:bd
+MAC: b0:48:de:95:c8:4c
+MAC: 3d:d3:29:c0:7e:67
+MAC: cf:17:19:71:51:0b
+MAC: 79:8d:cd:5e:d6:d8
+MAC: c5:42:50:4a:06:0e
+MAC: a6:21:05:05:6d:e2
+MAC: 94:31:87:2e:f4:66
+MAC: 89:89:e5:ac:30:79
+MAC: f8:70:52:29:ca:9b
+MAC: 39:c0:4e:82:eb:af
+MAC: f6:ac:02:a2:44:38
+MAC: 4b:7d:0b:54:34:f0
+MAC: 25:48:59:c2:12:48
+MAC: 4e:9a:5a:29:20:cc
+MAC: 17:2f:d3:ff:5a:27
+MAC: 66:11:27:ac:24:e6
+MAC: 83:a7:b4:54:ad:fa
+MAC: cf:05:c3:20:93:51
+MAC: 06:a5:f1:f7:70:a6
+MAC: c0:c9:3b:79:58:ea
+MAC: fa:c3:90:83:c1:cd
+MAC: 81:10:fc:b8:7a:11
+MAC: 1d:10:98:48:a5:94
+MAC: 9a:fa:8c:51:fa:43
+MAC: 6d:0a:3b:55:02:29
+MAC: 3f:51:78:30:b4:55
+MAC: 09:85:62:6d:61:a9
+MAC: 5a:d5:f0:5b:ea:79
+MAC: e1:37:2a:0c:5b:c3
+MAC: 60:54:d0:84:f5:ac
+MAC: 34:59:d7:9c:ff:12
+MAC: 22:3b:0f:eb:be:c7
+MAC: ef:84:cf:f1:a9:90
+MAC: 1d:5d:de:ad:f3:1e
+MAC: 9c:1a:42:4a:99:58
+MAC: d7:27:90:e8:01:fc
+MAC: c0:db:c2:32:52:66
+MAC: ac:73:99:9c:5f:68
+MAC: c3:ae:9a:87:62:df
+MAC: 47:77:e1:26:95:c3
+MAC: 07:f8:40:27:8c:d7
+MAC: 59:6f:66:20:dd:e9
+MAC: 12:8d:80:f1:02:9c
+MAC: 47:ad:09:6b:6f:9e
+MAC: fd:3d:a8:65:77:51
+MAC: cf:e8:31:a3:4f:3d
+MAC: 01:7b:3b:2f:1a:a2
+MAC: 0b:54:e8:11:90:c4
+MAC: 7e:62:b0:3d:9a:09
+MAC: a5:66:b0:01:a1:2c
+MAC: e8:52:2b:0b:9a:0b
+MAC: aa:aa:2b:f2:d4:d3
+MAC: 79:ea:59:d3:a8:26
+MAC: 03:5b:a8:1c:3c:19
+MAC: 1c:38:79:6d:af:75
+MAC: ab:08:74:51:37:8c
+MAC: d2:9e:7f:bc:59:7f
+MAC: ea:b9:e4:18:bc:48
+MAC: 2f:20:86:e0:1e:26
+MAC: f8:8d:a9:12:00:af
+MAC: 79:05:b9:45:73:f5
+MAC: b2:b2:b9:28:3c:d0
+MAC: aa:40:32:89:a3:12
+MAC: 99:c9:17:f8:a6:af
+MAC: 3f:c0:2f:fd:c2:2a
+MAC: f9:1f:64:90:aa:bc
+MAC: 39:fd:58:e0:8e:ce
+MAC: 78:d9:71:ee:a3:99
+MAC: ae:59:21:01:26:60
+MAC: 90:53:ad:ea:c4:9c
+MAC: 19:fe:e5:23:43:5a
+MAC: d5:ba:21:8c:ae:91
+MAC: d3:52:a7:ca:9b:17
+MAC: be:83:3e:5d:f5:25
+MAC: 5b:2a:35:a0:b4:d5
+MAC: b0:74:95:63:14:28
+MAC: fd:43:80:29:11:79
+MAC: 83:6d:01:96:49:03
+MAC: 65:98:c0:02:62:db
+MAC: dc:40:26:0b:89:29
+MAC: 6d:fc:17:c0:62:0c
+MAC: 1f:d6:0b:93:ab:3d
+MAC: 10:d5:e8:da:58:e1
+MAC: d9:59:c3:87:a8:c6
+MAC: b0:b0:da:9a:51:a4
+MAC: 48:00:b2:13:a7:ec
+MAC: 36:1f:a2:e1:a9:fb
+MAC: ef:e3:ab:1e:78:75
+MAC: 8a:7d:72:94:c6:4d
+MAC: f2:93:85:52:a4:9d
+MAC: fe:e2:60:c2:10:7d
+MAC: 52:9c:d2:8a:8b:28
+MAC: 89:ee:c8:92:62:ea
+MAC: c4:d0:15:24:2e:de
+MAC: f3:a0:e1:5a:6c:51
+MAC: 4f:50:39:28:31:de
+MAC: 69:c4:4e:f1:cf:4d
+MAC: 8f:df:9e:b9:0e:82
+MAC: 86:35:36:aa:04:e1
+MAC: e1:e1:00:6c:a1:e8
+MAC: 91:3a:65:08:b3:f1
+MAC: 2f:3e:27:de:4a:f1
+MAC: 13:b8:20:4d:15:d3
+MAC: e3:ad:98:18:9f:8a
+MAC: 44:cd:bd:91:3a:16
+MAC: a1:ac:d2:0c:7f:56
+MAC: 65:50:33:7f:d2:01
+MAC: 32:05:c5:e1:48:0b
+MAC: 11:68:eb:74:eb:09
+MAC: 41:d9:01:f5:dd:15
+MAC: 23:ea:2b:42:63:22
+MAC: d5:7b:47:c5:26:80
+MAC: 07:0d:bc:85:52:a1
+MAC: 22:b1:d7:2f:6c:32
+MAC: 9d:86:bf:d6:19:82
+MAC: 93:89:1b:3c:88:a4
+MAC: f3:e8:d5:03:3b:6f
+MAC: d7:da:f1:40:cd:63
+MAC: 2c:77:45:cd:5e:02
+MAC: 56:81:81:e8:69:29
+MAC: 19:d9:c2:9c:73:08
+MAC: fd:1f:10:ce:66:c0
+MAC: 4f:14:1e:ac:e5:13
+MAC: ca:85:a3:35:84:a6
+MAC: 6b:c7:88:40:54:f6
+MAC: 2e:0c:e8:96:59:70
+MAC: ad:03:68:0a:c0:4a
+MAC: 33:c0:80:0e:4c:42
+MAC: de:a3:36:42:a4:54
+MAC: 59:e1:47:60:f3:00
+MAC: 00:f3:95:87:62:85
+MAC: c6:ef:b0:ce:7e:a6
+MAC: 65:d0:6a:16:71:0d
+MAC: 9b:b9:3d:25:67:25
+MAC: de:21:05:41:54:6d
+MAC: ea:82:8f:b8:e0:7d
+MAC: b6:f0:23:71:0f:aa
+MAC: b7:0b:06:82:88:dd
+MAC: 6f:b7:b5:61:e7:e6
+MAC: 68:8f:d8:1d:5e:9c
+MAC: 47:b3:29:36:87:60
+MAC: ef:9b:79:f0:80:c5
+MAC: 3e:c8:0d:3e:01:36
+MAC: b8:30:54:f5:2d:28
+MAC: f9:13:94:b8:be:38
+MAC: 70:3c:45:95:0e:c6
+MAC: f1:26:46:ed:00:eb
+MAC: 27:01:50:ba:af:68
+MAC: 13:ea:9d:d3:7b:cc
+MAC: 49:3b:11:7a:67:88
+MAC: 04:e9:92:0c:3a:f9
+MAC: 49:3d:18:1f:97:9f
+MAC: c9:03:af:26:a6:4a
+MAC: 8f:f2:f1:52:b4:6c
+MAC: 1a:c3:88:2a:fc:fb
+MAC: 69:5f:5f:18:98:06
+MAC: 3f:e3:b3:7c:59:4c
+MAC: 51:2f:8b:69:ca:20
+MAC: 17:bb:5b:76:c4:99
+MAC: e7:cb:20:2f:aa:0a
+MAC: 16:8d:16:15:44:23
+MAC: 39:2d:25:8f:bc:67
+MAC: 13:1e:ed:f6:c0:ba
+MAC: 1d:9b:82:90:de:ce
+MAC: d5:65:a3:62:7e:e2
+MAC: d5:1b:73:3b:70:47
+MAC: bf:3a:00:82:ba:14
+MAC: 7d:99:4e:a6:5a:66
+MAC: 40:ef:13:2e:59:46
+MAC: 3a:b3:64:0b:37:77
+MAC: b8:a2:85:32:0c:30
+MAC: fa:05:5f:c0:5d:2e
+MAC: 59:af:59:9e:59:fa
+MAC: bb:45:c2:3e:01:12
+MAC: ef:40:dc:ce:ea:92
+MAC: c2:55:08:2f:2d:c4
+MAC: 43:af:e4:ce:c6:0f
+MAC: e4:bd:e2:44:93:ca
+MAC: fd:59:33:8b:b2:e8
+MAC: 6e:11:21:b3:a2:9d
+MAC: 4f:df:7c:4d:92:1d
+MAC: 9c:94:89:f1:8a:57
+MAC: bc:92:14:d6:71:e0
+MAC: 86:f8:74:50:09:84
+MAC: 5c:c3:4a:d1:89:80
+MAC: a6:b4:b4:4c:b8:f5
+MAC: 7d:b6:c4:0c:1e:91
+MAC: df:44:a6:c3:34:91
+MAC: 47:ab:bf:af:07:39
+MAC: 34:48:fe:11:6b:c9
+MAC: 52:51:96:5a:80:89
+MAC: 09:ae:e7:64:25:bd
+MAC: 15:d5:3c:78:ff:e9
+MAC: 43:4c:22:0b:63:fc
+MAC: 78:71:94:4b:1e:15
+MAC: fb:f7:00:41:6e:36
+MAC: 6a:39:7d:fc:01:56
+MAC: 87:db:5a:90:25:31
+MAC: 49:14:0c:96:c8:30
+MAC: 76:67:7c:05:87:d6
+MAC: 37:95:ef:b8:24:1e
+MAC: 08:e7:0d:b0:72:8a
+MAC: 11:08:2e:2d:f4:73
+MAC: 54:4b:be:92:f9:77
+MAC: bf:f9:2f:6b:af:22
+MAC: dc:4e:37:aa:25:6c
+MAC: 53:16:2e:73:8e:cc
+MAC: 95:10:0c:b8:aa:a8
+MAC: e8:8a:83:a7:6f:4d
+MAC: 6d:0a:5d:00:32:1c
+MAC: a6:58:8e:8a:b6:90
+MAC: 1a:ea:6c:33:ca:5b
+MAC: 9f:6e:48:95:fa:bc
+MAC: 45:ff:2c:5f:b1:42
+MAC: 81:ca:ce:09:d5:43
+MAC: bb:ba:03:c2:5d:e3
+MAC: 1e:0c:7a:6c:01:24
+MAC: 61:96:08:93:d6:8b
+MAC: 31:71:28:aa:b1:40
+MAC: 74:da:33:96:a0:40
+MAC: 2a:f6:92:60:66:38
+MAC: 53:d8:40:17:16:d6
+MAC: e1:b1:22:e4:2e:f4
+MAC: a6:c9:58:7c:86:d9
+MAC: f4:b0:0e:60:0d:f4
+MAC: df:c2:71:81:61:5b
+MAC: 23:c9:d8:d4:09:75
+MAC: 1b:69:73:40:97:19
+MAC: fb:46:2c:e1:f5:b3
+MAC: ef:61:cb:3f:00:82
+MAC: 8f:b7:82:b2:16:47
+MAC: f1:78:79:88:e5:4b
+MAC: cc:c0:2c:ff:84:11
+MAC: d5:70:5e:1b:5f:9c
+MAC: c8:50:57:45:d1:28
+MAC: 7b:16:c9:a7:ec:3b
+MAC: 46:9a:ec:61:ef:e7
+MAC: a5:27:6f:df:89:8f
+MAC: 0e:3d:a4:21:4b:93
+MAC: ce:1d:fc:f4:f1:b8
+MAC: 65:20:5a:d1:3f:11
+MAC: e2:2b:3a:99:12:be
+MAC: c7:49:58:11:1a:16
+MAC: 86:3c:d9:59:39:eb
+MAC: da:fe:12:e9:4e:04
+MAC: 3a:10:f1:b9:37:a6
+MAC: ae:36:e8:49:11:5f
+MAC: 19:30:bc:10:ce:23
+MAC: fe:2e:2b:34:07:d2
+MAC: 4e:02:b9:12:e6:43
+MAC: af:ba:ce:8a:c2:f7
+MAC: eb:71:ab:31:02:6b
+MAC: 8e:bf:c8:42:ba:f5
+MAC: 9c:91:d3:06:da:7e
+MAC: 48:e2:d5:ef:58:ef
+MAC: ab:76:58:82:8b:cb
+MAC: 08:1e:a7:2e:42:b1
+MAC: 39:da:5a:12:2a:d9
+MAC: b3:60:ff:99:e5:40
+MAC: 5f:11:d8:84:5e:37
+MAC: fd:6d:68:c6:d2:4f
+MAC: 14:64:69:5a:88:c9
+MAC: a4:6b:70:06:3c:cc
+MAC: c8:34:76:ce:47:40
+MAC: f2:77:14:95:4c:92
+MAC: 58:e1:8e:99:47:a0
+MAC: aa:ff:78:a7:f0:b3
+MAC: 4b:41:44:96:b1:f2
+MAC: b5:cb:5d:43:2a:99
+MAC: f8:97:27:b3:57:fa
+MAC: 02:ee:d5:42:6a:47
+MAC: 9b:96:f5:00:46:ab
+MAC: b5:71:58:f9:78:9c
+MAC: 1b:96:0e:77:4d:18
+MAC: ec:b3:c1:df:20:06
+MAC: 93:9b:92:92:64:d2
+MAC: 1b:8d:7f:04:5a:93
+MAC: 74:b6:43:d9:e5:4c
+MAC: b9:24:6a:3d:94:a7
+MAC: ca:a1:fb:81:2c:fe
+MAC: 8c:e2:24:15:25:0a
+MAC: 23:c7:59:c0:c3:6c
+MAC: ab:84:3c:cf:a6:5d
+MAC: 60:f5:4e:f5:17:99
+MAC: 9d:4c:15:ff:07:40
+MAC: bc:f0:37:b1:3a:33
+MAC: cb:58:0c:1b:ca:05
+MAC: 60:88:64:f9:90:00
+MAC: 6f:ff:ae:64:79:fe
+MAC: 4c:fe:0c:ad:aa:b2
+MAC: a5:be:44:b7:f4:20
+MAC: 7a:4f:ab:3b:84:b0
+MAC: 2d:2c:88:28:48:ef
+MAC: 10:ae:95:0d:9d:47
+MAC: f0:08:17:4a:aa:77
+MAC: 81:f6:3c:dc:78:ca
+MAC: 86:20:04:0b:b9:0a
+MAC: d7:fb:04:76:81:4d
+MAC: 08:7a:42:04:de:66
+MAC: 08:33:fe:21:50:36
+MAC: 71:35:f0:6d:69:fa
+MAC: f3:05:94:2b:96:9f
+MAC: fa:f0:8f:10:3e:76
+MAC: 82:05:1f:d8:a9:d8
+MAC: ee:ae:55:85:99:1d
+MAC: d7:83:71:f1:d0:a0
+MAC: 67:70:63:97:94:73
+MAC: ca:55:da:b1:42:3f
+MAC: 02:ce:16:4f:a2:a4
+MAC: 81:c3:79:1b:7b:58
+MAC: 9d:9d:6d:43:16:df
+MAC: 5b:82:41:08:fa:0a
+MAC: 99:b0:79:58:11:d6
+MAC: cb:9b:3d:f3:64:ec
+MAC: bf:13:9a:35:f2:ab
+MAC: e7:c7:fa:4e:c3:13
+MAC: db:f8:c1:aa:6d:4e
+MAC: ed:05:83:44:3b:67
+MAC: 7d:c4:89:5d:75:98
+MAC: 3b:2e:8b:40:4c:6b
+MAC: e0:90:9a:1b:4e:16
+MAC: 91:fb:49:a2:17:80
+MAC: 9b:e6:4c:39:f0:02
+MAC: 9a:8e:83:22:38:d3
+MAC: aa:aa:c2:b2:fe:80
+MAC: 6c:9f:41:78:e0:1d
+MAC: ab:12:35:dd:d9:99
+MAC: 4d:c8:18:ed:2b:b8
+MAC: 60:e1:97:48:6e:93
+MAC: ab:5f:e6:d3:66:61
+MAC: b6:f0:c9:30:6b:d0
+MAC: f3:d7:58:33:d8:cc
+MAC: b0:e2:30:a6:ce:50
+MAC: 9e:67:e4:83:f4:5d
+MAC: 10:37:5e:a9:c1:be
+MAC: 72:5e:99:7e:a0:0b
+MAC: 74:ca:34:13:99:25
+MAC: 18:a4:8f:99:b5:bd
+MAC: 2e:61:74:18:8e:06
+MAC: 5f:c5:c2:0e:85:f4
+MAC: 2a:95:8f:79:82:15
+MAC: 89:a4:c4:23:2b:24
+MAC: 79:6e:d9:8c:8f:49
+MAC: f5:63:4a:cc:9e:33
+MAC: 2a:f7:4d:92:8c:81
+MAC: 37:52:a9:75:52:80
+MAC: 44:05:59:0b:4d:21
+MAC: 8d:fb:d7:12:9b:4c
+MAC: 64:84:3b:5e:40:52
+MAC: b6:de:fc:7d:9d:c4
+MAC: 6e:69:7f:a2:2c:a5
+MAC: a7:fe:8c:39:16:13
+MAC: 28:ea:0c:9b:76:4e
+MAC: d3:80:aa:5d:47:6c
+MAC: b5:da:2b:a8:54:60
+MAC: db:df:55:6c:3d:5a
+MAC: 03:6c:30:84:ce:db
+MAC: ce:20:fc:97:3a:66
+MAC: 47:20:58:52:24:2a
+MAC: 57:c4:a0:e8:1c:fb
+MAC: d3:3a:3c:c7:5d:f1
+MAC: cf:cc:b4:3e:7b:39
+MAC: 3a:92:66:71:2e:f5
+MAC: 11:51:25:3e:65:fd
+MAC: 69:68:55:90:b1:c0
+MAC: 32:47:f1:c4:80:88
+MAC: 30:91:7e:b1:54:60
+MAC: e3:2c:3a:07:6a:05
+MAC: 57:fd:2a:22:88:01
+MAC: dd:69:4e:32:a8:51
+MAC: 5b:b9:85:43:82:97
+MAC: 8f:09:60:8f:98:d6
+MAC: 3f:bb:1d:71:08:48
+MAC: 9a:d2:e9:a2:1f:39
+MAC: 15:e1:14:a2:44:db
+MAC: 06:1c:d4:dc:1b:ca
+MAC: 95:57:67:a0:ec:0f
+MAC: cf:32:cc:9d:62:02
+MAC: e7:c2:e2:04:ba:a4
+MAC: e2:c7:63:fb:b0:09
+MAC: f9:1d:43:20:10:b1
+MAC: a2:2a:12:56:71:10
+MAC: 45:6a:06:84:1a:87
+MAC: 51:64:ea:88:51:2c
+MAC: 53:7c:43:83:ac:8c
+MAC: bb:04:67:81:92:35
+MAC: f7:f9:ca:c8:93:f0
+MAC: 04:e1:22:88:68:8f
+MAC: 1f:76:28:f9:61:8e
+MAC: b5:b1:61:12:3d:3f
+MAC: 0c:98:77:97:28:1d
+MAC: 60:48:46:50:04:d1
+MAC: 46:35:cd:3e:9b:8b
+MAC: e4:b1:6b:24:75:cd
+MAC: 06:93:c5:b1:5b:90
+MAC: f7:e0:10:3d:4c:b6
+MAC: 97:1c:46:79:36:24
+MAC: 6b:a4:59:f6:c8:52
+MAC: a2:19:ee:9f:90:07
+MAC: e7:05:fb:3c:7d:0e
+MAC: cd:4f:2b:92:35:9d
+MAC: 18:c8:ea:60:2a:ec
+MAC: 0a:85:38:68:6e:8f
+MAC: d0:42:2b:d4:38:39
+MAC: 1e:3a:5a:0c:b9:f1
+MAC: 56:26:9c:cb:de:d9
+MAC: 46:d9:1b:2d:b5:2d
+MAC: 1c:67:75:01:8c:f5
+MAC: fa:9a:da:66:35:49
+MAC: 7c:fe:04:8f:a0:92
+MAC: 30:b2:8c:66:82:a9
+MAC: 76:ff:2a:5c:98:91
+MAC: 8f:74:00:c4:bd:64
+MAC: 49:f8:b3:0a:a2:3d
+MAC: 0e:0e:eb:11:fb:93
+MAC: a1:59:ce:af:94:3b
+MAC: e7:df:63:54:af:ae
+MAC: 43:b2:b0:4e:39:4d
+MAC: be:6f:ca:40:86:3d
+MAC: 3d:97:75:9f:b8:aa
+MAC: 09:b2:2e:86:7f:26
+MAC: 09:04:58:c2:6a:9f
+MAC: 12:c9:37:4d:3d:97
+MAC: f0:11:33:29:83:9d
+MAC: 1c:3e:6b:f0:54:3a
+MAC: 2f:ce:dc:22:d6:75
+MAC: 8e:79:a6:89:51:a1
+MAC: 6d:c4:d4:74:b6:04
+MAC: 6e:45:e9:93:02:80
+MAC: 4d:85:51:2c:82:f6
+MAC: 5a:a5:38:5d:a3:ad
+MAC: d5:ef:5f:b1:b3:e6
+MAC: 97:18:ce:e3:69:dd
+MAC: 87:39:ec:e9:ce:ad
+MAC: 84:c3:37:1d:d1:45
+MAC: b3:f5:1d:8e:5e:ed
+MAC: 98:f7:c0:b8:01:a0
+MAC: 81:8b:ca:c3:e4:24
+MAC: eb:a9:7f:a8:58:20
+MAC: 0d:7c:f3:01:02:88
+MAC: e7:04:3e:13:74:96
+MAC: ba:d5:fb:fd:47:64
+MAC: ae:6d:94:45:6d:b5
+MAC: 7f:48:fe:7e:4b:f4
+MAC: 07:3a:36:c6:0e:56
+MAC: f2:9e:45:3b:eb:39
+MAC: 1d:a6:21:5f:83:86
+MAC: f8:25:2c:b3:4e:be
+MAC: 3f:ac:e9:19:f1:ec
+MAC: 3a:e7:2c:b8:55:de
+MAC: 90:1e:14:40:65:76
+MAC: 65:b0:dc:3e:a6:1d
+MAC: 3d:52:56:25:0f:86
+MAC: 2a:ab:6b:e8:20:1c
+MAC: 2f:87:a8:15:d5:1a
+MAC: 06:51:aa:c9:c9:84
+MAC: d9:5a:55:0a:26:cc
+MAC: f6:74:76:3f:0a:18
+MAC: 45:1e:b4:0e:c1:1a
+MAC: fa:65:55:b7:38:e2
+MAC: 16:c3:90:c2:2c:37
+MAC: d0:1a:f3:4f:4b:72
+MAC: 65:fb:7b:5c:87:b2
+MAC: 7b:69:0d:33:02:f5
+MAC: 06:29:21:cf:4a:e9
+MAC: 7e:cf:c0:40:96:40
+MAC: 54:8f:20:ae:2e:68
+MAC: cf:79:32:99:a8:62
+MAC: 3d:79:00:52:06:8f
+MAC: 40:18:13:33:a2:95
+MAC: b3:93:c6:cc:b4:46
+Guru Meditation Error: Core  1 panic'ed (LoadStoreError). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x400d6de5  PS      : 0x00060230  A0      : 0x800d7183  A1      : 0x3ffc6a40  
+A2      : 0x3ffb4a14  A3      : 0x00009ea0  A4      : 0x00000000  A5      : 0x00000db5  
+A6      : 0x4000004c  A7      : 0x0000000a  A8      : 0x00000009  A9      : 0x3ffc6a30  
+A10     : 0xfffffff1  A11     : 0x3ffb4dd4  A12     : 0x00000093  A13     : 0x000000c6  
+A14     : 0x000000cc  A15     : 0x3ffc69fc  SAR     : 0x00000004  EXCCAUSE: 0x00000003  
+EXCVADDR: 0x40000051  LBEG    : 0x400013f9  LEND    : 0x4000140d  LCOUNT  : 0xfffffffc  
+
+
+Backtrace: 0x400d6de2:0x3ffc6a40 0x400d7180:0x3ffc6a70 0x400d7249:0x3ffc6bd0 0x4008b7fd:0x3ffc6bf0
+
+
+
+
+ELF file SHA256: 4d504701e68128d5
+
+Rebooting...
+ets Jun  8 2016 00:22:57
+
+rst:0xc (SW_CPU_RESET),boot:0x17 (SPI_FAST_FLASH_BOOT)
+configsip: 0, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7176
+load:0x40078000,len:15564
+ho 0 tail 12 room 4
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (31) boot: ESP-IDF v5.3.1-dirty 2nd stage bootloader[0m
+[0;32mI (31) boot: compile time Nov  2 2024 18:17:21[0m
+[0;32mI (31) boot: Multicore bootloader[0m
+[0;32mI (36) boot: chip revision: v1.0[0m
+[0;32mI (40) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (44) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (49) boot.esp32: SPI Flash Size : 2MB[0m
+[0;32mI (53) boot: Enabling RNG early entropy source...[0m
+[0;32mI (59) boot: Partition Table:[0m
+[0;32mI (62) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (70) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (77) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (84) boot:  2 factory          factory app      00 00 00010000 00100000[0m
+[0;32mI (92) boot: End of partition table[0m
+[0;32mI (96) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d424h (119844) map[0m
+[0;32mI (146) esp_image: segment 1: paddr=0002d44c vaddr=3ffb0000 size=02bcch ( 11212) load[0m
+[0;32mI (150) esp_image: segment 2: paddr=00030020 vaddr=400d0020 size=715a4h (464292) map[0m
+[0;32mI (311) esp_image: segment 3: paddr=000a15cc vaddr=3ffb2bcc size=0170ch (  5900) load[0m
+[0;32mI (313) esp_image: segment 4: paddr=000a2ce0 vaddr=40080000 size=18bb0h (101296) load[0m
+[0;32mI (368) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (368) boot: Disabling RNG early entropy source...[0m
+[0;32mI (380) cpu_start: Multicore app[0m
+[0;32mI (389) cpu_start: Pro cpu start user code[0m
+[0;32mI (389) cpu_start: cpu freq: 160000000 Hz[0m
+[0;32mI (389) app_init: Application information:[0m
+[0;32mI (392) app_init: Project name:     wifi_rtos[0m
+[0;32mI (397) app_init: App version:      60e9f13-dirty[0m
+[0;32mI (402) app_init: Compile time:     Nov  6 2024 22:06:38[0m
+[0;32mI (408) app_init: ELF file SHA256:  4d504701e68128d5...[0m
+[0;32mI (414) app_init: ESP-IDF:          v5.3.1-dirty[0m
+[0;32mI (419) efuse_init: Min chip rev:     v0.0[0m
+[0;32mI (424) efuse_init: Max chip rev:     v3.99 [0m
+[0;32mI (429) efuse_init: Chip rev:         v1.0[0m
+[0;32mI (434) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (441) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (447) heap_init: At 3FFB83F8 len 00027C08 (159 KiB): DRAM[0m
+[0;32mI (453) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (460) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (466) heap_init: At 40098BB0 len 00007450 (29 KiB): IRAM[0m
+[0;32mI (474) spi_flash: detected chip: gd[0m
+[0;32mI (477) spi_flash: flash io: dio[0m
+[0;33mW (480) spi_flash: Detected size(4096k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;33mW (494) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (505) main_task: Started on CPU0[0m
+[0;32mI (515) main_task: Calling app_main()[0m
+I (695) wifi:wifi driver task: 3ffbe294, prio:23, stack:6656, core=0
+I (695) wifi:wifi firmware version: ccaebfa
+I (695) wifi:wifi certification version: v7.0
+I (695) wifi:config NVS flash: enabled
+I (695) wifi:config nano formating: disabled
+I (705) wifi:Init data frame dynamic rx buffer num: 32
+I (705) wifi:Init static rx mgmt buffer num: 5
+I (715) wifi:Init management short buffer num: 32
+I (715) wifi:Init dynamic tx buffer num: 32
+I (715) wifi:Init static rx buffer size: 1600
+I (725) wifi:Init static rx buffer num: 10
+I (725) wifi:Init dynamic rx buffer num: 32
+[0;32mI (735) wifi_init: rx ba win: 6[0m
+[0;32mI (735) wifi_init: accept mbox: 6[0m
+[0;32mI (735) wifi_init: tcpip mbox: 32[0m
+[0;32mI (745) wifi_init: udp mbox: 6[0m
+[0;32mI (745) wifi_init: tcp mbox: 6[0m
+[0;32mI (745) wifi_init: tcp tx win: 5744[0m
+[0;32mI (755) wifi_init: tcp rx win: 5744[0m
+[0;32mI (755) wifi_init: tcp mss: 1440[0m
+[0;32mI (765) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (765) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (775) phy_init: phy_version 4830,54550f7,Jun 20 2024,14:22:08[0m
+[0;33mW (775) phy_init: failed to load RF calibration data (0x1102), falling back to full calibration[0m
+[0;33mW (855) phy_init: saving new calibration data because of checksum failure, mode(2)[0m
+E (865) wifi:failed to post WiFi event=43 ret=259
+I (865) wifi:mode : sta (b4:e6:2d:b1:e1:f9)
+I (875) wifi:enable tsf
+E (875) wifi:failed to post WiFi event=2 ret=259
+[0;32mI (995) main_task: Returned from app_main()[0m
+E (3405) wifi:failed to post WiFi event=1 ret=259

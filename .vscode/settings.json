@@ -12,7 +12,9 @@
         "event_groups.h": "c",
         "lcd.h": "c",
         "magnetometer.h": "c",
-        "ssd1306.h": "c"
+        "ssd1306.h": "c",
+        "wifi_scan.h": "c",
+        "algorithm.h": "c"
     },
     "idf.adapterTargetName": "esp32"
 }
